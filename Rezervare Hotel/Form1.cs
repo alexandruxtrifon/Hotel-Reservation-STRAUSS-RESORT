@@ -15,6 +15,7 @@ namespace Rezervare_Hotel
     public partial class Form1 : Form
     {
         OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alex\source\repos\Rezervare Hotel\Rezervare Hotel\Baza de date licenta.accdb");
+        
         public Form1()
         {
             InitializeComponent();
@@ -38,6 +39,11 @@ namespace Rezervare_Hotel
             cmd.ExecuteNonQuery();
             MessageBox.Show("Client Adaugat", "Bravo buey");
             con.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
         }
     }
 }
