@@ -14,19 +14,19 @@ namespace Rezervare_Hotel
 {
     public partial class Form3 : Form
     {
-        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alex\source\repos\Rezervare Hotel\Rezervare Hotel\Baza de date licenta.accdb");
-        OleDbCommand cmd;
-        OleDbDataAdapter adapter;
+        //OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alex\source\repos\Rezervare Hotel\Rezervare Hotel\Baza de date licenta.accdb");
+        //OleDbCommand cmd;
+        //OleDbDataAdapter adapter;
         DataTable dt;
 
         void GetCustomers()
         {
             dt = new DataTable();
-            adapter = new OleDbDataAdapter("SELECT * FROM Client", con);
-            con.Open();
-            adapter.Fill(dt);
+            Utility.adapter = new OleDbDataAdapter("SELECT * FROM Client", Utility.con);
+            Utility.con.Open();
+            Utility.adapter.Fill(dt);
             dataGridView1.DataSource = dt;
-            con.Close();
+            Utility.con.Close();
 
         }
 
@@ -45,15 +45,15 @@ namespace Rezervare_Hotel
         {
             string query = "INSERT INTO Client (Nume_Client,Prenume_Client,Email_Client,Telefon_Client,Adresa_Client) VALUES" +
                 "(@nume,@prenume,@email,@telefon,@adresa)";
-            cmd = new OleDbCommand(query, con);
-            cmd.Parameters.AddWithValue("@nume", textnume.Text);
-            cmd.Parameters.AddWithValue("@prenume", textprenume.Text);
-            cmd.Parameters.AddWithValue("@email", textemail.Text);
-            cmd.Parameters.AddWithValue("@telefon", texttelefon.Text);
-            cmd.Parameters.AddWithValue("@adresa", textadresa.Text);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+            Utility.cmd = new OleDbCommand(query, Utility.con);
+            Utility.cmd.Parameters.AddWithValue("@nume", textnume.Text);
+            Utility.cmd.Parameters.AddWithValue("@prenume", textprenume.Text);
+            Utility.cmd.Parameters.AddWithValue("@email", textemail.Text);
+            Utility.cmd.Parameters.AddWithValue("@telefon", texttelefon.Text);
+            Utility.cmd.Parameters.AddWithValue("@adresa", textadresa.Text);
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            Utility.con.Close();
             MessageBox.Show("Clientul a fost introdus cu succes. BRAVO BUEY");
             GetCustomers();
         }
@@ -62,16 +62,16 @@ namespace Rezervare_Hotel
         {
             string query = "UPDATE Client SET Nume_Client=@nume,Prenume_Client=@prenume,Email_Client=@email,Telefon_Client=@telefon,Adresa_Client=@adresa" +
                 "WHERE Cod_Client=@id";
-            cmd = new OleDbCommand(query, con);
-            cmd.Parameters.AddWithValue("@nume", textnume.Text);
-            cmd.Parameters.AddWithValue("@prenume", textprenume.Text);
-            cmd.Parameters.AddWithValue("@email", textemail.Text);
-            cmd.Parameters.AddWithValue("@telefon", texttelefon.Text);
-            cmd.Parameters.AddWithValue("@adresa", textadresa.Text);
-            cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+            Utility.cmd = new OleDbCommand(query, Utility.con);
+            Utility.cmd.Parameters.AddWithValue("@nume", textnume.Text);
+            Utility.cmd.Parameters.AddWithValue("@prenume", textprenume.Text);
+            Utility.cmd.Parameters.AddWithValue("@email", textemail.Text);
+            Utility.cmd.Parameters.AddWithValue("@telefon", texttelefon.Text);
+            Utility.cmd.Parameters.AddWithValue("@adresa", textadresa.Text);
+            Utility.cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            Utility.con.Close();
             MessageBox.Show("Clientul a fost actualizat cu succes. BRAVO BUEY");
             GetCustomers();
         }
@@ -90,11 +90,11 @@ namespace Rezervare_Hotel
         private void butonsterge_Click(object sender, EventArgs e)
         {
             string query = "DELETE FROM Client WHERE Cod_Client=@id";
-            cmd = new OleDbCommand(query, con);
-            cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+            Utility.cmd = new OleDbCommand(query, Utility.con);
+            Utility.cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            Utility.con.Close();
             MessageBox.Show("Clientul a fost sters cu succes. BRAVO BUEY");
             GetCustomers();
         }

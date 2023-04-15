@@ -53,8 +53,6 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 79);
@@ -63,7 +61,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(880, 319);
+            this.dataGridView1.Size = new System.Drawing.Size(880, 396);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
@@ -149,7 +147,7 @@
             // 
             // butoninsereaza
             // 
-            this.butoninsereaza.Location = new System.Drawing.Point(919, 248);
+            this.butoninsereaza.Location = new System.Drawing.Point(919, 400);
             this.butoninsereaza.Name = "butoninsereaza";
             this.butoninsereaza.Size = new System.Drawing.Size(75, 75);
             this.butoninsereaza.TabIndex = 11;
@@ -159,7 +157,7 @@
             // 
             // butonactualizeaza
             // 
-            this.butonactualizeaza.Location = new System.Drawing.Point(1000, 248);
+            this.butonactualizeaza.Location = new System.Drawing.Point(1000, 400);
             this.butonactualizeaza.Name = "butonactualizeaza";
             this.butonactualizeaza.Size = new System.Drawing.Size(75, 75);
             this.butonactualizeaza.TabIndex = 12;
@@ -169,7 +167,7 @@
             // 
             // butonsterge
             // 
-            this.butonsterge.Location = new System.Drawing.Point(1081, 248);
+            this.butonsterge.Location = new System.Drawing.Point(1081, 400);
             this.butonsterge.Name = "butonsterge";
             this.butonsterge.Size = new System.Drawing.Size(75, 75);
             this.butonsterge.TabIndex = 13;
