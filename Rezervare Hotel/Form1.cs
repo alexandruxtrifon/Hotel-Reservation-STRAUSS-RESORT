@@ -45,14 +45,55 @@ namespace Rezervare_Hotel
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
-            f2.Show();
+            Form2 f = new Form2();
+            f.Show();
         }
 
         private void butonclienti_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3();
-            f3.Show();
+            Form3 f = new Form3();
+            f.Show();
+        }
+
+        private void butoncheckin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butonrezervari_Click(object sender, EventArgs e)
+        {
+            RezervareForm f = new RezervareForm();
+            f.Show();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.Show();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.Show();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            RezervareForm f = new RezervareForm();
+            f.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            RezervareForm f = new RezervareForm();
+            f.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.Show();
         }
     }
 }

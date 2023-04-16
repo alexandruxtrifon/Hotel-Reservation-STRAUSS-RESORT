@@ -55,13 +55,13 @@ namespace Rezervare_Hotel
             //Utility.reader = Utility.cmd.ExecuteReader();
             string query = ("SELECT Nume_TipCamera FROM TipCamera");
             Utility.cmd.CommandText = query;
-            Utility.cmd = new OleDbCommand(query, Utility.con);
-            //Utility.cmd.ExecuteReader();
+            Utility.cmd.Connection = Utility.con;
             OleDbDataReader reader = Utility.cmd.ExecuteReader();
             while (reader.Read())
             {
                 combonumetipcamera.Items.Add(reader.GetValue(0));
             }
+            reader.Close();
             Utility.con.Close();
         }
 
@@ -69,35 +69,38 @@ namespace Rezervare_Hotel
         {
             try
             {
-                //default value pentru could camera
-                //int codcamera = 0;
-
-
-                // aici vom selecta codul camera luand numele din Combobox
-                string query1 = $"SELECT CodCamera FROM Tip_Camera WHERE NumeCamera = '{combonumetipcamera}'";
+                string query = "INSERT INTO Camera (Nr_Camera,Etaj_Camera) VALUES" +
+                "(@nr,@etaj)";
+                Utility.cmd = new OleDbCommand(query, Utility.con);
+                Utility.cmd.Parameters.AddWithValue("@nr", textnrcamera.Text);
+                //Utility.cmd.Parameters.AddWithValue("@codtip", textprenume.Text);
+                Utility.cmd.Parameters.AddWithValue("@etaj", textetajcamera.Text);
                 Utility.con.Open();
-
-                OleDbDataReader reader = Utility.cmd.ExecuteReader();
-               
-                int codcamera = (int)Utility.cmd.ExecuteScalar();
-
-
-                //{codcamera} va lua valoarea Query1
-                string query2 = $"INSERT INTO Camera(Nr_Camera, Cod_TipCamera, Etaj_Camera) VALUES ('{textnrcamera}',{codcamera},'{textetajcamera}')"; 
+                Utility.cmd.ExecuteNonQuery();
+                Utility.con.Close();
+                MessageBox.Show("Camera a fost introdusa cu succes.");
+                GetCamera();
 
 
+                // Retrieve the selected item from the combo box
+                string selectedTipCamera = combonumetipcamera.SelectedItem.ToString();
 
-                //string query = "INSERT INTO Camera (Nr_Camera,Etaj_Camera) VALUES" +
-                //"(@nr,@etaj)";
-                //Utility.cmd = new OleDbCommand(query, Utility.con);
-                //Utility.cmd.Parameters.AddWithValue("@nr", textnrcamera.Text);
-                ////Utility.cmd.Parameters.AddWithValue("@codtip", textprenume.Text);
-                //Utility.cmd.Parameters.AddWithValue("@etaj", textetajcamera.Text);
-                //Utility.con.Open();
-                //Utility.cmd.ExecuteNonQuery();
-                //Utility.con.Close();
-                //MessageBox.Show("Camera a fost introdusa cu succes.");
-                //GetCamera();
+                // Query the 'TipCamera' table to retrieve the corresponding 'Cod_TipCamera' value
+                string query1 = $"SELECT Cod_TipCamera FROM TipCamera WHERE Nume_TipCamera = '{selectedTipCamera}'";
+                Utility.cmd.CommandText = query1;
+                Utility.con.Open();
+                int codTipCamera = (int)Utility.cmd.ExecuteScalar();
+                Utility.con.Close();
+
+                // Insert a new record into the 'Camera' table
+                string query2 = $"INSERT INTO Camera(Nr_Camera, Cod_TipCamera, Etaj_Camera) VALUES ('{textnrcamera.Text}',{codTipCamera},'{textetajcamera.Text}')";
+                Utility.cmd.CommandText = query2;
+                Utility.con.Open();
+                Utility.cmd.ExecuteNonQuery();
+                Utility.con.Close();
+
+                MessageBox.Show("Camera a fost introdusa cu succes.");
+                GetCamera();
             }
             catch (Exception ex)
             {
@@ -113,6 +116,7 @@ namespace Rezervare_Hotel
             textetajcamera.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
         }
+
 
 
         //private void combonumetipcamera_SelectedIndexChanged(object sender, EventArgs e)
