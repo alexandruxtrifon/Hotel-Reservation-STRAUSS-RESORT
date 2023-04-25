@@ -137,6 +137,7 @@
             this.textnumetipcamera.Name = "textnumetipcamera";
             this.textnumetipcamera.Size = new System.Drawing.Size(125, 22);
             this.textnumetipcamera.TabIndex = 38;
+            this.textnumetipcamera.TextChanged += new System.EventHandler(this.textnumetipcamera_TextChanged);
             // 
             // label1
             // 

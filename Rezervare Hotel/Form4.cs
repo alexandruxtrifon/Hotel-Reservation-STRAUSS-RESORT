@@ -73,5 +73,10 @@ namespace Rezervare_Hotel
             MessageBox.Show("Tipul camerei a fost sters cu succes.");
             GetTipCamera();
         }
+
+        private void textnumetipcamera_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,8 +37,6 @@ namespace Rezervare_Hotel
         {
             InitializeComponent();
             //GetCustomers();
-
-
         }
 
         private void butoninsereaza_Click(object sender, EventArgs e)
@@ -57,8 +55,37 @@ namespace Rezervare_Hotel
             //MessageBox.Show("Clientul a fost introdus cu succes. BRAVO BUEY");
             //GetCustomers();
 
-            Client newClient = new Client();
-            clientiBindingSource.Add(newClient);
+            //Client newClient = new Client();
+            //clientiBindingSource.Add(newClient);
+
+            if (textnume.Text == "" || textprenume.Text == ""|| textemail.Text==""|| texttelefon.Text==""||textadresa.Text=="")
+            {
+                MessageBox.Show("Completeaza toate campurile!", "Mai incearca", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                { 
+                    string query = "INSERT INTO Client (Nume_Client, Prenume_Client, Email_Client, Telefon_Client, Adresa_Client) VALUES" +
+                    "(@nume,@prenume,@email,@telefon,@adresa)";
+                    Utility.cmd = new OleDbCommand(query, Utility.con);
+                    Utility.cmd.Parameters.AddWithValue("@nume", textnume.Text);
+                    Utility.cmd.Parameters.AddWithValue("@prenume", textprenume.Text);
+                    Utility.cmd.Parameters.AddWithValue("@email", textemail.Text);
+                    Utility.cmd.Parameters.AddWithValue("@telefon", texttelefon.Text);
+                    Utility.cmd.Parameters.AddWithValue("@adresa", textadresa.Text);
+                    Utility.con.Open();
+                    Utility.cmd.ExecuteNonQuery();
+                    Utility.con.Close();
+                    MessageBox.Show("Clientul a fost introdus cu succes.");
+                    GetCustomers();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Acest client se afla deja in baza de date", "Mai incearca", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
         }
 
         private void butonactualizeaza_Click(object sender, EventArgs e)
@@ -75,18 +102,18 @@ namespace Rezervare_Hotel
             Utility.con.Open();
             Utility.cmd.ExecuteNonQuery();
             Utility.con.Close();
-            MessageBox.Show("Clientul a fost actualizat cu succes. BRAVO BUEY");
+            MessageBox.Show("Clientul a fost actualizat cu succes.");
             GetCustomers();
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            //textcodclient.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            //textnume.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            //textprenume.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            //textemail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            //texttelefon.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            //textadresa.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            textcodclient.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textnume.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textprenume.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textemail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            texttelefon.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            textadresa.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
 
         }
 
@@ -111,9 +138,7 @@ namespace Rezervare_Hotel
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            List<Client> clienti = dal.GetAllClients();
-            clientiBindingSource.DataSource = clienti;
-            dataGridView1.DataSource = clientiBindingSource;
+            GetCustomers();
         }
     }
 }
