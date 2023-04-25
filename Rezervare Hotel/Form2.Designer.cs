@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textcodcamera = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,10 +45,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -66,7 +69,7 @@
             // 
             // textcodcamera
             // 
-            this.textcodcamera.Location = new System.Drawing.Point(193, 24);
+            this.textcodcamera.Location = new System.Drawing.Point(413, 24);
             this.textcodcamera.Name = "textcodcamera";
             this.textcodcamera.ReadOnly = true;
             this.textcodcamera.Size = new System.Drawing.Size(100, 22);
@@ -75,7 +78,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(68, 30);
+            this.label6.Location = new System.Drawing.Point(288, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 16);
             this.label6.TabIndex = 34;
@@ -83,7 +86,7 @@
             // 
             // butonsterge
             // 
-            this.butonsterge.Location = new System.Drawing.Point(227, 298);
+            this.butonsterge.Location = new System.Drawing.Point(447, 298);
             this.butonsterge.Name = "butonsterge";
             this.butonsterge.Size = new System.Drawing.Size(75, 75);
             this.butonsterge.TabIndex = 33;
@@ -92,7 +95,7 @@
             // 
             // butonactualizeaza
             // 
-            this.butonactualizeaza.Location = new System.Drawing.Point(146, 298);
+            this.butonactualizeaza.Location = new System.Drawing.Point(366, 298);
             this.butonactualizeaza.Name = "butonactualizeaza";
             this.butonactualizeaza.Size = new System.Drawing.Size(75, 75);
             this.butonactualizeaza.TabIndex = 32;
@@ -101,7 +104,7 @@
             // 
             // butoninsereaza
             // 
-            this.butoninsereaza.Location = new System.Drawing.Point(65, 298);
+            this.butoninsereaza.Location = new System.Drawing.Point(285, 298);
             this.butoninsereaza.Name = "butoninsereaza";
             this.butoninsereaza.Size = new System.Drawing.Size(75, 75);
             this.butoninsereaza.TabIndex = 31;
@@ -111,7 +114,7 @@
             // 
             // textetajcamera
             // 
-            this.textetajcamera.Location = new System.Drawing.Point(193, 136);
+            this.textetajcamera.Location = new System.Drawing.Point(413, 136);
             this.textetajcamera.Name = "textetajcamera";
             this.textetajcamera.Size = new System.Drawing.Size(100, 22);
             this.textetajcamera.TabIndex = 28;
@@ -119,7 +122,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 142);
+            this.label4.Location = new System.Drawing.Point(288, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 16);
             this.label4.TabIndex = 27;
@@ -128,7 +131,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 114);
+            this.label3.Location = new System.Drawing.Point(288, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 16);
             this.label3.TabIndex = 25;
@@ -136,7 +139,7 @@
             // 
             // textnrcamera
             // 
-            this.textnrcamera.Location = new System.Drawing.Point(193, 52);
+            this.textnrcamera.Location = new System.Drawing.Point(413, 52);
             this.textnrcamera.Name = "textnrcamera";
             this.textnrcamera.Size = new System.Drawing.Size(100, 22);
             this.textnrcamera.TabIndex = 22;
@@ -144,7 +147,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 58);
+            this.label1.Location = new System.Drawing.Point(288, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 21;
@@ -152,7 +155,7 @@
             // 
             // butontipcamera
             // 
-            this.butontipcamera.Location = new System.Drawing.Point(327, 298);
+            this.butontipcamera.Location = new System.Drawing.Point(547, 298);
             this.butontipcamera.Name = "butontipcamera";
             this.butontipcamera.Size = new System.Drawing.Size(75, 75);
             this.butontipcamera.TabIndex = 36;
@@ -163,7 +166,7 @@
             // combonumetipcamera
             // 
             this.combonumetipcamera.FormattingEnabled = true;
-            this.combonumetipcamera.Location = new System.Drawing.Point(193, 108);
+            this.combonumetipcamera.Location = new System.Drawing.Point(413, 108);
             this.combonumetipcamera.Name = "combonumetipcamera";
             this.combonumetipcamera.Size = new System.Drawing.Size(121, 24);
             this.combonumetipcamera.TabIndex = 37;
@@ -180,6 +183,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.butontipcamera);
             this.tabPage1.Controls.Add(this.combonumetipcamera);
@@ -211,6 +215,16 @@
             this.tabPage2.Text = "Lista Camere";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 59;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -226,6 +240,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,5 +263,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
