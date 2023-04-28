@@ -38,9 +38,6 @@
             this.butonclienti = new System.Windows.Forms.Button();
             this.butoncamere = new System.Windows.Forms.Button();
             this.panoujos = new System.Windows.Forms.Panel();
-            this.butondelogare = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.butoncheckin = new System.Windows.Forms.Button();
             this.butonrezervari = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -122,44 +119,13 @@
             // 
             this.panoujos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panoujos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.panoujos.Controls.Add(this.butondelogare);
-            this.panoujos.Controls.Add(this.button6);
-            this.panoujos.Controls.Add(this.butoncheckin);
             this.panoujos.Controls.Add(this.butonrezervari);
             this.panoujos.Controls.Add(this.butonclienti);
             this.panoujos.Controls.Add(this.butoncamere);
-            this.panoujos.Location = new System.Drawing.Point(0, 39);
+            this.panoujos.Location = new System.Drawing.Point(50, 39);
             this.panoujos.Name = "panoujos";
             this.panoujos.Size = new System.Drawing.Size(882, 75);
             this.panoujos.TabIndex = 8;
-            // 
-            // butondelogare
-            // 
-            this.butondelogare.Location = new System.Drawing.Point(375, 0);
-            this.butondelogare.Name = "butondelogare";
-            this.butondelogare.Size = new System.Drawing.Size(75, 75);
-            this.butondelogare.TabIndex = 10;
-            this.butondelogare.Text = "delogare";
-            this.butondelogare.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(300, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 75);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // butoncheckin
-            // 
-            this.butoncheckin.Location = new System.Drawing.Point(225, 0);
-            this.butoncheckin.Name = "butoncheckin";
-            this.butoncheckin.Size = new System.Drawing.Size(75, 75);
-            this.butoncheckin.TabIndex = 8;
-            this.butoncheckin.Text = "check-in";
-            this.butoncheckin.UseVisualStyleBackColor = true;
-            this.butoncheckin.Click += new System.EventHandler(this.butoncheckin_Click);
             // 
             // butonrezervari
             // 
@@ -176,7 +142,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(882, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(982, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -185,7 +151,7 @@
             this.toolStrip1.AutoSize = false;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
@@ -194,7 +160,7 @@
             this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 373);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(882, 80);
+            this.toolStrip1.Size = new System.Drawing.Size(982, 80);
             this.toolStrip1.TabIndex = 10;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -257,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 453);
+            this.ClientSize = new System.Drawing.Size(982, 453);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panoujos);
             this.Controls.Add(this.textBox1);
@@ -291,9 +257,6 @@
         private System.Windows.Forms.Button butoncamere;
         private System.Windows.Forms.Button butonclienti;
         private System.Windows.Forms.Panel panoujos;
-        private System.Windows.Forms.Button butondelogare;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button butoncheckin;
         private System.Windows.Forms.Button butonrezervari;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
