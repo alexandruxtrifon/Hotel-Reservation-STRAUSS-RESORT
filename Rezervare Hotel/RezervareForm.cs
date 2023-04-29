@@ -22,17 +22,6 @@ namespace Rezervare_Hotel
 
         private void butoninsereaza_Click(object sender, EventArgs e)
         {
-            //string query = "INSERT INTO Rezervare (Data_Cazare, Data_Plecare) VALUES" +
-            //"(@datacazare, @dataplecare)";
-            //Utility.cmd = new OleDbCommand(query, Utility.con);
-            //Utility.cmd.Parameters.AddWithValue("@datacazare", checkindate.Value);
-            //Utility.cmd.Parameters.AddWithValue("@dataplecare", checkoutdate.Value);
-            //Utility.con.Open();
-            //Utility.cmd.ExecuteNonQuery();
-            //Utility.con.Close();
-            //MessageBox.Show("Rezervarea a fost efectuata cu succes!");
-
-
             //
 
             string selectednume = combonumeclient.SelectedItem.ToString();
@@ -54,6 +43,14 @@ namespace Rezervare_Hotel
             int codcamera = (int)Utility.cmd.ExecuteScalar();
             Utility.con.Close();
 
+            //
+            if (checkoverlap(codcamera, checkindate.Value, checkoutdate.Value))
+            {
+                MessageBox.Show("Camera selectata este deja rezervata");
+                return;
+            }
+            //
+
             string query3 = $"INSERT INTO Rezervare(Data_Cazare, Data_Plecare, Cod_Client, Cod_Camera)" +
                 $" VALUES ('{checkindate.Value}', '{checkoutdate.Value}', '{codclient}', '{codcamera}')";
             Utility.cmd.CommandText = query3;
@@ -62,60 +59,7 @@ namespace Rezervare_Hotel
             Utility.con.Close();
             MessageBox.Show("Rezervarea a fost efectuata cu succes!");
 
-            //overlap();
-
-            //query tabela 'Client' pentru a prelua valoarea 'Cod_Client'
-            string query4 = $"INSERT INTO Rezervare (Data_Cazare, Data_Plecare, @codclient FROM Camera WHERE ";
-
-
-
-
-
-
-
-
-
-            //if (combonumeclient.SelectedIndex == -1 
-            //    || combotipcamera.SelectedIndex == -1 
-            //    || combonrcamera.SelectedIndex == -1)
-            //    if(checkindate.Value == DateTimePicker.MinimumDateTime 
-            //        || checkoutdate.Value == DateTimePicker.MinimumDateTime)
-            //    //|| checkindate.Value = DateTimePicker.MinimumDateTime || checkoutdate.Value == DateTimePicker.MinimumDateTime)
-            //{
-            //    MessageBox.Show("Selecteaza toate campurile", "Mai incearca", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //else
-            //{
-            //    try
-            //    {
-            //        Utility.con.Open();
-            //        string query = "INSERT INTO Rezervare (Cod_Rezervare,Data_Cazare,Data_Plecare,Cod_Client,Cod_Camera" +
-            //                " VALUES('"+textcodrezervare.Text+"',@checkindate,@checkoutdate,'"+textcodclient.Text+"','"+textcodcamera.Text+"')";
-            //        Utility.cmd.Parameters.AddWithValue("@checkindate",checkindate.Value);
-            //        Utility.cmd.Parameters.AddWithValue("@checkoutdate", checkoutdate.Value);
-            //        Utility.cmd = new OleDbCommand(query, Utility.con);
-            //        string query2 = "SELECT Max(Cod_Rezervare) FROM Rezervare";
-            //        OleDbCommand cmd2 = new OleDbCommand(query2, Utility.con);
-            //            Utility.cmd.ExecuteNonQuery();
-            //        OleDbDataReader reader = cmd2.ExecuteReader();
-            //        if(reader.Read())
-            //            {
-            //                popularerezervari();
-            //                MessageBox.Show("Rezervare efectuata", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //                clear();
-            //            }
-            //            else
-            //            {
-            //                MessageBox.Show("Rezervare esuata", "Mai incearca", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //            }
-            //            Utility.con.Close();
-
-            //    }
-            //        catch(Exception)
-            //        {
-            //            MessageBox.Show("Codul Client este deja folosit", "Mai incearca", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        }
-            //}
+            getrezervari();
         }
 
         private void RezervareForm_Load(object sender, EventArgs e)
@@ -124,6 +68,20 @@ namespace Rezervare_Hotel
             popularerezervari();
             popularetipcamera();
             populareclienti();
+            getrezervari();
+        }
+        private bool checkoverlap(int codcamera, DateTime datacazare, DateTime dataplecare)
+        {
+            //verific daca camera selectata este disponibila pe perioada selectata
+            string query = $"SELECT COUNT(*) FROM Rezervare WHERE Cod_Camera = {codcamera} AND " +
+                   $"((Data_Cazare <= #{datacazare.ToShortDateString()}# AND Data_Plecare >= #{datacazare.ToShortDateString()}#) " +
+                   $"OR (Data_Cazare <= #{dataplecare.ToShortDateString()}# AND Data_Plecare >= #{dataplecare.ToShortDateString()}#) " +
+                   $"OR (Data_Cazare >= #{datacazare.ToShortDateString()}# AND Data_Plecare <= #{dataplecare.ToShortDateString()}#))";
+            Utility.cmd.CommandText = query;
+            Utility.con.Open();
+            int count = (int)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+            return count > 0;
         }
         private void overlap()
         {
@@ -152,6 +110,14 @@ namespace Rezervare_Hotel
                 MessageBox.Show("Camera selectata este deja rezervata in acea perioada");
             }
 
+        }
+        void getrezervari()
+        {
+            DataTable dt = new DataTable();
+            Utility.adapter = new OleDbDataAdapter("SELECT * FROM Rezervare", Utility.con);
+            Utility.adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+            Utility.con.Close();
         }
 
         public void popularenrcamera()
