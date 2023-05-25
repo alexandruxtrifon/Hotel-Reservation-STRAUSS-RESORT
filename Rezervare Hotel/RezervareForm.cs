@@ -27,7 +27,7 @@ namespace Rezervare_Hotel
             string selectednume = combonumeclient.SelectedItem.ToString();
             string nume = selectednume.Split(' ')[0];
             string query1 = $"SELECT Cod_Client FROM Client WHERE Nume_Client = '{nume}'";
-            Utility.cmd = new OleDbCommand(query1, Utility.con);
+            //Utility.cmd = new OleDbCommand(query1, Utility.con);
             Utility.cmd.CommandText = query1;
             Utility.con.Open();
             Utility.cmd.ExecuteNonQuery();
@@ -39,7 +39,6 @@ namespace Rezervare_Hotel
             Utility.cmd.CommandText = query2;
             Utility.con.Open();
             Utility.cmd.ExecuteNonQuery();
-            //Utility.con.Close();
             int codcamera = (int)Utility.cmd.ExecuteScalar();
             Utility.con.Close();
 
@@ -74,16 +73,32 @@ namespace Rezervare_Hotel
             int codClient = (int)Utility.cmd.ExecuteScalar();
             Utility.con.Close();
 
+
+            string query11 = "SELECT MAX(Data_Cazare) FROM Rezervare";
+            Utility.cmd.CommandText = query11;
+            Utility.con.Open();
+            DateTime datacazare = (DateTime)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+            string query12 = "SELECT MAX(Data_Plecare) FROM Rezervare";
+            Utility.cmd.CommandText = query12;
+            Utility.con.Open();
+            DateTime dataplecare = (DateTime)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+
             // calculare nr zile si total de plata
-            OleDbDataReader reader = Utility.cmd.ExecuteReader();
-            reader.Read();
-            double pretTipCamera = (double)reader["Pret_TipCamera"];
-            int nrzile = (int)(checkoutdate.Value - checkindate.Value).TotalDays;
-            double totalplata = nrzile * pretTipCamera;
+            int pretTipCamera = int.Parse(textpretcamera.Text);
+            int nrzile = (int)(dataplecare - datacazare).TotalDays;
+            int totalplata = nrzile * pretTipCamera;
 
             // inserare date in tabela facturi
-            string query6 = $"INSERT INTO Factura (Data, Suma, Cod_Rezervare)" +
-                $"VALUES ('{checkindate.Value}', '{totalplata}', '{codRezervare}')";
+            string query6 = $"INSERT INTO Factura (Data, Pret_Unitar, Valoare, Cod_Rezervare)" +
+                $"VALUES ('{datacazare}', '{pretTipCamera}', '{totalplata}', '{codRezervare}')";
+            Utility.cmd.CommandText = query6;
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            Utility.con.Close();
             MessageBox.Show("Datele au fost introduse pentru facturare");
 
             getrezervari();
@@ -236,6 +251,19 @@ namespace Rezervare_Hotel
             {
                 combonrcamera.Items.Add(dr["Nr_Camera"].ToString());
             }
+
+            //actualizare preturi
+            combotipcamera.SelectedIndexChanged += combotipcamera_SelectedIndexChanged;
+            //string camptipcamera = combotipcamera.Text;
+            string selectedTipCamera = combotipcamera.SelectedItem.ToString();
+            string query1 = $"SELECT Pret_TipCamera FROM TipCamera WHERE Nume_TipCamera = '{camptipcamera}'";
+            Utility.cmd = new OleDbCommand(query1, Utility.con);
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            double pretTipCamera = (double)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+            textpretcamera.Text = pretTipCamera.ToString();
         }
 
         private void combonumeclient_SelectedIndexChanged(object sender, EventArgs e)
@@ -258,6 +286,11 @@ namespace Rezervare_Hotel
             this.Close();
             Form f = new Form1();
             f.Show();
+        }
+
+        private void combotipcamera_SelectedValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

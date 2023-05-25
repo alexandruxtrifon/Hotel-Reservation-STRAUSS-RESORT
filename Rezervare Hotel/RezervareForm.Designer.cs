@@ -54,6 +54,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textpretcamera = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -75,6 +77,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textpretcamera);
+            this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.textcodclient);
@@ -250,6 +254,7 @@
             this.combotipcamera.Size = new System.Drawing.Size(120, 33);
             this.combotipcamera.TabIndex = 11;
             this.combotipcamera.SelectedIndexChanged += new System.EventHandler(this.combotipcamera_SelectedIndexChanged);
+            this.combotipcamera.SelectedValueChanged += new System.EventHandler(this.combotipcamera_SelectedValueChanged);
             // 
             // textcodrezervare
             // 
@@ -333,6 +338,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(968, 418);
             this.dataGridView1.TabIndex = 0;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(530, 134);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(122, 25);
+            this.label9.TabIndex = 60;
+            this.label9.Text = "Pret Camera";
+            // 
+            // textpretcamera
+            // 
+            this.textpretcamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textpretcamera.Location = new System.Drawing.Point(651, 134);
+            this.textpretcamera.Name = "textpretcamera";
+            this.textpretcamera.ReadOnly = true;
+            this.textpretcamera.Size = new System.Drawing.Size(100, 30);
+            this.textpretcamera.TabIndex = 61;
+            // 
             // RezervareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -382,5 +406,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textpretcamera;
+        private System.Windows.Forms.Label label9;
     }
 }
