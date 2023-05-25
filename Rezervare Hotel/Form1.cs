@@ -92,7 +92,7 @@ namespace Rezervare_Hotel
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2();
+            Form3 f = new Form3();
             f.Show();
         }
     }

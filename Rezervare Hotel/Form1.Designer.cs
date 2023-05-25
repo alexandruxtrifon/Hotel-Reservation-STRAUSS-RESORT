@@ -35,10 +35,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.butonclienti = new System.Windows.Forms.Button();
-            this.butoncamere = new System.Windows.Forms.Button();
-            this.panoujos = new System.Windows.Forms.Panel();
-            this.butonrezervari = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -46,8 +42,9 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.panoujos.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -94,48 +91,6 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // butonclienti
-            // 
-            this.butonclienti.Location = new System.Drawing.Point(75, 0);
-            this.butonclienti.Name = "butonclienti";
-            this.butonclienti.Size = new System.Drawing.Size(75, 75);
-            this.butonclienti.TabIndex = 2;
-            this.butonclienti.Text = "clienti";
-            this.butonclienti.UseVisualStyleBackColor = true;
-            this.butonclienti.Click += new System.EventHandler(this.butonclienti_Click);
-            // 
-            // butoncamere
-            // 
-            this.butoncamere.Location = new System.Drawing.Point(0, 0);
-            this.butoncamere.Name = "butoncamere";
-            this.butoncamere.Size = new System.Drawing.Size(75, 75);
-            this.butoncamere.TabIndex = 1;
-            this.butoncamere.Text = "camere";
-            this.butoncamere.UseVisualStyleBackColor = true;
-            this.butoncamere.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // panoujos
-            // 
-            this.panoujos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panoujos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.panoujos.Controls.Add(this.butonrezervari);
-            this.panoujos.Controls.Add(this.butonclienti);
-            this.panoujos.Controls.Add(this.butoncamere);
-            this.panoujos.Location = new System.Drawing.Point(50, 39);
-            this.panoujos.Name = "panoujos";
-            this.panoujos.Size = new System.Drawing.Size(882, 75);
-            this.panoujos.TabIndex = 8;
-            // 
-            // butonrezervari
-            // 
-            this.butonrezervari.Location = new System.Drawing.Point(150, 0);
-            this.butonrezervari.Name = "butonrezervari";
-            this.butonrezervari.Size = new System.Drawing.Size(75, 75);
-            this.butonrezervari.TabIndex = 7;
-            this.butonrezervari.Text = "rezervari";
-            this.butonrezervari.UseVisualStyleBackColor = true;
-            this.butonrezervari.Click += new System.EventHandler(this.butonrezervari_Click);
             // 
             // menuStrip1
             // 
@@ -219,13 +174,23 @@
             this.toolStripButton5.Text = "toolStripButton1";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(160, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 453);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.panoujos);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -238,9 +203,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panoujos.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,10 +219,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button butoncamere;
-        private System.Windows.Forms.Button butonclienti;
-        private System.Windows.Forms.Panel panoujos;
-        private System.Windows.Forms.Button butonrezervari;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
@@ -265,6 +226,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

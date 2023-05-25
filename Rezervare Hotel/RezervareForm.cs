@@ -59,6 +59,33 @@ namespace Rezervare_Hotel
             Utility.con.Close();
             MessageBox.Show("Rezervarea a fost efectuata cu succes!");
 
+
+            // Retrieve fk codrezervare
+            string query4 = "SELECT MAX(Cod_Rezervare) FROM Rezervare";
+            Utility.cmd.CommandText = query4;
+            Utility.con.Open();
+            int codRezervare = (int)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+            string query5 = $"SELECT Cod_Client FROM Client WHERE Nume_Client = '{nume}'";
+            Utility.cmd.CommandText = query5;
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            int codClient = (int)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+            // calculare nr zile si total de plata
+            OleDbDataReader reader = Utility.cmd.ExecuteReader();
+            reader.Read();
+            double pretTipCamera = (double)reader["Pret_TipCamera"];
+            int nrzile = (int)(checkoutdate.Value - checkindate.Value).TotalDays;
+            double totalplata = nrzile * pretTipCamera;
+
+            // inserare date in tabela facturi
+            string query6 = $"INSERT INTO Factura (Data, Suma, Cod_Rezervare)" +
+                $"VALUES ('{checkindate.Value}', '{totalplata}', '{codRezervare}')";
+            MessageBox.Show("Datele au fost introduse pentru facturare");
+
             getrezervari();
         }
 
