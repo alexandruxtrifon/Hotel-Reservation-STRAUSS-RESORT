@@ -1,3 +1,0 @@
-﻿namespace Rezervare_Hotel
-{
-}

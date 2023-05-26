@@ -80,7 +80,7 @@ namespace Rezervare_Hotel
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            RezervareForm f = new RezervareForm();
+            Form5 f = new Form5();
             f.Show();
         }
 

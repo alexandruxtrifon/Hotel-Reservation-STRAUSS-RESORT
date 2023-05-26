@@ -93,8 +93,8 @@ namespace Rezervare_Hotel
             int totalplata = nrzile * pretTipCamera;
 
             // inserare date in tabela facturi
-            string query6 = $"INSERT INTO Factura (Data, Pret_Unitar, Valoare, Cod_Rezervare)" +
-                $"VALUES ('{datacazare}', '{pretTipCamera}', '{totalplata}', '{codRezervare}')";
+            string query6 = $"INSERT INTO Factura (Data, Pret_Unitar, Cantitate, Valoare, Cod_Rezervare)" +
+                $"VALUES ('{datacazare}', '{pretTipCamera}', '{nrzile}', '{totalplata}', '{codRezervare}')";
             Utility.cmd.CommandText = query6;
             Utility.con.Open();
             Utility.cmd.ExecuteNonQuery();

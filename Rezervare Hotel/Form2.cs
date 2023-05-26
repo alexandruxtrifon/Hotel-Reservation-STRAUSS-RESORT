@@ -112,46 +112,8 @@ namespace Rezervare_Hotel
         {
             textcodcamera.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textnrcamera.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            //textcodtipcamera.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            textetajcamera.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textetajcamera.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
         }
-
-
-
-        //private void combonumetipcamera_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        // obtin codul Cod_TipCamera din Camera(table)
-        //        //int codcamera = 0;
-        //        //string query2 = $"SELECT Cod_TipCamera FROM Camera WHERE Nume_TipCamera = '{combonumetipcamera}';";
-        //        //Utility.con.Open();
-        //        //OleDbDataReader reader2 = Utility.cmd.ExecuteReader();
-        //        //while(reader2.Read())
-        //        //{
-        //        //    codcamera = reader2.GetInt32(0);
-        //        //}
-        //        //Utility.con.Close();
-
-        //        //string query = $"SELECT TipCamera.Cod_TipCamera" + $" FROM TipCamera" +
-        //        //    $" INNER JOIN Camera ON Tipcamera.CodTip_Camera = {codcamera}";
-        //        //Utility.cmd = new OleDbCommand(query, Utility.con);
-        //        //Utility.con.Open();
-        //        //Utility.cmd.ExecuteNonQuery();
-        //        //OleDbDataReader reader = Utility.cmd.ExecuteReader();
-        //        //while(reader.Read())
-        //        //{
-        //        //    textcodtipcamera.AppendText(reader.GetString(0));
-        //        //}
-        //        //Utility.con.Close();
-        //    }
-        //    catch(Exception ex) 
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //        Utility.con.Close();
-        //    }
-
-        //}
     }
 }
