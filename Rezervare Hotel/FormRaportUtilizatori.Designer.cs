@@ -1,6 +1,6 @@
 ﻿namespace Rezervare_Hotel
 {
-    partial class Form5
+    partial class FormRaportUtilizatori
     {
         /// <summary>
         /// Required designer variable.
@@ -30,60 +30,52 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new Rezervare_Hotel.DataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTable1TableAdapter = new Rezervare_Hotel.DataSet1TableAdapters.DataTable1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            this.dataSet1 = new Rezervare_Hotel.DataSet1();
+            this.utilizatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.utilizatorTableAdapter = new Rezervare_Hotel.DataSet1TableAdapters.UtilizatorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utilizatorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataTable1BindingSource
+            // reportViewer1
             // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.dataSet1;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.utilizatorBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Rezervare_Hotel.RaportUtilizatori.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.TabIndex = 0;
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // utilizatorBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.dataTable1BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Rezervare_Hotel.Report3.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(982, 453);
-            this.reportViewer1.TabIndex = 0;
+            this.utilizatorBindingSource.DataMember = "Utilizator";
+            this.utilizatorBindingSource.DataSource = this.dataSet1;
             // 
-            // dataSet1BindingSource
+            // utilizatorTableAdapter
             // 
-            this.dataSet1BindingSource.DataSource = this.dataSet1;
-            this.dataSet1BindingSource.Position = 0;
+            this.utilizatorTableAdapter.ClearBeforeFill = true;
             // 
-            // dataTable1TableAdapter
-            // 
-            this.dataTable1TableAdapter.ClearBeforeFill = true;
-            // 
-            // Form5
+            // FormRaportUtilizatori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 453);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Form5";
-            this.Text = "Form5";
-            this.Load += new System.EventHandler(this.Form5_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            this.Name = "FormRaportUtilizatori";
+            this.Text = "FormRaportUtilizatori";
+            this.Load += new System.EventHandler(this.FormRaportUtilizatori_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utilizatorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,8 +84,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource dataSet1BindingSource;
-        private System.Windows.Forms.BindingSource dataTable1BindingSource;
-        private DataSet1TableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        private System.Windows.Forms.BindingSource utilizatorBindingSource;
+        private DataSet1TableAdapters.UtilizatorTableAdapter utilizatorTableAdapter;
     }
 }

@@ -74,7 +74,7 @@ namespace Rezervare_Hotel
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2();
+            Form6 f = new Form6();
             f.Show();
         }
 
@@ -93,6 +93,12 @@ namespace Rezervare_Hotel
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             Form3 f = new Form3();
+            f.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FormRaportUtilizatori f = new FormRaportUtilizatori();
             f.Show();
         }
     }

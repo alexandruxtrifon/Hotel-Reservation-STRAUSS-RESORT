@@ -12,6 +12,8 @@ namespace Rezervare_Hotel
     {
         //path si conexiunea globala
         public static string conString = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alex\source\repos\Rezervare Hotel\Rezervare Hotel\Baza de date licenta.accdb");
+        //public static string conString = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Baza de date licenta.accdb");
+
         public static OleDbConnection con = new OleDbConnection(conString);
         public static OleDbCommand cmd;
         public static OleDbDataAdapter adapter;
@@ -25,6 +27,8 @@ namespace Rezervare_Hotel
     public class DataAccessLayer
     {
         private string conString = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alex\source\repos\Rezervare Hotel\Rezervare Hotel\Baza de date licenta.accdb");
+        //private string conString = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Baza de date licenta.accdb");
+
 
         public List<Client> GetAllClients()
         {
