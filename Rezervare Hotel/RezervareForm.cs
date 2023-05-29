@@ -42,6 +42,8 @@ namespace Rezervare_Hotel
             int codcamera = (int)Utility.cmd.ExecuteScalar();
             Utility.con.Close();
 
+            
+
             //
             if (checkoverlap(codcamera, checkindate.Value, checkoutdate.Value))
             {

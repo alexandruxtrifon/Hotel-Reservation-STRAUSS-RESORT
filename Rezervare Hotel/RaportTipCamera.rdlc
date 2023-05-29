@@ -232,8 +232,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>5.91483cm</Top>
-        <Left>2cm</Left>
+        <Top>7.56583cm</Top>
+        <Left>3.92617cm</Left>
         <Height>0.5in</Height>
         <Width>4.84167in</Width>
         <Style>
@@ -246,8 +246,8 @@
         <Source>Embedded</Source>
         <Value>logonobackground</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>2cm</Top>
-        <Left>2cm</Left>
+        <Top>0cm</Top>
+        <Left>0cm</Left>
         <Height>3cm</Height>
         <Width>3cm</Width>
         <ZIndex>1</ZIndex>
@@ -257,16 +257,56 @@
           </Border>
         </Style>
       </Image>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Situatie Tipuri de camere</Value>
+                <Style>
+                  <FontFamily>Century Gothic</FontFamily>
+                  <FontSize>18pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>DimGray</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>1.16444in</Top>
+        <Left>1.55407in</Left>
+        <Height>0.74167in</Height>
+        <Width>4.83333in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>23.0325cm</Height>
+    <Height>4in</Height>
     <Style>
       <Border>
         <Style>None</Style>
       </Border>
     </Style>
   </Body>
-  <Width>21cm</Width>
+  <Width>8in</Width>
   <Page>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
     <TopMargin>1in</TopMargin>

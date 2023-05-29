@@ -48,14 +48,34 @@ namespace Rezervare_Hotel
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            textBox1.Text = (int.Parse(textBox1.Text) - 1).ToString();
+            this.dataTable1TableAdapter.Fill(this.dataSet1.DataTable1, int.Parse(textBox1.Text));
+            this.reportViewer1.RefreshReport();
         }
 
         private void Form5_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dataSet1.DataTable1' table. You can move, or remove it, as needed.
-            this.dataTable1TableAdapter.Fill(this.dataSet1.DataTable1);
+            this.dataTable1TableAdapter.Fill(this.dataSet1.DataTable1, int.Parse(textBox1.Text));
             this.reportViewer1.RefreshReport();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = (int.Parse(textBox1.Text) + 1).ToString();
+            this.dataTable1TableAdapter.Fill(this.dataSet1.DataTable1, int.Parse(textBox1.Text));
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBox1.Text = (int.Parse(textBox1.Text) - 1).ToString();
+            this.dataTable1TableAdapter.Fill(this.dataSet1.DataTable1, int.Parse(textBox1.Text));
             this.reportViewer1.RefreshReport();
         }
     }
