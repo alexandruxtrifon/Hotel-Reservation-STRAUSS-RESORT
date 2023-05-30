@@ -1,6 +1,6 @@
 ﻿namespace Rezervare_Hotel
 {
-    partial class Form5
+    partial class FormFactura
     {
         /// <summary>
         /// Required designer variable.
@@ -30,32 +30,37 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Rezervare_Hotel.DataSet1();
+            this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1TableAdapter = new Rezervare_Hotel.DataSet1TableAdapters.DataTable1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataTable1BindingSource1
+            // dataTable1BindingSource
             // 
-            this.dataTable1BindingSource1.DataMember = "DataTable1";
-            this.dataTable1BindingSource1.DataSource = this.dataSet1;
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.dataSet1;
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataTable1BindingSource1
+            // 
+            this.dataTable1BindingSource1.DataMember = "DataTable1";
+            this.dataTable1BindingSource1.DataSource = this.dataSet1;
             // 
             // reportViewer1
             // 
@@ -63,7 +68,7 @@
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.dataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Rezervare_Hotel.Report3.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Rezervare_Hotel.RaportFactura.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -104,16 +109,10 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(61, 164);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(982, 51);
             this.panel1.TabIndex = 4;
-            // 
-            // dataTable1BindingSource
-            // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.dataSet1;
             // 
             // dataSet1BindingSource
             // 
@@ -124,21 +123,21 @@
             // 
             this.dataTable1TableAdapter.ClearBeforeFill = true;
             // 
-            // Form5
+            // FormFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 453);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Form5";
+            this.Name = "FormFactura";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
 

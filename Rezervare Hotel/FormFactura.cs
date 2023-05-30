@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Rezervare_Hotel
 {
-    public partial class Form5 : Form
+    public partial class FormFactura : Form
     {
         DataTable dt;
         OleDbDataAdapter adapter;
-        public Form5()
+        public FormFactura()
         {
             InitializeComponent();
         }
@@ -55,6 +55,7 @@ namespace Rezervare_Hotel
 
         private void Form5_Load(object sender, EventArgs e)
         {
+
             // TODO: This line of code loads data into the 'dataSet1.DataTable1' table. You can move, or remove it, as needed.
             this.dataTable1TableAdapter.Fill(this.dataSet1.DataTable1, int.Parse(textBox1.Text));
             this.reportViewer1.RefreshReport();

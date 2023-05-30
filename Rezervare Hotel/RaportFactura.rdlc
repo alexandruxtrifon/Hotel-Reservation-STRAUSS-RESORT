@@ -6,24 +6,24 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.24167in</Width>
+              <Width>0.44847in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.74167in</Width>
+              <Width>3.59167in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.24167in</Width>
+              <Width>0.775in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.24167in</Width>
+              <Width>1.05001in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.24167in</Width>
+              <Width>1.11667in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.63333in</Height>
+              <Height>0.28333in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -36,7 +36,7 @@
                             <TextRun>
                               <Value>Nr.</Value>
                               <Style>
-                                <FontFamily>century gothic</FontFamily>
+                                <FontFamily>arial</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -72,7 +72,7 @@
                             <TextRun>
                               <Value>Denumire serviciu</Value>
                               <Style>
-                                <FontFamily>century gothic</FontFamily>
+                                <FontFamily>arial</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -108,7 +108,7 @@
                             <TextRun>
                               <Value>Cantitate</Value>
                               <Style>
-                                <FontFamily>century gothic</FontFamily>
+                                <FontFamily>arial</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -144,22 +144,7 @@
                             <TextRun>
                               <Value>Pret unitar</Value>
                               <Style>
-                                <FontFamily>century gothic</FontFamily>
-                                <FontSize>12pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>(fara TVA)</Value>
-                              <Style>
-                                <FontFamily>century gothic</FontFamily>
+                                <FontFamily>arial</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -195,7 +180,7 @@
                             <TextRun>
                               <Value>Valoare</Value>
                               <Style>
-                                <FontFamily>century gothic</FontFamily>
+                                <FontFamily>arial</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -223,7 +208,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.38333in</Height>
+              <Height>0.29166in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -235,7 +220,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=RowNumber(Nothing)</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>arial</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -266,8 +254,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>= "Camera" + First(Fields!Nume_TipCamera.Value, "DataSet1")</Value>
-                              <Style />
+                              <Value>= "Camera" + Fields!tipcameranumetipcamera.Value</Value>
+                              <Style>
+                                <FontFamily>arial</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -299,7 +290,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value)</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>arial</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -330,8 +324,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Pret_TipCamera.Value</Value>
-                              <Style />
+                              <Value>=Fields!tipcameraprettipcamera.Value</Value>
+                              <Style>
+                                <FontFamily>arial</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -362,8 +359,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!Pret_TipCamera.Value</Value>
-                              <Style />
+                              <Value>=DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!tipcameraprettipcamera.Value</Value>
+                              <Style>
+                                <FontFamily>arial</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -410,9 +410,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>2.77146in</Top>
-        <Left>0.62318in</Left>
-        <Height>1.01667in</Height>
-        <Width>6.70833in</Width>
+        <Left>0.50651in</Left>
+        <Height>0.57499in</Height>
+        <Width>6.98182in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -426,15 +426,15 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Client:</Value>
+                <Value>Client: </Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=First(Fields!Nume_Client.Value) + " " + First(Fields!Prenume_Client.Value)</Value>
+                <Value>=First(Fields!clientnumeclient.Value) + " " + First(Fields!clientprenumeclient.Value)</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -447,8 +447,64 @@
               <TextRun>
                 <Value />
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>12pt</FontSize>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Adresa: </Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!Adresa_Client.Value)</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tel.: </Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!Telefon_Client.Value)</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Email: </Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=First(Fields!ClientEmailClient.Value)</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -461,112 +517,7 @@
               <TextRun>
                 <Value />
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Reg.Com.:   J44/483/2014</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>CIF:              83748</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Adresa: BULEVARDUL MAMAIA, NR.326, MUNICIPIUL CONSTANȚA, CONSTANȚA</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <ListLevel>1</ListLevel>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>IBAN: RO08PORL1694578413836993</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Banca: BANCA TRANSILVANIA</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>SWIFT: BTRLRON23</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Tel.: 078374747</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Email: straussresort@gmail.com</Value>
-                <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -579,16 +530,108 @@
               <TextRun>
                 <Value />
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Data Emiterii: </Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Globals!ExecutionTime</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Termen Plata: </Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=DateAdd("d", 7, Globals!ExecutionTime )</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
         <Top>0.16041in</Top>
-        <Left>4.62318in</Left>
+        <Left>4.78in</Left>
         <Height>2.175in</Height>
         <Width>2.70833in</Width>
         <ZIndex>1</ZIndex>
@@ -611,7 +654,7 @@
               <TextRun>
                 <Value>Furnizor:</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -622,7 +665,7 @@
               <TextRun>
                 <Value>STRAUSS RESORT SRL</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                   <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
@@ -634,7 +677,7 @@
               <TextRun>
                 <Value />
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -643,9 +686,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Reg.Com.:   J44/483/2014</Value>
+                <Value>Reg.Com.: J44/483/2016</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -654,9 +697,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>CIF:              83748</Value>
+                <Value>CIF: 27084472</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -667,7 +710,7 @@
               <TextRun>
                 <Value>Adresa: BULEVARDUL MAMAIA, NR.326, MUNICIPIUL CONSTANȚA, CONSTANȚA</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -678,7 +721,7 @@
               <TextRun>
                 <Value>IBAN: RO08PORL1694578413836993</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -689,7 +732,7 @@
               <TextRun>
                 <Value>Banca: BANCA TRANSILVANIA</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -700,7 +743,7 @@
               <TextRun>
                 <Value>SWIFT: BTRLRON23</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -711,7 +754,7 @@
               <TextRun>
                 <Value>Tel.: 078374747</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -722,7 +765,7 @@
               <TextRun>
                 <Value>Email: straussresort@gmail.com</Value>
                 <Style>
-                  <FontFamily>Times New Roman</FontFamily>
+                  <FontFamily>arial</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -742,7 +785,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
         <Top>0.16041in</Top>
-        <Left>0.62318in</Left>
+        <Left>0.50651in</Left>
         <Height>2.175in</Height>
         <Width>2.70833in</Width>
         <ZIndex>2</ZIndex>
@@ -756,14 +799,210 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>1.05001in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.11667in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.28333in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox3">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Total plata</Value>
+                              <Style>
+                                <FontFamily>arial</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!tipcameraprettipcamera.Value)</Value>
+                              <Style>
+                                <FontFamily>arial</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details1" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <Top>3.34645in</Top>
+        <Left>5.32165in</Left>
+        <Height>0.28333in</Height>
+        <Width>2.16668in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Intocmit de:</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Fields!Nume.Value + " " + Fields!Prenume.Value</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>4.38709in</Top>
+        <Left>0.49262in</Left>
+        <Height>0.49167in</Height>
+        <Width>4.04014in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <RightBorder>
+            <Style>None</Style>
+          </RightBorder>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Semnatura de primire:</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>4.38709in</Top>
+        <Left>4.54665in</Left>
+        <Height>0.49167in</Height>
+        <Width>2.94168in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <LeftBorder>
+            <Style>None</Style>
+          </LeftBorder>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>9.47979in</Height>
+    <Height>5.29646in</Height>
     <Style />
   </Body>
-  <Width>7.95469in</Width>
+  <Width>8.01333in</Width>
   <Page>
     <PageHeader>
-      <Height>1.38458in</Height>
+      <Height>2.11791in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -776,7 +1015,7 @@
                 <TextRun>
                   <Value>Factura Fiscala</Value>
                   <Style>
-                    <FontFamily>century gothic</FontFamily>
+                    <FontFamily>arial</FontFamily>
                     <FontSize>18pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -788,9 +1027,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Left>1.58803in</Left>
-          <Height>0.43333in</Height>
-          <Width>5.14197in</Width>
+          <Top>0.58333in</Top>
+          <Height>0.40833in</Height>
+          <Width>8.01333in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -805,8 +1044,8 @@
           <Source>Embedded</Source>
           <Value>logonobackground</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0cm</Top>
-          <Left>0cm</Left>
+          <Top>1.48166cm</Top>
+          <Left>1.28654cm</Left>
           <Height>3cm</Height>
           <Width>3cm</Width>
           <ZIndex>1</ZIndex>
@@ -823,12 +1062,50 @@
         </Border>
       </Style>
     </PageHeader>
+    <PageFooter>
+      <Height>0.84167in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="OverallPageNumber">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!OverallPageNumber</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>OverallPageNumber</rd:DefaultName>
+          <Top>0.37397in</Top>
+          <Height>0.25in</Height>
+          <Width>8.01333in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
     <PageHeight>11.69in</PageHeight>
     <PageWidth>8.27in</PageWidth>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
@@ -848,16 +1125,64 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Cod_TipCamera">
-          <DataField>Cod_TipCamera</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Nume_TipCamera">
-          <DataField>Nume_TipCamera</DataField>
+        <Field Name="Nr_Camera">
+          <DataField>Nr_Camera</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Pret_TipCamera">
-          <DataField>Pret_TipCamera</DataField>
+        <Field Name="cameracodtipcamera">
+          <DataField>cameracodtipcamera</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Etaj_Camera">
+          <DataField>Etaj_Camera</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="clientnumeclient">
+          <DataField>clientnumeclient</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="clientprenumeclient">
+          <DataField>clientprenumeclient</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClientEmailClient">
+          <DataField>ClientEmailClient</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Telefon_Client">
+          <DataField>Telefon_Client</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Adresa_Client">
+          <DataField>Adresa_Client</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Data_Cazare">
+          <DataField>Data_Cazare</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Data_Plecare">
+          <DataField>Data_Plecare</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Cod_Client">
+          <DataField>Cod_Client</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Cod_Camera">
+          <DataField>Cod_Camera</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="rezervarecodutilizator">
+          <DataField>rezervarecodutilizator</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="tipcameranumetipcamera">
+          <DataField>tipcameranumetipcamera</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="tipcameraprettipcamera">
+          <DataField>tipcameraprettipcamera</DataField>
           <rd:TypeName>System.Double</rd:TypeName>
         </Field>
         <Field Name="Nume">
@@ -872,56 +1197,20 @@
           <DataField>Cod_Utilizator</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
+        <Field Name="Cod_TipCamera">
+          <DataField>Cod_TipCamera</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="clientcodclient">
+          <DataField>clientcodclient</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="cameracodcamera">
+          <DataField>cameracodcamera</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="Cod_Rezervare">
           <DataField>Cod_Rezervare</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Data_Cazare">
-          <DataField>Data_Cazare</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="Cod_Client">
-          <DataField>Cod_Client</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Cod_Camera">
-          <DataField>Cod_Camera</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="PK_CodClient">
-          <DataField>PK_CodClient</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Nume_Client">
-          <DataField>Nume_Client</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Prenume_Client">
-          <DataField>Prenume_Client</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Adresa_Client">
-          <DataField>Adresa_Client</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PK_CodCamera">
-          <DataField>PK_CodCamera</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Nr_Camera">
-          <DataField>Nr_Camera</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="PK_CodTipCamera">
-          <DataField>PK_CodTipCamera</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Data_Plecare">
-          <DataField>Data_Plecare</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="Expr1">
-          <DataField>Expr1</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>

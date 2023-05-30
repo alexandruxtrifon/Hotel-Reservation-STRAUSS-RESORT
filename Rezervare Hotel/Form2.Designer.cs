@@ -170,6 +170,7 @@
             this.combonumetipcamera.Name = "combonumetipcamera";
             this.combonumetipcamera.Size = new System.Drawing.Size(121, 24);
             this.combonumetipcamera.TabIndex = 37;
+            this.combonumetipcamera.SelectedIndexChanged += new System.EventHandler(this.combonumetipcamera_SelectedIndexChanged);
             // 
             // tabControl1
             // 

@@ -6,8 +6,8 @@
         <Source>Embedded</Source>
         <Value>logonobackground</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>2cm</Top>
-        <Left>2cm</Left>
+        <Top>1.28033cm</Top>
+        <Left>1.238cm</Left>
         <Height>3cm</Height>
         <Width>3cm</Width>
         <Style>
@@ -20,22 +20,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.62184in</Width>
+              <Width>0.35116in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.93765in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.97932in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.38765in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.38765in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>1.97099in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -51,10 +51,8 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Nr. Crt.</Value>
-                              <Style>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Value>Nr.</Value>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -86,9 +84,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nume</Value>
-                              <Style>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -120,9 +116,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Prenume</Value>
-                              <Style>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -154,9 +148,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Email</Value>
-                              <Style>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -188,9 +180,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Adresa</Value>
-                              <Style>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -222,9 +212,7 @@
                           <TextRuns>
                             <TextRun>
                               <Value>IBAN</Value>
-                              <Style>
-                                <FontSize>12pt</FontSize>
-                              </Style>
+                              <Style />
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -264,7 +252,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -294,7 +284,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox4</rd:DefaultName>
@@ -324,7 +316,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Prenume</rd:DefaultName>
@@ -354,7 +348,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Email</rd:DefaultName>
@@ -384,7 +380,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Adresa</rd:DefaultName>
@@ -414,7 +412,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>IBAN</rd:DefaultName>
@@ -456,10 +456,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>3.13833in</Top>
-        <Left>1.34666in</Left>
+        <Top>2.17166in</Top>
+        <Left>0.4874in</Left>
         <Height>0.5in</Height>
-        <Width>5.62184in</Width>
+        <Width>7.01443in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -468,15 +468,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>29.7cm</Height>
+    <Height>5.29646in</Height>
     <Style />
   </Body>
-  <Width>21cm</Width>
+  <Width>8.01333in</Width>
   <Page>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>

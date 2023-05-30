@@ -115,5 +115,10 @@ namespace Rezervare_Hotel
             textetajcamera.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
 
         }
+
+        private void combonumetipcamera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

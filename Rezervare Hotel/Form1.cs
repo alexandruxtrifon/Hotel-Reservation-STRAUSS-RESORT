@@ -245,7 +245,19 @@ namespace Rezervare_Hotel
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form5 f = new Form5();
+            FormFactura f = new FormFactura();
+            f.Show();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FormRaportUtilizatori f = new FormRaportUtilizatori();
+            f.Show();
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            FormularPrelucrare f = new FormularPrelucrare();
             f.Show();
         }
     }

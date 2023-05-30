@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.61389in</Width>
+              <Width>2.33005in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.61389in</Width>
+              <Width>2.33005in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.61389in</Width>
+              <Width>2.33005in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -31,6 +31,7 @@
                               <Value>Denumire</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -63,6 +64,7 @@
                               <Value>Pret</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -95,6 +97,7 @@
                               <Value>Capacitate</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -232,63 +235,48 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>7.56583cm</Top>
-        <Left>3.92617cm</Left>
+        <Top>2.4435cm</Top>
+        <Left>1.28654cm</Left>
         <Height>0.5in</Height>
-        <Width>4.84167in</Width>
+        <Width>6.99016in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
-      <Image Name="Image2">
-        <Source>Embedded</Source>
-        <Value>logonobackground</Value>
-        <Sizing>FitProportional</Sizing>
-        <Top>0cm</Top>
-        <Left>0cm</Left>
-        <Height>3cm</Height>
-        <Width>3cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
-      <Textbox Name="Textbox7">
+      <Textbox Name="Textbox8">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Situatie Tipuri de camere</Value>
+                <Value>Generat in data: </Value>
                 <Style>
-                  <FontFamily>Century Gothic</FontFamily>
-                  <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
-                  <Color>DimGray</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=DAY(Globals!ExecutionTime) &amp; "/" &amp; MONTH(Globals!ExecutionTime) &amp; "/" &amp; YEAR(Globals!ExecutionTime)</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
+            <Style />
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>1.16444in</Top>
-        <Left>1.55407in</Left>
-        <Height>0.74167in</Height>
-        <Width>4.83333in</Width>
-        <ZIndex>2</ZIndex>
+        <rd:DefaultName>Textbox8</rd:DefaultName>
+        <Top>0.42167in</Top>
+        <Left>0.50651in</Left>
+        <Height>0.25in</Height>
+        <Width>7.50682in</Width>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
-          <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
           <PaddingTop>2pt</PaddingTop>
@@ -296,21 +284,89 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>4in</Height>
+    <Height>2.93813in</Height>
     <Style>
       <Border>
         <Style>None</Style>
       </Border>
     </Style>
   </Body>
-  <Width>8in</Width>
+  <Width>8.01333in</Width>
   <Page>
+    <PageHeader>
+      <Height>1.86667in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Image2">
+          <Source>Embedded</Source>
+          <Value>logonobackground</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>1.48166cm</Top>
+          <Left>1.28654cm</Left>
+          <Height>3cm</Height>
+          <Width>3cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox7">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Raport Tipuri Camere</Value>
+                  <Style>
+                    <FontFamily>arial</FontFamily>
+                    <FontSize>18pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox7</rd:DefaultName>
+          <Top>0.58333in</Top>
+          <Height>0.40833in</Height>
+          <Width>8.01333in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <VerticalAlign>Middle</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>1in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
     <PageHeight>11.69in</PageHeight>
     <PageWidth>8.27in</PageWidth>
-    <LeftMargin>1in</LeftMargin>
-    <RightMargin>1in</RightMargin>
-    <TopMargin>1in</TopMargin>
-    <BottomMargin>1in</BottomMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
