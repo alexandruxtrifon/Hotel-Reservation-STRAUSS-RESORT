@@ -260,5 +260,11 @@ namespace Rezervare_Hotel
             FormularPrelucrare f = new FormularPrelucrare();
             f.Show();
         }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            Form6 f = new Form6();
+            f.Show();
+        }
     }
 }

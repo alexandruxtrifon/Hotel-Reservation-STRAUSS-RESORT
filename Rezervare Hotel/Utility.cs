@@ -23,36 +23,4 @@ namespace Rezervare_Hotel
 
         }
     }
-
-    public class DataAccessLayer
-    {
-        private string conString = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alex\source\repos\Rezervare Hotel\Rezervare Hotel\Baza de date licenta.accdb");
-        //private string conString = (@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Baza de date licenta.accdb");
-
-
-        public List<Client> GetAllClients()
-        {
-            List<Client> clienti = new List<Client>();
-            using (OleDbConnection con = new OleDbConnection(conString))
-            {
-                con.Open();
-                OleDbCommand cmd = new OleDbCommand("SELECT * FROM Client", con);
-                OleDbDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    Client client = new Client
-                    {
-                        _Codclient = (int)reader["Cod_Client"],
-                        _Numeclient = (string)reader["Nume_Client"],
-                        _Prenumeclient = (string)reader["Prenume_Client"],
-                        _Emailclient = (string)reader["Email_Client"],
-                        _Telefonclient = (string)reader["Telefon_Client"],
-                        _Adresaclient = (string)reader["Adresa_Client"]
-                    };
-                    clienti.Add(client);
-                }
-            }
-            return clienti;
-        }
-    }
 }

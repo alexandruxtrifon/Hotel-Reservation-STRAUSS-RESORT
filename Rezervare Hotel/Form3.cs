@@ -19,7 +19,6 @@ namespace Rezervare_Hotel
         //OleDbCommand cmd;
         //OleDbDataAdapter adapter;
         DataTable dt;
-        private DataAccessLayer dal = new DataAccessLayer();
         private BindingSource clientiBindingSource = new BindingSource();
 
         void GetCustomers()

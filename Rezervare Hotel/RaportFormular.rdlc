@@ -37,8 +37,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.14167in</Top>
+        <Left>0.49667in</Left>
         <Height>0.46667in</Height>
-        <Width>6.5in</Width>
+        <Width>7in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -158,8 +159,8 @@
         <rd:DefaultName>Textbox2</rd:DefaultName>
         <Top>0.92093in</Top>
         <Left>0.49667in</Left>
-        <Height>0.9in</Height>
-        <Width>5.5in</Width>
+        <Height>1.28889in</Height>
+        <Width>7in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -209,10 +210,9 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=Globals!ExecutionTime</Value>
+                <Value>=Format(Globals!ExecutionTime, "dd/MM/yyyy")</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
-                  <Calendar>Gregorian</Calendar>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -220,7 +220,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>2.07093in</Top>
+        <Top>2.4876in</Top>
         <Left>0.49667in</Left>
         <Height>0.3in</Height>
         <Width>5.5in</Width>
@@ -298,6 +298,24 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
                 <Value xml:space="preserve"> </Value>
                 <Style />
               </TextRun>
@@ -345,10 +363,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>2.7876in</Top>
+        <Top>2.9876in</Top>
         <Left>0.49667in</Left>
-        <Height>3.1in</Height>
-        <Width>5.5in</Width>
+        <Height>3.08333in</Height>
+        <Width>7in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -361,10 +379,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>6.14167in</Height>
+    <Height>6.42927in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>8.01333in</Width>
   <Page>
     <PageHeader>
       <Height>1.27573in</Height>

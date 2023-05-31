@@ -90,7 +90,7 @@ namespace Rezervare_Hotel
         {
 
             // Get the selected item from listBox1
-            string selectedItem = listBox1.SelectedItem.ToString();
+            string selectedItem = listBox1.SelectedItems[0] as string;
 
             // Split the selected item based on ' '
             string[] nameParts = selectedItem.Split(' ');
@@ -100,11 +100,14 @@ namespace Rezervare_Hotel
             // Fill the clientTableAdapter with the selected names
             this.clientTableAdapter.Fill(this.dataSet1.Client, firstName, lastName);
             // this.clientTableAdapter.Fill(this.dataSet1.Client, firstName, lastName);
+            this.reportViewer1.RefreshReport();
+
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        void button1_Click(object sender, EventArgs e)
         {
+            this.clientTableAdapter.Fill(this.dataSet1.Client, firstName, lastName);
 
 
         }

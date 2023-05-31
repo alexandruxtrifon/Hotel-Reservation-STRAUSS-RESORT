@@ -64,21 +64,20 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.dataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Rezervare_Hotel.RaportFactura.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 57);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(982, 453);
+            this.reportViewer1.Size = new System.Drawing.Size(582, 538);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(336, 12);
+            this.button1.Location = new System.Drawing.Point(144, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 24);
             this.button1.TabIndex = 1;
@@ -88,7 +87,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(518, 12);
+            this.button2.Location = new System.Drawing.Point(326, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 24);
             this.button2.TabIndex = 2;
@@ -98,7 +97,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(454, 14);
+            this.textBox1.Location = new System.Drawing.Point(262, 14);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(58, 22);
             this.textBox1.TabIndex = 3;
@@ -109,9 +108,10 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(61, 164);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(982, 51);
+            this.panel1.Size = new System.Drawing.Size(582, 51);
             this.panel1.TabIndex = 4;
             // 
             // dataSet1BindingSource
@@ -127,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 453);
+            this.ClientSize = new System.Drawing.Size(582, 753);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "FormFactura";
