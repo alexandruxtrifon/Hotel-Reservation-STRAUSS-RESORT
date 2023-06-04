@@ -46,7 +46,7 @@ namespace Rezervare_Hotel
             loadgauge();
             //piechart_load();
             // chart1.Series["Tipuri de Camere"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-
+            Utility.ButonRotunjit(button1);
 
         }
 
@@ -264,6 +264,12 @@ namespace Rezervare_Hotel
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
             Form6 f = new Form6();
+            f.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            LoginForm f = new LoginForm();
             f.Show();
         }
     }
