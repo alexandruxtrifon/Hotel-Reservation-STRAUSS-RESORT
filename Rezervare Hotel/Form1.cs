@@ -7,12 +7,12 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using static Rezervare_Hotel.Utility;
-using MaterialSkin;
 //using MaterialSkin.Controls;
 //using MaterialSkin.Animations;
 //using MaterialSkin.Properties;
@@ -47,7 +47,7 @@ namespace Rezervare_Hotel
             //piechart_load();
             // chart1.Series["Tipuri de Camere"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             Utility.ButonRotunjit(button1);
-
+            label3.Text = $"Bine ai venit, {Utility.contnume}";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -272,5 +272,10 @@ namespace Rezervare_Hotel
             LoginForm f = new LoginForm();
             f.Show();
         }
+
+        private void loadlabeluser()
+        {
+        }
+
     }
 }

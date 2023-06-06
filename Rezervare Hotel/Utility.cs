@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 using System.Drawing.Drawing2D;
 using Button = System.Windows.Forms.Button;
+using TextBox = System.Windows.Forms.TextBox;
 using System.ComponentModel;
 
 namespace Rezervare_Hotel
@@ -29,6 +30,9 @@ namespace Rezervare_Hotel
         {
 
         }
+
+        public static string contnume;
+
         public static void ButonRotunjit(Button button)
         {
             // Set FlatStyle to Flat
@@ -36,8 +40,6 @@ namespace Rezervare_Hotel
 
             // Customize FlatAppearance properties
             button.FlatAppearance.BorderSize = 0;
-           // button.FlatAppearance.MouseOverBackColor = Color.LightGray;
-           // button.FlatAppearance.MouseDownBackColor = Color.Gray;
 
             // Adjust the button shape to be pill-shaped
             int cornerRadius = button.Height / 2;
@@ -51,7 +53,6 @@ namespace Rezervare_Hotel
             button.Region = new Region(path);
         }
     }
-
     public class ButonR : Button
     {
         private int borderSize = 0;
@@ -62,7 +63,6 @@ namespace Rezervare_Hotel
 
 
         //Properties
-        [Category("RJ Code Advance")]
         public int BorderSize
         {
             get { return borderSize; }
@@ -73,7 +73,6 @@ namespace Rezervare_Hotel
             }
         }
 
-        [Category("RJ Code Advance")]
         public int BorderRadius
         {
             get { return borderRadius; }
@@ -191,8 +190,5 @@ namespace Rezervare_Hotel
         {
             this.Invalidate();
         }
-
-
-
     }
 }
