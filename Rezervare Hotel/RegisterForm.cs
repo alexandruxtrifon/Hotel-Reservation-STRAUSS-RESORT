@@ -16,5 +16,10 @@ namespace Rezervare_Hotel
         {
             InitializeComponent();
         }
+
+        private void butonR1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
