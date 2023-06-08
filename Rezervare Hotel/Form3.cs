@@ -40,24 +40,7 @@ namespace Rezervare_Hotel
 
         private void butoninsereaza_Click(object sender, EventArgs e)
         {
-            //string query = "INSERT INTO Client (Nume_Client,Prenume_Client,Email_Client,Telefon_Client,Adresa_Client) VALUES" +
-            //    "(@nume,@prenume,@email,@telefon,@adresa)";
-            //Utility.cmd = new OleDbCommand(query, Utility.con);
-            //Utility.cmd.Parameters.AddWithValue("@nume", textnume.Text);
-            //Utility.cmd.Parameters.AddWithValue("@prenume", textprenume.Text);
-            //Utility.cmd.Parameters.AddWithValue("@email", textemail.Text);
-            //Utility.cmd.Parameters.AddWithValue("@telefon", texttelefon.Text);
-            //Utility.cmd.Parameters.AddWithValue("@adresa", textadresa.Text);
-            //Utility.con.Open();
-            //Utility.cmd.ExecuteNonQuery();
-            //Utility.con.Close();
-            //MessageBox.Show("Clientul a fost introdus cu succes. BRAVO BUEY");
-            //GetCustomers();
-
-            //Client newClient = new Client();
-            //clientiBindingSource.Add(newClient);
-
-            if (textnume.Text == "" || textprenume.Text == ""|| textemail.Text==""|| texttelefon.Text==""||textadresa.Text=="")
+            if (textnumer.Text == "" || textprenumer.Text == ""|| textemailr.Text==""|| texttelefonr.Text==""||textadresar.Text=="")
             {
                 MessageBox.Show("Completeaza toate campurile!", "Mai incearca", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -68,11 +51,11 @@ namespace Rezervare_Hotel
                     string query = "INSERT INTO Client (Nume_Client, Prenume_Client, Email_Client, Telefon_Client, Adresa_Client) VALUES" +
                     "(@nume,@prenume,@email,@telefon,@adresa)";
                     Utility.cmd = new OleDbCommand(query, Utility.con);
-                    Utility.cmd.Parameters.AddWithValue("@nume", textnume.Text);
-                    Utility.cmd.Parameters.AddWithValue("@prenume", textprenume.Text);
-                    Utility.cmd.Parameters.AddWithValue("@email", textemail.Text);
-                    Utility.cmd.Parameters.AddWithValue("@telefon", texttelefon.Text);
-                    Utility.cmd.Parameters.AddWithValue("@adresa", textadresa.Text);
+                    Utility.cmd.Parameters.AddWithValue("@nume", textnumer.Text);
+                    Utility.cmd.Parameters.AddWithValue("@prenume", textprenumer.Text);
+                    Utility.cmd.Parameters.AddWithValue("@email", textemailr.Text);
+                    Utility.cmd.Parameters.AddWithValue("@telefon", texttelefonr.Text);
+                    Utility.cmd.Parameters.AddWithValue("@adresa", textadresar.Text);
                     Utility.con.Open();
                     Utility.cmd.ExecuteNonQuery();
                     Utility.con.Close();
@@ -89,15 +72,15 @@ namespace Rezervare_Hotel
 
         private void butonactualizeaza_Click(object sender, EventArgs e)
         {
-            string query = "UPDATE Client SET Nume_Client=@nume,Prenume_Client=@prenume,Email_Client=@email,Telefon_Client=@telefon,Adresa_Client=@adresa" +
-                "WHERE Cod_Client=@id";
+            string query = "UPDATE Client SET Nume_Client=@nume,Prenume_Client=@prenume,Email_Client=@email,Telefon_Client=@telefon,Adresa_Client=@adresa"; //+
+               // "WHERE Cod_Client=@id";
             Utility.cmd = new OleDbCommand(query, Utility.con);
             Utility.cmd.Parameters.AddWithValue("@nume", textnume.Text);
             Utility.cmd.Parameters.AddWithValue("@prenume", textprenume.Text);
             Utility.cmd.Parameters.AddWithValue("@email", textemail.Text);
             Utility.cmd.Parameters.AddWithValue("@telefon", texttelefon.Text);
             Utility.cmd.Parameters.AddWithValue("@adresa", textadresa.Text);
-            Utility.cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
+           // Utility.cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
             Utility.con.Open();
             Utility.cmd.ExecuteNonQuery();
             Utility.con.Close();
@@ -107,12 +90,12 @@ namespace Rezervare_Hotel
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            textcodclient.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textnume.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textprenume.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            textemail.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            texttelefon.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            textadresa.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+          //  textcodclient.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+          //  textnumer.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+          //  textprenumer.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+          //  textemailr.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+          //  texttelefonr.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+           // textadresar.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
 
         }
 
@@ -120,7 +103,7 @@ namespace Rezervare_Hotel
         {
             string query = "DELETE FROM Client WHERE Cod_Client=@id";
             Utility.cmd = new OleDbCommand(query, Utility.con);
-            Utility.cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
+         //   Utility.cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
             Utility.con.Open();
             Utility.cmd.ExecuteNonQuery();
             Utility.con.Close();
@@ -137,8 +120,14 @@ namespace Rezervare_Hotel
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            GetCustomers();
+            // TODO: This line of code loads data into the 'dataSet1.Client1' table. You can move, or remove it, as needed.
+            this.client1TableAdapter.Fill(this.dataSet1.Client1);
+            //GetCustomers();
         }
 
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridView1.ClearSelection();
+        }
     }
 }

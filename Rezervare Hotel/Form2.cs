@@ -110,9 +110,9 @@ namespace Rezervare_Hotel
         }
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            textcodcamera.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textnrcamera.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textetajcamera.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+           // textcodcamera.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textnrcamera.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textetajcamera.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
 
         }
 

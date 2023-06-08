@@ -30,11 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBoxR2 = new Rezervare_Hotel.TextBoxR();
             this.textBoxR1 = new Rezervare_Hotel.TextBoxR();
             this.butonR1 = new Rezervare_Hotel.ButonR();
-            this.textBoxR2 = new Rezervare_Hotel.TextBoxR();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,6 +56,27 @@
             this.label2.Size = new System.Drawing.Size(74, 39);
             this.label2.TabIndex = 4;
             this.label2.Text = "Parola";
+            // 
+            // textBoxR2
+            // 
+            this.textBoxR2.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxR2.BorderColor = System.Drawing.SystemColors.Control;
+            this.textBoxR2.BorderFocusColor = System.Drawing.SystemColors.Control;
+            this.textBoxR2.BorderRadius = 20;
+            this.textBoxR2.BorderSize = 2;
+            this.textBoxR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxR2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxR2.Location = new System.Drawing.Point(98, 190);
+            this.textBoxR2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxR2.Multiline = false;
+            this.textBoxR2.Name = "textBoxR2";
+            this.textBoxR2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.textBoxR2.PasswordChar = true;
+            this.textBoxR2.PlaceholderColor = System.Drawing.Color.Empty;
+            this.textBoxR2.PlaceholderText = "";
+            this.textBoxR2.Size = new System.Drawing.Size(250, 40);
+            this.textBoxR2.TabIndex = 7;
+            this.textBoxR2.UnderlinedStyle = false;
             // 
             // textBoxR1
             // 
@@ -100,49 +119,12 @@
             this.butonR1.UseVisualStyleBackColor = false;
             this.butonR1.Click += new System.EventHandler(this.butonR1_Click);
             // 
-            // textBoxR2
-            // 
-            this.textBoxR2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxR2.BorderColor = System.Drawing.SystemColors.Control;
-            this.textBoxR2.BorderFocusColor = System.Drawing.SystemColors.Control;
-            this.textBoxR2.BorderRadius = 20;
-            this.textBoxR2.BorderSize = 2;
-            this.textBoxR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxR2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxR2.Location = new System.Drawing.Point(98, 190);
-            this.textBoxR2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxR2.Multiline = false;
-            this.textBoxR2.Name = "textBoxR2";
-            this.textBoxR2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.textBoxR2.PasswordChar = true;
-            this.textBoxR2.PlaceholderColor = System.Drawing.Color.Empty;
-            this.textBoxR2.PlaceholderText = "";
-            this.textBoxR2.Size = new System.Drawing.Size(250, 40);
-            this.textBoxR2.TabIndex = 7;
-            this.textBoxR2.UnderlinedStyle = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(56, 362);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 22);
-            this.textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(43, 408);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 22);
-            this.textBox2.TabIndex = 9;
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(432, 453);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxR2);
             this.Controls.Add(this.textBoxR1);
             this.Controls.Add(this.label2);
@@ -164,7 +146,5 @@
         private System.Windows.Forms.Label label2;
         private TextBoxR textBoxR1;
         private TextBoxR textBoxR2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
     }
 }

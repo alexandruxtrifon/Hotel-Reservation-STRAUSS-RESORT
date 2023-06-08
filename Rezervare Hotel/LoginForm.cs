@@ -64,14 +64,6 @@ namespace Rezervare_Hotel
             }
 
 
-        }
-        //catch (Exception ex)
-        //  {
-        //         MessageBox.Show("A aparut o eroare: " + ex.Message);
-        //    }
-        //    finally
-        //   {
-        //        Utility.con.Close();
-        //   }        
+        }      
     }
 }

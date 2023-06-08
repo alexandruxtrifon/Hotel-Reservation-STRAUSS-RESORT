@@ -159,6 +159,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SchemaDB.cs" />
     <Compile Include="RezervareForm.cs">
       <SubType>Form</SubType>
@@ -232,6 +238,9 @@
     </Compile>
     <EmbeddedResource Include="RaportBlank.rdlc" />
     <EmbeddedResource Include="RaportUtilizatori.rdlc" />
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="RaportFactura.rdlc" />
     <EmbeddedResource Include="RaportTipCamera.rdlc" />
