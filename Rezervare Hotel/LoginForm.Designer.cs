@@ -77,6 +77,7 @@
             this.textBoxR2.Size = new System.Drawing.Size(250, 40);
             this.textBoxR2.TabIndex = 7;
             this.textBoxR2.UnderlinedStyle = false;
+            this.textBoxR2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxR2_KeyDown);
             // 
             // textBoxR1
             // 

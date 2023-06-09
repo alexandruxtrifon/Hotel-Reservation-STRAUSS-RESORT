@@ -1,6 +1,6 @@
 ﻿namespace Rezervare_Hotel
 {
-    partial class Form2
+    partial class FormCamera
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCamera));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textcodcamera = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();

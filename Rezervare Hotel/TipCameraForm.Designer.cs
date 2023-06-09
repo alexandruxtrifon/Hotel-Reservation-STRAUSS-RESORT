@@ -1,6 +1,6 @@
 ﻿namespace Rezervare_Hotel
 {
-    partial class Form4
+    partial class TipCameraForm
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace Rezervare_Hotel
 {
-    partial class Form3
+    partial class UtilizatorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.numeClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenumeClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adresa_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.client1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new Rezervare_Hotel.DataSet1();
             this.textnume = new System.Windows.Forms.TextBox();
             this.textprenume = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,16 +57,9 @@
             this.texttelefonr = new Rezervare_Hotel.TextBoxR();
             this.textadresar = new Rezervare_Hotel.TextBoxR();
             this.butonR1 = new Rezervare_Hotel.ButonR();
-            this.client1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new Rezervare_Hotel.DataSet1();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientTableAdapter = new Rezervare_Hotel.DataSet1TableAdapters.ClientTableAdapter();
             this.client1TableAdapter = new Rezervare_Hotel.DataSet1TableAdapters.Client1TableAdapter();
-            this.numeClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenumeClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonClientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adresa_Client = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -98,6 +98,56 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
+            // 
+            // numeClientDataGridViewTextBoxColumn
+            // 
+            this.numeClientDataGridViewTextBoxColumn.DataPropertyName = "Nume_Client";
+            this.numeClientDataGridViewTextBoxColumn.HeaderText = "Nume";
+            this.numeClientDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numeClientDataGridViewTextBoxColumn.Name = "numeClientDataGridViewTextBoxColumn";
+            this.numeClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // prenumeClientDataGridViewTextBoxColumn
+            // 
+            this.prenumeClientDataGridViewTextBoxColumn.DataPropertyName = "Prenume_Client";
+            this.prenumeClientDataGridViewTextBoxColumn.HeaderText = "Prenume";
+            this.prenumeClientDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prenumeClientDataGridViewTextBoxColumn.Name = "prenumeClientDataGridViewTextBoxColumn";
+            this.prenumeClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailClientDataGridViewTextBoxColumn
+            // 
+            this.emailClientDataGridViewTextBoxColumn.DataPropertyName = "Email_Client";
+            this.emailClientDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailClientDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailClientDataGridViewTextBoxColumn.Name = "emailClientDataGridViewTextBoxColumn";
+            this.emailClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonClientDataGridViewTextBoxColumn
+            // 
+            this.telefonClientDataGridViewTextBoxColumn.DataPropertyName = "Telefon_Client";
+            this.telefonClientDataGridViewTextBoxColumn.HeaderText = "Telefon";
+            this.telefonClientDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.telefonClientDataGridViewTextBoxColumn.Name = "telefonClientDataGridViewTextBoxColumn";
+            this.telefonClientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Adresa_Client
+            // 
+            this.Adresa_Client.DataPropertyName = "Adresa_Client";
+            this.Adresa_Client.HeaderText = "Adresa";
+            this.Adresa_Client.MinimumWidth = 6;
+            this.Adresa_Client.Name = "Adresa_Client";
+            this.Adresa_Client.ReadOnly = true;
+            // 
+            // client1BindingSource
+            // 
+            this.client1BindingSource.DataMember = "Client1";
+            this.client1BindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textnume
             // 
@@ -341,16 +391,6 @@
             this.butonR1.TextColor = System.Drawing.Color.White;
             this.butonR1.UseVisualStyleBackColor = false;
             // 
-            // client1BindingSource
-            // 
-            this.client1BindingSource.DataMember = "Client1";
-            this.client1BindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // clientBindingSource
             // 
             this.clientBindingSource.DataMember = "Client";
@@ -363,46 +403,6 @@
             // client1TableAdapter
             // 
             this.client1TableAdapter.ClearBeforeFill = true;
-            // 
-            // numeClientDataGridViewTextBoxColumn
-            // 
-            this.numeClientDataGridViewTextBoxColumn.DataPropertyName = "Nume_Client";
-            this.numeClientDataGridViewTextBoxColumn.HeaderText = "Nume";
-            this.numeClientDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numeClientDataGridViewTextBoxColumn.Name = "numeClientDataGridViewTextBoxColumn";
-            this.numeClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // prenumeClientDataGridViewTextBoxColumn
-            // 
-            this.prenumeClientDataGridViewTextBoxColumn.DataPropertyName = "Prenume_Client";
-            this.prenumeClientDataGridViewTextBoxColumn.HeaderText = "Prenume";
-            this.prenumeClientDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prenumeClientDataGridViewTextBoxColumn.Name = "prenumeClientDataGridViewTextBoxColumn";
-            this.prenumeClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailClientDataGridViewTextBoxColumn
-            // 
-            this.emailClientDataGridViewTextBoxColumn.DataPropertyName = "Email_Client";
-            this.emailClientDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailClientDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailClientDataGridViewTextBoxColumn.Name = "emailClientDataGridViewTextBoxColumn";
-            this.emailClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonClientDataGridViewTextBoxColumn
-            // 
-            this.telefonClientDataGridViewTextBoxColumn.DataPropertyName = "Telefon_Client";
-            this.telefonClientDataGridViewTextBoxColumn.HeaderText = "Telefon";
-            this.telefonClientDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonClientDataGridViewTextBoxColumn.Name = "telefonClientDataGridViewTextBoxColumn";
-            this.telefonClientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Adresa_Client
-            // 
-            this.Adresa_Client.DataPropertyName = "Adresa_Client";
-            this.Adresa_Client.HeaderText = "Adresa";
-            this.Adresa_Client.MinimumWidth = 6;
-            this.Adresa_Client.Name = "Adresa_Client";
-            this.Adresa_Client.ReadOnly = true;
             // 
             // label1
             // 
@@ -420,9 +420,9 @@
             this.label6.Location = new System.Drawing.Point(42, 233);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label6.Size = new System.Drawing.Size(96, 39);
+            this.label6.Size = new System.Drawing.Size(68, 39);
             this.label6.TabIndex = 27;
-            this.label6.Text = "Utilizator";
+            this.label6.Text = "Nume";
             // 
             // label8
             // 
@@ -431,9 +431,9 @@
             this.label8.Location = new System.Drawing.Point(42, 281);
             this.label8.Name = "label8";
             this.label8.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label8.Size = new System.Drawing.Size(96, 39);
+            this.label8.Size = new System.Drawing.Size(98, 39);
             this.label8.TabIndex = 28;
-            this.label8.Text = "Utilizator";
+            this.label8.Text = "Prenume";
             // 
             // label9
             // 
@@ -442,9 +442,9 @@
             this.label9.Location = new System.Drawing.Point(42, 329);
             this.label9.Name = "label9";
             this.label9.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label9.Size = new System.Drawing.Size(96, 39);
+            this.label9.Size = new System.Drawing.Size(65, 39);
             this.label9.TabIndex = 29;
-            this.label9.Text = "Utilizator";
+            this.label9.Text = "Email";
             // 
             // label10
             // 
@@ -453,9 +453,9 @@
             this.label10.Location = new System.Drawing.Point(41, 377);
             this.label10.Name = "label10";
             this.label10.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label10.Size = new System.Drawing.Size(96, 39);
+            this.label10.Size = new System.Drawing.Size(85, 39);
             this.label10.TabIndex = 30;
-            this.label10.Text = "Utilizator";
+            this.label10.Text = "Telefon";
             // 
             // label11
             // 
@@ -464,11 +464,11 @@
             this.label11.Location = new System.Drawing.Point(41, 425);
             this.label11.Name = "label11";
             this.label11.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label11.Size = new System.Drawing.Size(96, 39);
+            this.label11.Size = new System.Drawing.Size(81, 39);
             this.label11.TabIndex = 31;
-            this.label11.Text = "Utilizator";
+            this.label11.Text = "Adresa";
             // 
-            // Form3
+            // UtilizatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -501,7 +501,7 @@
             this.Controls.Add(this.textnume);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form3";
+            this.Name = "UtilizatorForm";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

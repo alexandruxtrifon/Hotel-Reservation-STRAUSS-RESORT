@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LiveCharts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Rezervare_Hotel.Utility;
+using System.Runtime.CompilerServices;
+using System.Windows.Controls.Primitives;
+
 
 namespace Rezervare_Hotel
 {
@@ -21,6 +25,7 @@ namespace Rezervare_Hotel
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            textBoxR1.Select();
         }
 
         private void butonR1_Click(object sender, EventArgs e)
@@ -64,6 +69,17 @@ namespace Rezervare_Hotel
             }
 
 
-        }      
+        }
+
+        private void textBoxR2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                butonR1.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+           // textBoxR2.KeyDown += textBoxR2_KeyDown;
+
+        }
     }
 }

@@ -9,6 +9,10 @@ namespace Rezervare_Hotel
 {
     internal static class Program
     {
+        private static MenuStrip menuStrip1;
+        private static ToolStripMenuItem fileMenuItem;
+        private static ToolStripMenuItem exitMenuItem;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,7 +21,9 @@ namespace Rezervare_Hotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new LoginForm());
+
+
         }
     }
 }

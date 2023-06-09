@@ -13,6 +13,7 @@ using System.Drawing.Drawing2D;
 using Button = System.Windows.Forms.Button;
 using TextBox = System.Windows.Forms.TextBox;
 using System.ComponentModel;
+using System.ComponentModel.Design.Serialization;
 
 namespace Rezervare_Hotel
 {
@@ -53,6 +54,19 @@ namespace Rezervare_Hotel
             button.Region = new Region(path);
         }
     }
+
+    public class CustomMenuStripRenderer : ToolStripProfessionalRenderer
+    {
+        protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
+        {
+        }
+        public CustomMenuStripRenderer()
+        {
+            // bug de la microsoft din 2005. Nu merge sa scot linia gri de border.
+            // se rezolva prin apelarea goala a functiei.
+        }
+    }
+
     public class ButonR : Button
     {
         private int borderSize = 0;

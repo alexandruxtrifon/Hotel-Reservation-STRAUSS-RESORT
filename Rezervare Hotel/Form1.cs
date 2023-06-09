@@ -13,9 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using static Rezervare_Hotel.Utility;
-//using MaterialSkin.Controls;
-//using MaterialSkin.Animations;
-//using MaterialSkin.Properties;
+
 
 
 namespace Rezervare_Hotel
@@ -40,7 +38,6 @@ namespace Rezervare_Hotel
 
         }
 
-
         private void Form1_Load(object sender, EventArgs e)
         {
             loadgauge();
@@ -48,17 +45,20 @@ namespace Rezervare_Hotel
             // chart1.Series["Tipuri de Camere"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             Utility.ButonRotunjit(button1);
             label3.Text = $"Bine ai venit, {Utility.contnume}";
+            menuStrip1.BackColor = Color.White; // din nou exista un bug cu selectarea culorii
+            menuStrip1.Renderer = new CustomMenuStripRenderer();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2();
+            FormCamera f = new FormCamera();
             f.Show();
         }
 
         private void butonclienti_Click(object sender, EventArgs e)
         {
-            Form3 f = new Form3();
+            UtilizatorForm f = new UtilizatorForm();
             f.Show();
         }
 
@@ -75,7 +75,7 @@ namespace Rezervare_Hotel
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Form2 f = new Form2();
+            FormCamera f = new FormCamera();
             f.Show();
         }
 
@@ -98,7 +98,7 @@ namespace Rezervare_Hotel
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            Form3 f = new Form3();
+            UtilizatorForm f = new UtilizatorForm();
             f.Show();
         }
 
@@ -277,5 +277,17 @@ namespace Rezervare_Hotel
         {
         }
 
+        private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            LoginForm f = new LoginForm();
+            //f.Hide();
+            this.Hide();
+            f.ShowDialog();
+        }
     }
 }

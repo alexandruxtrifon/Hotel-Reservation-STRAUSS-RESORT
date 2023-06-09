@@ -15,11 +15,20 @@ namespace Rezervare_Hotel
         public RegisterForm()
         {
             InitializeComponent();
+            textnume.KeyPress += textnume_KeyPress;
         }
 
         private void butonR1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textnume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

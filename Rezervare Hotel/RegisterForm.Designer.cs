@@ -88,6 +88,7 @@
             this.textnume.Size = new System.Drawing.Size(250, 40);
             this.textnume.TabIndex = 11;
             this.textnume.UnderlinedStyle = false;
+            this.textnume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textnume_KeyPress);
             // 
             // label2
             // 

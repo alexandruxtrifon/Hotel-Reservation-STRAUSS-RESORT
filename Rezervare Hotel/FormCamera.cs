@@ -15,7 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Rezervare_Hotel
 {
-    public partial class Form2 : Form
+    public partial class FormCamera : Form
     {
         DataTable dt;
         
@@ -29,7 +29,7 @@ namespace Rezervare_Hotel
             Utility.con.Close();
 
         }
-        public Form2()
+        public FormCamera()
         {
             InitializeComponent();
             GetCamera();
@@ -44,7 +44,7 @@ namespace Rezervare_Hotel
 
         private void butontipcamera_Click(object sender, EventArgs e)
         {
-            Form4 f4 = new Form4();
+            TipCameraForm f4 = new TipCameraForm();
             f4.Show();
         }
 

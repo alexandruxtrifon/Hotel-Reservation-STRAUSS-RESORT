@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Rezervare_Hotel
 {
-    public partial class Form4 : Form
+    public partial class TipCameraForm : Form
     {
         DataTable dt;
         void GetTipCamera()
@@ -24,7 +24,7 @@ namespace Rezervare_Hotel
             Utility.con.Close();
 
         }
-        public Form4()
+        public TipCameraForm()
         {
             InitializeComponent();
             GetTipCamera();
