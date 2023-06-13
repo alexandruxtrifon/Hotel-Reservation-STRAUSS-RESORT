@@ -55,11 +55,11 @@ namespace Rezervare_Hotel
                 reader.Close();
                 Utility.con.Close();
                 Form1 f = new Form1();
-               // Label label = (Label)Form1.Controls["label3"]
-               // ((Label)Form1.Controls.["label3"]).Text = "Bun venit, " + nume + " " + prenume; 
-
-                f.Show();
+                // Label label = (Label)Form1.Controls["label3"]
+                // ((Label)Form1.Controls.["label3"]).Text = "Bun venit, " + nume + " " + prenume; 
                 this.Hide();
+                f.Show();
+
             }
             else
             {
@@ -79,6 +79,25 @@ namespace Rezervare_Hotel
                 e.SuppressKeyPress = true;
             }
            // textBoxR2.KeyDown += textBoxR2_KeyDown;
+
+        }
+
+        private void LoginForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                butonR1.PerformClick();
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxR1_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxR1_MouseLeave(object sender, EventArgs e)
+        {
 
         }
     }

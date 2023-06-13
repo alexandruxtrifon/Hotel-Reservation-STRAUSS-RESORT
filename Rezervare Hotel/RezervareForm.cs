@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Runtime.InteropServices;
 using System.Collections;
+using System.Data.SqlClient;
 
 namespace Rezervare_Hotel
 {
@@ -113,6 +114,10 @@ namespace Rezervare_Hotel
             popularetipcamera();
             populareclienti();
             getrezervari();
+
+
+
+
         }
         private bool checkoverlap(int codcamera, DateTime datacazare, DateTime dataplecare)
         {
@@ -275,12 +280,6 @@ namespace Rezervare_Hotel
             string numecomplet = combonumeclient.SelectedItem.ToString();
             string nume = numecomplet.Split(' ')[0];
             //MessageBox.Show(nume); //testing daca merge
-
-
-
-
-            //textcodclient.Text = codclient.ToString();
-
         }
 
         private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
@@ -292,6 +291,38 @@ namespace Rezervare_Hotel
 
         private void combotipcamera_SelectedValueChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void metodanoua()
+        {
+            DateTime selectedStartDate = monthCalendar1.SelectionStart;
+            DateTime selectedEndDate = monthCalendar1.SelectionEnd;
+            string query = @"SELECT TipCamera.Nume_TipCamera, Camera.Nr_Camera FROM Camera
+            INNER JOIN TipCamera ON TipCamera.CodTipCamera = Camera.CodTipCamera WHERE NOT EXISTS (
+            SELECT 1 FROM Rezervare WHERE Rezervare.Cod_Camera = Camera.Cod_Camera AND
+            Rezervare.Data_Cazare <= @SelectedEndDate
+            AND Rezervare.Data_Plecare => @SelectedStartDate)";
+            //SqlCommand command = new SqlCommand(query, Utility.con);
+            //Utility.cmd = new OleDbCommand( query, Utility.con);
+            SqlConnection connection = new SqlConnection(Utility.conString);
+            SqlCommand command = new SqlCommand(query, connection);
+            Utility.cmd.Parameters.AddWithValue("@SelectedStartDate", selectedStartDate);
+            Utility.cmd.Parameters.AddWithValue("@SelectedEndDate", selectedEndDate);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    string tipcamera = reader["Nume_TipCamera"].ToString();
+                    string nrcamera = reader["Nr_Camera"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

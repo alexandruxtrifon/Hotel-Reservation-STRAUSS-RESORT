@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RezervareForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.textpretcamera = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textcodclient = new System.Windows.Forms.TextBox();
@@ -54,8 +57,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textpretcamera = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -70,13 +72,16 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(982, 453);
+            this.tabControl1.Size = new System.Drawing.Size(981, 453);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.Controls.Add(this.monthCalendar1);
             this.tabPage1.Controls.Add(this.textpretcamera);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.pictureBox2);
@@ -101,17 +106,46 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(974, 424);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(973, 424);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Meniu Rezervare";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(711, 217);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 62;
+            // 
+            // textpretcamera
+            // 
+            this.textpretcamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textpretcamera.Location = new System.Drawing.Point(651, 134);
+            this.textpretcamera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textpretcamera.Name = "textpretcamera";
+            this.textpretcamera.ReadOnly = true;
+            this.textpretcamera.Size = new System.Drawing.Size(100, 30);
+            this.textpretcamera.TabIndex = 61;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(531, 134);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(122, 25);
+            this.label9.TabIndex = 60;
+            this.label9.Text = "Pret Camera";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(34, 28);
+            this.pictureBox2.Location = new System.Drawing.Point(35, 28);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +156,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(814, 264);
+            this.pictureBox1.Location = new System.Drawing.Point(813, 263);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 160);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,6 +168,7 @@
             // 
             this.textcodclient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textcodclient.Location = new System.Drawing.Point(749, 38);
+            this.textcodclient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textcodclient.Name = "textcodclient";
             this.textcodclient.ReadOnly = true;
             this.textcodclient.Size = new System.Drawing.Size(100, 30);
@@ -162,6 +198,7 @@
             // 
             this.textcodcamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textcodcamera.Location = new System.Drawing.Point(749, 84);
+            this.textcodcamera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textcodcamera.Name = "textcodcamera";
             this.textcodcamera.ReadOnly = true;
             this.textcodcamera.Size = new System.Drawing.Size(100, 30);
@@ -172,7 +209,8 @@
             this.combonumeclient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combonumeclient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combonumeclient.FormattingEnabled = true;
-            this.combonumeclient.Location = new System.Drawing.Point(368, 77);
+            this.combonumeclient.Location = new System.Drawing.Point(368, 78);
+            this.combonumeclient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.combonumeclient.Name = "combonumeclient";
             this.combonumeclient.Size = new System.Drawing.Size(120, 33);
             this.combonumeclient.TabIndex = 53;
@@ -180,7 +218,8 @@
             // 
             // butonsterge
             // 
-            this.butonsterge.Location = new System.Drawing.Point(490, 316);
+            this.butonsterge.Location = new System.Drawing.Point(491, 316);
+            this.butonsterge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butonsterge.Name = "butonsterge";
             this.butonsterge.Size = new System.Drawing.Size(100, 100);
             this.butonsterge.TabIndex = 52;
@@ -189,7 +228,8 @@
             // 
             // butonactualizeaza
             // 
-            this.butonactualizeaza.Location = new System.Drawing.Point(358, 316);
+            this.butonactualizeaza.Location = new System.Drawing.Point(357, 316);
+            this.butonactualizeaza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butonactualizeaza.Name = "butonactualizeaza";
             this.butonactualizeaza.Size = new System.Drawing.Size(100, 100);
             this.butonactualizeaza.TabIndex = 51;
@@ -198,7 +238,8 @@
             // 
             // butoninsereaza
             // 
-            this.butoninsereaza.Location = new System.Drawing.Point(226, 316);
+            this.butoninsereaza.Location = new System.Drawing.Point(227, 316);
+            this.butoninsereaza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.butoninsereaza.Name = "butoninsereaza";
             this.butoninsereaza.Size = new System.Drawing.Size(100, 100);
             this.butoninsereaza.TabIndex = 50;
@@ -211,6 +252,7 @@
             this.checkoutdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.checkoutdate.Location = new System.Drawing.Point(367, 257);
+            this.checkoutdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkoutdate.Name = "checkoutdate";
             this.checkoutdate.Size = new System.Drawing.Size(164, 30);
             this.checkoutdate.TabIndex = 16;
@@ -219,7 +261,8 @@
             // 
             this.checkindate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkindate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.checkindate.Location = new System.Drawing.Point(368, 216);
+            this.checkindate.Location = new System.Drawing.Point(368, 217);
+            this.checkindate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkindate.Name = "checkindate";
             this.checkindate.Size = new System.Drawing.Size(163, 30);
             this.checkindate.TabIndex = 15;
@@ -240,6 +283,7 @@
             this.combonrcamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combonrcamera.FormattingEnabled = true;
             this.combonrcamera.Location = new System.Drawing.Point(368, 169);
+            this.combonrcamera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.combonrcamera.Name = "combonrcamera";
             this.combonrcamera.Size = new System.Drawing.Size(121, 33);
             this.combonrcamera.TabIndex = 13;
@@ -250,6 +294,7 @@
             this.combotipcamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combotipcamera.FormattingEnabled = true;
             this.combotipcamera.Location = new System.Drawing.Point(368, 126);
+            this.combotipcamera.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.combotipcamera.Name = "combotipcamera";
             this.combotipcamera.Size = new System.Drawing.Size(120, 33);
             this.combotipcamera.TabIndex = 11;
@@ -260,6 +305,7 @@
             // 
             this.textcodrezervare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textcodrezervare.Location = new System.Drawing.Point(368, 38);
+            this.textcodrezervare.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textcodrezervare.Name = "textcodrezervare";
             this.textcodrezervare.Size = new System.Drawing.Size(120, 30);
             this.textcodrezervare.TabIndex = 9;
@@ -268,7 +314,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(219, 216);
+            this.label5.Location = new System.Drawing.Point(219, 217);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 25);
             this.label5.TabIndex = 8;
@@ -318,9 +364,10 @@
             // 
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(974, 424);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(973, 424);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Lista Rezervari";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -329,41 +376,33 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(968, 418);
+            this.dataGridView1.Size = new System.Drawing.Size(967, 420);
             this.dataGridView1.TabIndex = 0;
             // 
-            // label9
+            // listBox1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(530, 134);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 25);
-            this.label9.TabIndex = 60;
-            this.label9.Text = "Pret Camera";
-            // 
-            // textpretcamera
-            // 
-            this.textpretcamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textpretcamera.Location = new System.Drawing.Point(651, 134);
-            this.textpretcamera.Name = "textpretcamera";
-            this.textpretcamera.ReadOnly = true;
-            this.textpretcamera.Size = new System.Drawing.Size(100, 30);
-            this.textpretcamera.TabIndex = 61;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(26, 205);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(140, 148);
+            this.listBox1.TabIndex = 63;
             // 
             // RezervareForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 453);
+            this.ClientSize = new System.Drawing.Size(981, 453);
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RezervareForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RezervareForm";
@@ -408,5 +447,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textpretcamera;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

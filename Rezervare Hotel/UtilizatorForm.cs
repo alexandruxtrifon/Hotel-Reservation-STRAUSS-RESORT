@@ -75,11 +75,11 @@ namespace Rezervare_Hotel
             string query = "UPDATE Client SET Nume_Client=@nume,Prenume_Client=@prenume,Email_Client=@email,Telefon_Client=@telefon,Adresa_Client=@adresa"; //+
                // "WHERE Cod_Client=@id";
             Utility.cmd = new OleDbCommand(query, Utility.con);
-            Utility.cmd.Parameters.AddWithValue("@nume", textnume.Text);
-            Utility.cmd.Parameters.AddWithValue("@prenume", textprenume.Text);
-            Utility.cmd.Parameters.AddWithValue("@email", textemail.Text);
-            Utility.cmd.Parameters.AddWithValue("@telefon", texttelefon.Text);
-            Utility.cmd.Parameters.AddWithValue("@adresa", textadresa.Text);
+            Utility.cmd.Parameters.AddWithValue("@nume", textnumer.Text);
+            Utility.cmd.Parameters.AddWithValue("@prenume", textprenumer.Text);
+            Utility.cmd.Parameters.AddWithValue("@email", textemailr.Text);
+            Utility.cmd.Parameters.AddWithValue("@telefon", texttelefonr.Text);
+            Utility.cmd.Parameters.AddWithValue("@adresa", textadresar.Text);
            // Utility.cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
             Utility.con.Open();
             Utility.cmd.ExecuteNonQuery();

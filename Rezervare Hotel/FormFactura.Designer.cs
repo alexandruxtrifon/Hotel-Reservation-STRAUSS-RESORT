@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Rezervare_Hotel.DataSet1();
             this.dataTable1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -64,22 +64,24 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.dataTable1BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.dataTable1BindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Rezervare_Hotel.RaportFactura.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 57);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 46);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(582, 538);
+            this.reportViewer1.Size = new System.Drawing.Size(584, 788);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(144, 12);
+            this.button1.Location = new System.Drawing.Point(108, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 24);
+            this.button1.Size = new System.Drawing.Size(86, 20);
             this.button1.TabIndex = 1;
             this.button1.Text = "<<<<";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,9 +89,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(326, 12);
+            this.button2.Location = new System.Drawing.Point(244, 10);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 24);
+            this.button2.Size = new System.Drawing.Size(86, 20);
             this.button2.TabIndex = 2;
             this.button2.Text = ">>>>";
             this.button2.UseVisualStyleBackColor = true;
@@ -97,9 +100,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(262, 14);
+            this.textBox1.Location = new System.Drawing.Point(196, 11);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(58, 22);
+            this.textBox1.Size = new System.Drawing.Size(44, 20);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "2";
             // 
@@ -110,8 +114,9 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(582, 51);
+            this.panel1.Size = new System.Drawing.Size(584, 41);
             this.panel1.TabIndex = 4;
             // 
             // dataSet1BindingSource
@@ -125,12 +130,14 @@
             // 
             // FormFactura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 753);
+            this.ClientSize = new System.Drawing.Size(584, 845);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormFactura";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();

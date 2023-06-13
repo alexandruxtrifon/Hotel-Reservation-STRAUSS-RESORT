@@ -35,7 +35,6 @@ namespace Rezervare_Hotel
             chart1.Series["s1"].Points.AddXY("Quad", "30");
             chart1.Series["s1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
 
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,6 +46,8 @@ namespace Rezervare_Hotel
             label3.Text = $"Bine ai venit, {Utility.contnume}";
             menuStrip1.BackColor = Color.White; // din nou exista un bug cu selectarea culorii
             menuStrip1.Renderer = new CustomMenuStripRenderer();
+            menuStrip2.BackColor = Color.White;
+            menuStrip2.Renderer = new CustomMenuStripRenderer();
 
         }
 
@@ -75,8 +76,7 @@ namespace Rezervare_Hotel
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            FormCamera f = new FormCamera();
-            f.Show();
+
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
@@ -98,8 +98,7 @@ namespace Rezervare_Hotel
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            UtilizatorForm f = new UtilizatorForm();
-            f.Show();
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -245,26 +244,21 @@ namespace Rezervare_Hotel
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FormFactura f = new FormFactura();
-            f.Show();
+
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            FormRaportUtilizatori f = new FormRaportUtilizatori();
-            f.Show();
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            FormularPrelucrare f = new FormularPrelucrare();
-            f.Show();
+
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
-            Form6 f = new Form6();
-            f.Show();
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -289,5 +283,63 @@ namespace Rezervare_Hotel
             this.Hide();
             f.ShowDialog();
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            FormCamera f = new FormCamera();
+            f.Show();
+        }
+
+        private void clientiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UtilizatorForm f = new UtilizatorForm();
+            f.Show();
+        }
+
+        private void rezervariToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RezervareForm f = new RezervareForm();
+            f.Show();
+        }
+
+        private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormFactura f = new FormFactura();
+            f.Show();
+        }
+
+        private void raportUtilizatoriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRaportUtilizatori f = new FormRaportUtilizatori();
+            f.Show();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void formuarPrelucrareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularPrelucrare f = new FormularPrelucrare();
+            f.Show();
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void raportTipuriCameraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form6 f = new Form6();
+            f.Show();
+        }
+
     }
 }

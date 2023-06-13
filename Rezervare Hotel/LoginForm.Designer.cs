@@ -33,6 +33,10 @@
             this.textBoxR2 = new Rezervare_Hotel.TextBoxR();
             this.textBoxR1 = new Rezervare_Hotel.TextBoxR();
             this.butonR1 = new Rezervare_Hotel.ButonR();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,7 +92,7 @@
             this.textBoxR1.BorderSize = 2;
             this.textBoxR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxR1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxR1.Location = new System.Drawing.Point(98, 103);
+            this.textBoxR1.Location = new System.Drawing.Point(0, 0);
             this.textBoxR1.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxR1.Multiline = false;
             this.textBoxR1.Name = "textBoxR1";
@@ -99,6 +103,8 @@
             this.textBoxR1.Size = new System.Drawing.Size(250, 40);
             this.textBoxR1.TabIndex = 6;
             this.textBoxR1.UnderlinedStyle = false;
+            this.textBoxR1.MouseEnter += new System.EventHandler(this.textBoxR1_MouseEnter);
+            this.textBoxR1.MouseLeave += new System.EventHandler(this.textBoxR1_MouseLeave);
             // 
             // butonR1
             // 
@@ -120,14 +126,33 @@
             this.butonR1.UseVisualStyleBackColor = false;
             this.butonR1.Click += new System.EventHandler(this.butonR1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.textBoxR1);
+            this.panel1.Location = new System.Drawing.Point(98, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 40);
+            this.panel1.TabIndex = 8;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Rezervare_Hotel.Properties.Resources.profile;
+            this.pictureBox1.Location = new System.Drawing.Point(250, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(432, 453);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxR2);
-            this.Controls.Add(this.textBoxR1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butonR1);
@@ -136,6 +161,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginForm_KeyDown);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,5 +175,7 @@
         private System.Windows.Forms.Label label2;
         private TextBoxR textBoxR1;
         private TextBoxR textBoxR2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
