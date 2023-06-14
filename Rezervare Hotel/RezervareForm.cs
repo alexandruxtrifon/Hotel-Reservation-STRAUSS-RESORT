@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Runtime.InteropServices;
 using System.Collections;
-using System.Data.SqlClient;
 
 namespace Rezervare_Hotel
 {
@@ -271,6 +270,8 @@ namespace Rezervare_Hotel
             Utility.con.Close();
 
             textpretcamera.Text = pretTipCamera.ToString();
+
+            metodanoua();
         }
 
         private void combonumeclient_SelectedIndexChanged(object sender, EventArgs e)
@@ -298,31 +299,45 @@ namespace Rezervare_Hotel
         {
             DateTime selectedStartDate = monthCalendar1.SelectionStart;
             DateTime selectedEndDate = monthCalendar1.SelectionEnd;
-            string query = @"SELECT TipCamera.Nume_TipCamera, Camera.Nr_Camera FROM Camera
-            INNER JOIN TipCamera ON TipCamera.CodTipCamera = Camera.CodTipCamera WHERE NOT EXISTS (
-            SELECT 1 FROM Rezervare WHERE Rezervare.Cod_Camera = Camera.Cod_Camera AND
-            Rezervare.Data_Cazare <= @SelectedEndDate
-            AND Rezervare.Data_Plecare => @SelectedStartDate)";
+            string selectedRoomType = combotipcamera.SelectedItem.ToString();
+            string query = @"SELECT Camera.Nr_Camera 
+                FROM Camera
+                INNER JOIN TipCamera ON TipCamera.Cod_TipCamera = Camera.Cod_TipCamera
+                WHERE Camera.Cod_Camera NOT IN (
+                    SELECT Rezervare.Cod_Camera
+                    FROM Rezervare
+                    WHERE Rezervare.Data_Cazare <= @SelectedEndDate
+                    AND Rezervare.Data_Plecare >= @SelectedStartDate
+                ) 
+                AND TipCamera.Nume_TipCamera = @SelectedRoomType";
+            List <string> camerelibere = new List<string>();
             //SqlCommand command = new SqlCommand(query, Utility.con);
             //Utility.cmd = new OleDbCommand( query, Utility.con);
-            SqlConnection connection = new SqlConnection(Utility.conString);
-            SqlCommand command = new SqlCommand(query, connection);
-            Utility.cmd.Parameters.AddWithValue("@SelectedStartDate", selectedStartDate);
-            Utility.cmd.Parameters.AddWithValue("@SelectedEndDate", selectedEndDate);
+            OleDbConnection connection = new OleDbConnection(Utility.conString);
+            OleDbCommand command = new OleDbCommand(query, connection);
+            command.Parameters.AddWithValue("@SelectedStartDate", selectedStartDate);
+            command.Parameters.AddWithValue("@SelectedEndDate", selectedEndDate);
+            command.Parameters.AddWithValue("@SelectedRoomType", selectedRoomType);
+
             try
             {
                 connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
+                OleDbDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    string tipcamera = reader["Nume_TipCamera"].ToString();
+                  //  string tipcamera = reader["Nume_TipCamera"].ToString();
                     string nrcamera = reader["Nr_Camera"].ToString();
+                    camerelibere.Add(nrcamera);
                 }
+                reader.Close();
+                connection.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            listBox1.Items.Clear();
+            listBox1.Items.AddRange(camerelibere.ToArray());
 
         }
     }

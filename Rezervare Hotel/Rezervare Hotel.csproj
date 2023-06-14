@@ -195,6 +195,7 @@
     <EmbeddedResource Include="FormCamera.resx">
       <DependentUpon>FormCamera.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RaportCamereOcupate.rdlc" />
     <EmbeddedResource Include="UtilizatorForm.resx">
       <DependentUpon>UtilizatorForm.cs</DependentUpon>
     </EmbeddedResource>
