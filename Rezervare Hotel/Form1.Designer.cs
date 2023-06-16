@@ -66,8 +66,9 @@
             this.formuarPrelucrareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raportCamereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raportTipuriCameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.situatiaCamerelorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.camereOcupateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -378,7 +379,8 @@
             this.formuarPrelucrareToolStripMenuItem,
             this.raportCamereToolStripMenuItem,
             this.raportTipuriCameraToolStripMenuItem,
-            this.situatiaCamerelorToolStripMenuItem});
+            this.situatiaCamerelorToolStripMenuItem,
+            this.camereOcupateToolStripMenuItem});
             this.rapoarteToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.report;
             this.rapoarteToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rapoarteToolStripMenuItem.Name = "rapoarteToolStripMenuItem";
@@ -430,6 +432,13 @@
             this.raportTipuriCameraToolStripMenuItem.Text = "Raport Tipuri Camera";
             this.raportTipuriCameraToolStripMenuItem.Click += new System.EventHandler(this.raportTipuriCameraToolStripMenuItem_Click);
             // 
+            // situatiaCamerelorToolStripMenuItem
+            // 
+            this.situatiaCamerelorToolStripMenuItem.Name = "situatiaCamerelorToolStripMenuItem";
+            this.situatiaCamerelorToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
+            this.situatiaCamerelorToolStripMenuItem.Text = "Situatia Camerelor";
+            this.situatiaCamerelorToolStripMenuItem.Click += new System.EventHandler(this.situatiaCamerelorToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -441,11 +450,12 @@
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
             // 
-            // situatiaCamerelorToolStripMenuItem
+            // camereOcupateToolStripMenuItem
             // 
-            this.situatiaCamerelorToolStripMenuItem.Name = "situatiaCamerelorToolStripMenuItem";
-            this.situatiaCamerelorToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
-            this.situatiaCamerelorToolStripMenuItem.Text = "Situatia Camerelor";
+            this.camereOcupateToolStripMenuItem.Name = "camereOcupateToolStripMenuItem";
+            this.camereOcupateToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
+            this.camereOcupateToolStripMenuItem.Text = "Camere Ocupate";
+            this.camereOcupateToolStripMenuItem.Click += new System.EventHandler(this.camereOcupateToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -518,6 +528,7 @@
         private System.Windows.Forms.ToolStripMenuItem administrareConturiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemImage;
         private System.Windows.Forms.ToolStripMenuItem situatiaCamerelorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem camereOcupateToolStripMenuItem;
     }
 }
 

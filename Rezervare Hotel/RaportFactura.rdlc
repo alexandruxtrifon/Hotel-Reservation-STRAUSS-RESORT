@@ -1504,8 +1504,8 @@
           <Source>Embedded</Source>
           <Value>logonobackground</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>1.48166cm</Top>
-          <Left>1.28654cm</Left>
+          <Top>1.5cm</Top>
+          <Left>1.3cm</Left>
           <Height>3cm</Height>
           <Width>3cm</Width>
           <ZIndex>1</ZIndex>

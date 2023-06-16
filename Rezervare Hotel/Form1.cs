@@ -341,5 +341,15 @@ namespace Rezervare_Hotel
             f.Show();
         }
 
+        private void situatiaCamerelorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void camereOcupateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRaportCamereOcupate f = new FormRaportCamereOcupate();
+            f.Show();
+        }
     }
 }

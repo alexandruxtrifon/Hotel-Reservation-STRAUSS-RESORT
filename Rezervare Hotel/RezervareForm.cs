@@ -51,6 +51,7 @@ namespace Rezervare_Hotel
                 return;
             }
             //
+            checkdate(checkindate.Value, checkoutdate.Value);
 
             string query3 = $"INSERT INTO Rezervare(Data_Cazare, Data_Plecare, Cod_Client, Cod_Camera)" +
                 $" VALUES ('{checkindate.Value}', '{checkoutdate.Value}', '{codclient}', '{codcamera}')";
@@ -95,13 +96,13 @@ namespace Rezervare_Hotel
             int totalplata = nrzile * pretTipCamera;
 
             // inserare date in tabela facturi
-            string query6 = $"INSERT INTO Factura (Data, Pret_Unitar, Cantitate, Valoare, Cod_Rezervare)" +
-                $"VALUES ('{datacazare}', '{pretTipCamera}', '{nrzile}', '{totalplata}', '{codRezervare}')";
-            Utility.cmd.CommandText = query6;
-            Utility.con.Open();
-            Utility.cmd.ExecuteNonQuery();
-            Utility.con.Close();
-            MessageBox.Show("Datele au fost introduse pentru facturare");
+            //string query6 = $"INSERT INTO Factura (Data, Pret_Unitar, Cantitate, Valoare, Cod_Rezervare)" +
+            //    $"VALUES ('{datacazare}', '{pretTipCamera}', '{nrzile}', '{totalplata}', '{codRezervare}')";
+            //Utility.cmd.CommandText = query6;
+            //Utility.con.Open();
+            //Utility.cmd.ExecuteNonQuery();
+            //Utility.con.Close();
+            //MessageBox.Show("Datele au fost introduse pentru facturare");
 
             getrezervari();
         }
@@ -125,11 +126,31 @@ namespace Rezervare_Hotel
                    $"((Data_Cazare <= #{datacazare.ToShortDateString()}# AND Data_Plecare >= #{datacazare.ToShortDateString()}#) " +
                    $"OR (Data_Cazare <= #{dataplecare.ToShortDateString()}# AND Data_Plecare >= #{dataplecare.ToShortDateString()}#) " +
                    $"OR (Data_Cazare >= #{datacazare.ToShortDateString()}# AND Data_Plecare <= #{dataplecare.ToShortDateString()}#))";
+
+            //string query1 = $"SELECT COUNT(*) FROM Rezervare WHERE Cod_Camera = {codcamera} AND " +
+            //        $"((Data_Cazare >= #{datacazare.ToShortDateString()}# AND Data_Plecare >= {dataplecare.ToShortDateString()}#) " +
+            //        $"OR (Data_Cazare <= #{datacazare.ToShortDateString()}# AND Data_Plecare <= {dataplecare.ToShortDateString()}#) " +
+            //        $" OR (Data_Cazare <= #{dataplecare.ToShortDateString()}# AND Data_Plecare >= #{dataplecare.ToShortDateString()}#) " +
+            //        $"";
+            string query2 = $"SELECT COUNT(*) FROM REZERVARE WHERE Cod_Camera = {codcamera} AND " +
+                $"((#{datacazare.ToShortDateString()}# >= Data_Cazare AND #{datacazare.ToShortDateString()}# < Data_Plecare) " +
+                $"OR (#{datacazare.ToShortDateString()}# < Data_Cazare AND #{dataplecare.ToShortDateString()}# > Data_Cazare))";
+
             Utility.cmd.CommandText = query;
             Utility.con.Open();
             int count = (int)Utility.cmd.ExecuteScalar();
             Utility.con.Close();
             return count > 0;
+        }
+
+        private void checkdate(DateTime checkindate, DateTime checkoutdate)
+        {
+            if (checkindate == checkoutdate)
+            {
+                MessageBox.Show("Rezervarea nu poate sa fie mai scurta decat o zi");
+                return;
+            }
+            getrezervari();
         }
         private void overlap()
         {

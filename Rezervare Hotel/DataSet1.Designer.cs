@@ -6516,25 +6516,23 @@ Prenume_Client=@Prenume_Box";
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT Camera.Nr_Camera, TipCamera.Nume_TipCamera, Rezervare.Data_Cazare, Rezervare.Data_Plecare
-FROM Camera
-INNER JOIN Rezervare ON Rezervare.Cod_Camera = Camera.Cod_Camera
-INNER JOIN TipCamera ON TipCamera.Cod_TipCamera = Camera.Cod_TipCamera
-WHERE (Rezervare.Data_Cazare <= @SelectedEndDate AND Rezervare.Data_Plecare >= @SelectedStartDate)
-      OR (Rezervare.Data_Cazare >= @SelectedStartDate AND Rezervare.Data_Plecare <= @SelectedEndDate)
-";
+FROM     ((Camera INNER JOIN
+                  Rezervare ON Rezervare.Cod_Camera = Camera.Cod_Camera) INNER JOIN
+                  TipCamera ON TipCamera.Cod_TipCamera = Camera.Cod_TipCamera)
+WHERE  (Rezervare.Data_Cazare >= @SelectedStartDate) AND (Rezervare.Data_Plecare <= SelectedEndDate)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SelectedEndDate", global::System.Data.OleDb.OleDbType.DBDate, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));
             this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SelectedStartDate", global::System.Data.OleDb.OleDbType.DBDate, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SelectedEndDate", global::System.Data.OleDb.OleDbType.DBDate, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), null, global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.RezervariDupaDataDataTable dataTable, System.DateTime SelectedEndDate, System.DateTime SelectedStartDate) {
+        public virtual int Fill(DataSet1.RezervariDupaDataDataTable dataTable, System.DateTime SelectedStartDate, System.DateTime SelectedEndDate) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(SelectedEndDate));
-            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(SelectedStartDate));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(SelectedStartDate));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(SelectedEndDate));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6546,10 +6544,10 @@ WHERE (Rezervare.Data_Cazare <= @SelectedEndDate AND Rezervare.Data_Plecare >= @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.RezervariDupaDataDataTable GetData(System.DateTime SelectedEndDate, System.DateTime SelectedStartDate) {
+        public virtual DataSet1.RezervariDupaDataDataTable GetData(System.DateTime SelectedStartDate, System.DateTime SelectedEndDate) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(SelectedEndDate));
-            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(SelectedStartDate));
+            this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(SelectedStartDate));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(SelectedEndDate));
             DataSet1.RezervariDupaDataDataTable dataTable = new DataSet1.RezervariDupaDataDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
