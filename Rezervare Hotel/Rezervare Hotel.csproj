@@ -297,6 +297,9 @@
     <Content Include="Baza de date licenta.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="icons\trash %281%29.png" />
+    <None Include="icons\pen-circle.png" />
+    <None Include="icons\user-pen.png" />
     <None Include="icons\pencil.png" />
     <None Include="icons\edit.png" />
     <None Include="icons\check.png" />

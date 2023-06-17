@@ -105,7 +105,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 29);
+            this.label1.Location = new System.Drawing.Point(47, 30);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
             this.label1.Size = new System.Drawing.Size(68, 39);
@@ -125,7 +125,7 @@
             this.butonR1.ForeColor = System.Drawing.Color.White;
             this.butonR1.Location = new System.Drawing.Point(122, 459);
             this.butonR1.Name = "butonR1";
-            this.butonR1.Size = new System.Drawing.Size(250, 40);
+            this.butonR1.Size = new System.Drawing.Size(250, 50);
             this.butonR1.TabIndex = 8;
             this.butonR1.Text = "Inregistreaza";
             this.butonR1.TextColor = System.Drawing.Color.White;
@@ -189,7 +189,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 125);
+            this.label4.Location = new System.Drawing.Point(19, 126);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
             this.label4.Size = new System.Drawing.Size(96, 39);
@@ -306,7 +306,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 317);
+            this.label7.Location = new System.Drawing.Point(34, 318);
             this.label7.Name = "label7";
             this.label7.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
             this.label7.Size = new System.Drawing.Size(81, 39);

@@ -95,15 +95,6 @@ namespace Rezervare_Hotel
             int nrzile = (int)(dataplecare - datacazare).TotalDays;
             int totalplata = nrzile * pretTipCamera;
 
-            // inserare date in tabela facturi
-            //string query6 = $"INSERT INTO Factura (Data, Pret_Unitar, Cantitate, Valoare, Cod_Rezervare)" +
-            //    $"VALUES ('{datacazare}', '{pretTipCamera}', '{nrzile}', '{totalplata}', '{codRezervare}')";
-            //Utility.cmd.CommandText = query6;
-            //Utility.con.Open();
-            //Utility.cmd.ExecuteNonQuery();
-            //Utility.con.Close();
-            //MessageBox.Show("Datele au fost introduse pentru facturare");
-
             getrezervari();
         }
 
@@ -152,34 +143,7 @@ namespace Rezervare_Hotel
             }
             getrezervari();
         }
-        private void overlap()
-        {
-            Utility.con.Open();
-            bool overlaps = false;
-            DateTime checkin = checkindate.Value;
-            DateTime checkout = checkoutdate.Value;
-            string query = "SELECT Data_Cazare, Data_Plecare FROM Rezervare WHERE Camera.Nr_Camera = @nrcamera";
-            OleDbDataAdapter adapter = new OleDbDataAdapter(query, Utility.con);
-            adapter.SelectCommand.Parameters.AddWithValue("@nrcamera", combonrcamera.SelectedValue);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            foreach(DataRow dr in dt.Rows)
-            {
-                DateTime existingcheckin = Convert.ToDateTime(dr["Data_Cazare"]);
-                DateTime existingcheckout = Convert.ToDateTime(dr["Data_Plecare"]);
 
-                if (checkin < existingcheckout && checkout > existingcheckin)
-                {
-                    overlaps = true;
-                    break;
-                }
-            }
-            if (overlaps)
-            {
-                MessageBox.Show("Camera selectata este deja rezervata in acea perioada");
-            }
-
-        }
         void getrezervari()
         {
             DataTable dt = new DataTable();
