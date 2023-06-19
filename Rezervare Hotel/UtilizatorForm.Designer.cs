@@ -248,7 +248,6 @@
             this.cautaclientr.TabIndex = 36;
             this.cautaclientr.UnderlinedStyle = false;
             this.cautaclientr._TextChanged += new System.EventHandler(this.cautaclientr__TextChanged);
-            this.cautaclientr.Load += new System.EventHandler(this.cautaclientr_Load);
             // 
             // butonmodifica
             // 

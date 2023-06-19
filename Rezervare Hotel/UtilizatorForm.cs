@@ -121,21 +121,6 @@ namespace Rezervare_Hotel
 
         private void butonmodifica_Click(object sender, EventArgs e)
         {
-            //string query = "UPDATE Client SET Nume_Client=@nume,Prenume_Client=@prenume,Email_Client=@email,Telefon_Client=@telefon,Adresa_Client=@adresa"; //+
-            //                                                                                                                                                // "WHERE Cod_Client=@id";
-            //Utility.cmd = new OleDbCommand(query, Utility.con);
-            //Utility.cmd.Parameters.AddWithValue("@nume", textnumer.Text);
-            //Utility.cmd.Parameters.AddWithValue("@prenume", textprenumer.Text);
-            //Utility.cmd.Parameters.AddWithValue("@email", textemailr.Text);
-            //Utility.cmd.Parameters.AddWithValue("@telefon", texttelefonr.Text);
-            //Utility.cmd.Parameters.AddWithValue("@adresa", textadresar.Text);
-            //// Utility.cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
-            //Utility.con.Open();
-            //Utility.cmd.ExecuteNonQuery();
-            //Utility.con.Close();
-            //MessageBox.Show("Clientul a fost actualizat cu succes.");
-            //GetCustomers();
-
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 int rowIndex = dataGridView1.SelectedRows[0].Index;
@@ -197,25 +182,15 @@ namespace Rezervare_Hotel
             }
         }
 
-        private void cautaclientr_Load(object sender, EventArgs e)
-        {
-        }
 
         private void cautaclientr__TextChanged(object sender, EventArgs e)
         {
-            string cauta = cautaclientr.Text.Trim().ToLower();
+            string keyword = cautaclientr.Text.Trim().ToLower();
 
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                string concatenatedName = $"{row.Cells["Nume"].Value} {row.Cells["Prenume"].Value}".ToLower();
+            DataView dataView = dataSet1.Tables["Client1"].DefaultView;
+            dataView.RowFilter = $"Nume_Client LIKE '%{keyword}%' OR Prenume_Client LIKE '%{keyword}%'";
 
-                if (concatenatedName.Contains(cauta))
-                {
-                    row.Selected = true;
-                    dataGridView1.FirstDisplayedScrollingRowIndex = row.Index;
-                    break;
-                }
-            }
+            dataGridView1.DataSource = dataView;
         }
     }
 }
