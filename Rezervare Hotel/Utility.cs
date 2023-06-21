@@ -36,13 +36,8 @@ namespace Rezervare_Hotel
         public static bool isadmin;
         public static void ButonRotunjit(Button button)
         {
-            // Set FlatStyle to Flat
             button.FlatStyle = FlatStyle.Flat;
-
-            // Customize FlatAppearance properties
             button.FlatAppearance.BorderSize = 0;
-
-            // Adjust the button shape to be pill-shaped
             int cornerRadius = button.Height / 2;
             Rectangle buttonBounds = new Rectangle(0, 0, button.Width, button.Height);
             GraphicsPath path = new GraphicsPath();

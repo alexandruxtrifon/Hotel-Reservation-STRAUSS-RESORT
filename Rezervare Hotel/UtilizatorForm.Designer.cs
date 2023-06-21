@@ -40,11 +40,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.Adresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prenume = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.cautaclientr = new Rezervare_Hotel.TextBoxR();
@@ -56,6 +51,12 @@
             this.textemailr = new Rezervare_Hotel.TextBoxR();
             this.textprenumer = new Rezervare_Hotel.TextBoxR();
             this.textnumer = new Rezervare_Hotel.TextBoxR();
+            this.Cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nume = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prenume = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.client1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -72,6 +73,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cod,
             this.Nume,
             this.Prenume,
             this.Email,
@@ -171,46 +173,6 @@
             this.label11.Size = new System.Drawing.Size(81, 39);
             this.label11.TabIndex = 31;
             this.label11.Text = "Adresa";
-            // 
-            // Adresa
-            // 
-            this.Adresa.DataPropertyName = "Adresa_Client";
-            this.Adresa.HeaderText = "Adresa";
-            this.Adresa.MinimumWidth = 6;
-            this.Adresa.Name = "Adresa";
-            this.Adresa.ReadOnly = true;
-            // 
-            // Telefon
-            // 
-            this.Telefon.DataPropertyName = "Telefon_Client";
-            this.Telefon.HeaderText = "Telefon";
-            this.Telefon.MinimumWidth = 6;
-            this.Telefon.Name = "Telefon";
-            this.Telefon.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email_Client";
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Prenume
-            // 
-            this.Prenume.DataPropertyName = "Prenume_Client";
-            this.Prenume.HeaderText = "Prenume";
-            this.Prenume.MinimumWidth = 6;
-            this.Prenume.Name = "Prenume";
-            this.Prenume.ReadOnly = true;
-            // 
-            // Nume
-            // 
-            this.Nume.DataPropertyName = "Nume_Client";
-            this.Nume.HeaderText = "Nume";
-            this.Nume.MinimumWidth = 6;
-            this.Nume.Name = "Nume";
-            this.Nume.ReadOnly = true;
             // 
             // errorProvider
             // 
@@ -425,6 +387,55 @@
             this.textnumer.TabIndex = 21;
             this.textnumer.UnderlinedStyle = false;
             // 
+            // Cod
+            // 
+            this.Cod.DataPropertyName = "Cod_Client";
+            this.Cod.HeaderText = "Cod";
+            this.Cod.MinimumWidth = 6;
+            this.Cod.Name = "Cod";
+            this.Cod.ReadOnly = true;
+            this.Cod.Visible = false;
+            // 
+            // Nume
+            // 
+            this.Nume.DataPropertyName = "Nume_Client";
+            this.Nume.HeaderText = "Nume";
+            this.Nume.MinimumWidth = 6;
+            this.Nume.Name = "Nume";
+            this.Nume.ReadOnly = true;
+            // 
+            // Prenume
+            // 
+            this.Prenume.DataPropertyName = "Prenume_Client";
+            this.Prenume.HeaderText = "Prenume";
+            this.Prenume.MinimumWidth = 6;
+            this.Prenume.Name = "Prenume";
+            this.Prenume.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email_Client";
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Telefon
+            // 
+            this.Telefon.DataPropertyName = "Telefon_Client";
+            this.Telefon.HeaderText = "Telefon";
+            this.Telefon.MinimumWidth = 6;
+            this.Telefon.Name = "Telefon";
+            this.Telefon.ReadOnly = true;
+            // 
+            // Adresa
+            // 
+            this.Adresa.DataPropertyName = "Adresa_Client";
+            this.Adresa.HeaderText = "Adresa";
+            this.Adresa.MinimumWidth = 6;
+            this.Adresa.Name = "Adresa";
+            this.Adresa.ReadOnly = true;
+            // 
             // UtilizatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -483,13 +494,14 @@
         private System.Windows.Forms.Label label11;
         private ButonR butonR2;
         private ButonR butonmodifica;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private TextBoxR cautaclientr;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cod;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nume;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prenume;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adresa;
-        private System.Windows.Forms.ErrorProvider errorProvider;
-        private TextBoxR cautaclientr;
-        private System.Windows.Forms.Label label1;
     }
 }

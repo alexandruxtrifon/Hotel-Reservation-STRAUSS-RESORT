@@ -79,13 +79,33 @@ namespace Rezervare_Hotel
 
         private void butonR2_Click(object sender, EventArgs e)
         {
-            string query = "DELETE FROM Client WHERE Cod_Client=@id";
-            Utility.cmd = new OleDbCommand(query, Utility.con);
-            //   Utility.cmd.Parameters.AddWithValue("@id", Convert.ToInt32(textcodclient.Text));
-            Utility.con.Open();
-            Utility.cmd.ExecuteNonQuery();
-            Utility.con.Close();
-            GetCustomers();
+            try
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    int rowIndex = dataGridView1.SelectedRows[0].Index;
+                    DataGridViewRow selectedRow = dataGridView1.Rows[rowIndex];
+
+                    int codclient = Convert.ToInt32(selectedRow.Cells["Cod"].Value);
+                    string delete = "DELETE FROM Client WHERE Cod_Client=@codclient";
+                    Utility.cmd = new OleDbCommand(delete, Utility.con);
+
+                    Utility.cmd.Parameters.AddWithValue("@codclient", codclient);
+
+                    Utility.con.Open();
+                    Utility.cmd.ExecuteNonQuery();
+                    Utility.con.Close();
+
+                    dataGridView1.Rows.RemoveAt(rowIndex);
+                    dataGridView1.ClearSelection();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Utility.con.Close();
+                return;
+            }
         }
 
         private void butonR1_Click(object sender, EventArgs e)
@@ -101,11 +121,7 @@ namespace Rezervare_Hotel
                     string query = "INSERT INTO Client (Nume_Client, Prenume_Client, Email_Client, Telefon_Client, Adresa_Client) VALUES" +
                     "(@nume,@prenume,@email,@telefon,@adresa)";
                     Utility.cmd = new OleDbCommand(query, Utility.con);
-                    Utility.cmd.Parameters.AddWithValue("@nume", textnumer.Text);
-                    Utility.cmd.Parameters.AddWithValue("@prenume", textprenumer.Text);
-                    Utility.cmd.Parameters.AddWithValue("@email", textemailr.Text);
-                    Utility.cmd.Parameters.AddWithValue("@telefon", texttelefonr.Text);
-                    Utility.cmd.Parameters.AddWithValue("@adresa", textadresar.Text);
+
                     Utility.con.Open();
                     Utility.cmd.ExecuteNonQuery();
                     Utility.con.Close();
@@ -126,13 +142,34 @@ namespace Rezervare_Hotel
                 int rowIndex = dataGridView1.SelectedRows[0].Index;
                 DataGridViewRow selectedRow = dataGridView1.Rows[rowIndex];
 
-                selectedRow.Cells["Nume"].Value = textnumer.Text;
-                selectedRow.Cells["Prenume"].Value = textprenumer.Text;
-                selectedRow.Cells["Email"].Value = textemailr.Text;
-                selectedRow.Cells["Telefon"].Value = texttelefonr.Text;
-                selectedRow.Cells["Adresa"].Value = textadresar.Text;
+                //string nume = textnumer.Text.Trim();
+                //string prenume = textprenumer.Text.Trim();
+                //string email = textemailr.Text.Trim();
+                //string telefon = texttelefonr.Text.Trim();
+                //string adresa = textadresar.Text.Trim();
 
+                int codclient = Convert.ToInt32(selectedRow.Cells["Cod"].Value);
+                string update = $"UPDATE Client SET Nume_Client=@Nnume, Prenume_Client=@prenume, " +
+                    $"Email_Client=@email, Telefon_Client=@telefon, Adresa_Client=@adresa WHERE Cod_Client=@codclient";
+                Utility.cmd = new OleDbCommand(update, Utility.con);
+                Utility.cmd.Parameters.AddWithValue("@nume", textnumer.Text);
+                Utility.cmd.Parameters.AddWithValue("@prenume", textprenumer.Text);
+                Utility.cmd.Parameters.AddWithValue("@email", textemailr.Text);
+                Utility.cmd.Parameters.AddWithValue("@telefon", texttelefonr.Text);
+                Utility.cmd.Parameters.AddWithValue("@adresa", textadresar.Text);
+                Utility.cmd.Parameters.AddWithValue("@codclient", codclient);
+                Utility.con.Open();
+                Utility.cmd.ExecuteNonQuery();
+                Utility.con.Close();
+                //selectedRow.Cells["Nume"].Value = nume;
+                //selectedRow.Cells["Prenume"].Value = prenume;
+                //selectedRow.Cells["Email"].Value = email;
+                //selectedRow.Cells["Telefon"].Value = telefon;
+                //selectedRow.Cells["Adresa"].Value = adresa;
                 dataGridView1.ClearSelection();
+                this.client1TableAdapter.Fill(this.dataSet1.Client1);
+
+
             }
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -160,7 +197,11 @@ namespace Rezervare_Hotel
 
                 textBox.Invalidate();
             }
-
+            else if (telefon.Length < 10)
+            {
+                errorProvider.SetError(textBox, "Numarul de telefon nu poate avea mai putin de 10 cifre.");
+                textBox.Invalidate();
+            }
             else if (telefon.Length > 10)
             {
                 errorProvider.SetError(textBox, "Numarul de telefon nu poate avea mai mult de 10 cifre.");

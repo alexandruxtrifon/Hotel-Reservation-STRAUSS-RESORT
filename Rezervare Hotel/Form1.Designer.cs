@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -67,8 +67,8 @@
             this.raportCamereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raportTipuriCameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.situatiaCamerelorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.camereOcupateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -148,40 +148,40 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(298, 28);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(241, 24);
             this.toolStripMenuItem1.Text = "Factura";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(298, 28);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(241, 24);
             this.toolStripMenuItem2.Text = "Raport Utilizatori";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(298, 28);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(241, 24);
             this.toolStripMenuItem3.Text = "toolStripMenuItem3";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(298, 28);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(241, 24);
             this.toolStripMenuItem4.Text = "Formular Prelucrare";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(298, 28);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(241, 24);
             this.toolStripMenuItem5.Text = "Raport Camere";
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(298, 28);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(241, 24);
             this.toolStripMenuItem6.Text = "Raport Tipuri Camere";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
@@ -196,10 +196,10 @@
             // solidGauge1
             // 
             this.solidGauge1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.solidGauge1.Location = new System.Drawing.Point(841, 398);
-            this.solidGauge1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.solidGauge1.Location = new System.Drawing.Point(631, 323);
+            this.solidGauge1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.solidGauge1.Name = "solidGauge1";
-            this.solidGauge1.Size = new System.Drawing.Size(259, 134);
+            this.solidGauge1.Size = new System.Drawing.Size(194, 109);
             this.solidGauge1.TabIndex = 63;
             this.solidGauge1.Text = "solidGauge1";
             this.solidGauge1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.solidGauge1_ChildChanged);
@@ -208,9 +208,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(784, 350);
+            this.label1.Location = new System.Drawing.Point(588, 284);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(347, 32);
+            this.label1.Size = new System.Drawing.Size(285, 26);
             this.label1.TabIndex = 66;
             this.label1.Text = "Situatia Ocuparii Hotelului";
             // 
@@ -218,38 +219,39 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(243, 282);
+            this.label2.Location = new System.Drawing.Point(182, 229);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(492, 32);
+            this.label2.Size = new System.Drawing.Size(402, 26);
             this.label2.TabIndex = 67;
             this.label2.Text = "Pondere Tipuri de Camere Rezervate";
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(309, 353);
-            this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(232, 287);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            series2.YValuesPerPoint = 6;
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(369, 201);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 6;
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(277, 163);
             this.chart1.TabIndex = 68;
             this.chart1.Text = "chart1";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
-            this.button1.Location = new System.Drawing.Point(521, 142);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(391, 115);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 54);
+            this.button1.Size = new System.Drawing.Size(131, 44);
             this.button1.TabIndex = 69;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
@@ -259,9 +261,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(472, 28);
+            this.label3.Location = new System.Drawing.Point(228, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 23);
+            this.label3.Size = new System.Drawing.Size(110, 19);
             this.label3.TabIndex = 70;
             this.label3.Text = "Bine ai venit, ";
             // 
@@ -275,9 +278,9 @@
             this.toolStripMenuItem7});
             this.menuStrip1.Location = new System.Drawing.Point(180, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(999, 64);
+            this.menuStrip1.Size = new System.Drawing.Size(704, 64);
             this.menuStrip1.TabIndex = 71;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -310,7 +313,7 @@
             // administrareConturiToolStripMenuItem
             // 
             this.administrareConturiToolStripMenuItem.Name = "administrareConturiToolStripMenuItem";
-            this.administrareConturiToolStripMenuItem.Size = new System.Drawing.Size(292, 28);
+            this.administrareConturiToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.administrareConturiToolStripMenuItem.Text = "Administrare Conturi";
             this.administrareConturiToolStripMenuItem.Visible = false;
             // 
@@ -329,7 +332,7 @@
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(0);
             this.menuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip2.Size = new System.Drawing.Size(180, 567);
+            this.menuStrip2.Size = new System.Drawing.Size(180, 461);
             this.menuStrip2.TabIndex = 72;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -393,7 +396,7 @@
             this.facturaToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.invoice;
             this.facturaToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
+            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
             this.facturaToolStripMenuItem.Text = "Factura";
             this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
@@ -401,68 +404,68 @@
             // 
             this.raportUtilizatoriToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.user;
             this.raportUtilizatoriToolStripMenuItem.Name = "raportUtilizatoriToolStripMenuItem";
-            this.raportUtilizatoriToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
+            this.raportUtilizatoriToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
             this.raportUtilizatoriToolStripMenuItem.Text = "Raport Utilizatori";
             this.raportUtilizatoriToolStripMenuItem.Click += new System.EventHandler(this.raportUtilizatoriToolStripMenuItem_Click);
             // 
             // jkhToolStripMenuItem
             // 
             this.jkhToolStripMenuItem.Name = "jkhToolStripMenuItem";
-            this.jkhToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
+            this.jkhToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
             this.jkhToolStripMenuItem.Text = "jkh";
             // 
             // formuarPrelucrareToolStripMenuItem
             // 
             this.formuarPrelucrareToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.requirement;
             this.formuarPrelucrareToolStripMenuItem.Name = "formuarPrelucrareToolStripMenuItem";
-            this.formuarPrelucrareToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
+            this.formuarPrelucrareToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
             this.formuarPrelucrareToolStripMenuItem.Text = "Formuar Prelucrare";
             this.formuarPrelucrareToolStripMenuItem.Click += new System.EventHandler(this.formuarPrelucrareToolStripMenuItem_Click);
             // 
             // raportCamereToolStripMenuItem
             // 
             this.raportCamereToolStripMenuItem.Name = "raportCamereToolStripMenuItem";
-            this.raportCamereToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
+            this.raportCamereToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
             this.raportCamereToolStripMenuItem.Text = "Raport Camere";
             // 
             // raportTipuriCameraToolStripMenuItem
             // 
             this.raportTipuriCameraToolStripMenuItem.Name = "raportTipuriCameraToolStripMenuItem";
-            this.raportTipuriCameraToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
+            this.raportTipuriCameraToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
             this.raportTipuriCameraToolStripMenuItem.Text = "Raport Tipuri Camera";
             this.raportTipuriCameraToolStripMenuItem.Click += new System.EventHandler(this.raportTipuriCameraToolStripMenuItem_Click);
             // 
             // situatiaCamerelorToolStripMenuItem
             // 
             this.situatiaCamerelorToolStripMenuItem.Name = "situatiaCamerelorToolStripMenuItem";
-            this.situatiaCamerelorToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
+            this.situatiaCamerelorToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
             this.situatiaCamerelorToolStripMenuItem.Text = "Situatia Camerelor";
             this.situatiaCamerelorToolStripMenuItem.Click += new System.EventHandler(this.situatiaCamerelorToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(240, 66);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 148);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 60;
-            this.pictureBox1.TabStop = false;
             // 
             // camereOcupateToolStripMenuItem
             // 
             this.camereOcupateToolStripMenuItem.Name = "camereOcupateToolStripMenuItem";
-            this.camereOcupateToolStripMenuItem.Size = new System.Drawing.Size(310, 38);
+            this.camereOcupateToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
             this.camereOcupateToolStripMenuItem.Text = "Camere Ocupate";
             this.camereOcupateToolStripMenuItem.Click += new System.EventHandler(this.camereOcupateToolStripMenuItem_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(180, 54);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1179, 567);
+            this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -473,7 +476,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip2;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
