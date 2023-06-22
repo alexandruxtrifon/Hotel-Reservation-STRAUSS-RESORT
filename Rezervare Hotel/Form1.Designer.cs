@@ -197,7 +197,7 @@
             // 
             this.solidGauge1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.solidGauge1.Location = new System.Drawing.Point(631, 323);
-            this.solidGauge1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.solidGauge1.Margin = new System.Windows.Forms.Padding(2);
             this.solidGauge1.Name = "solidGauge1";
             this.solidGauge1.Size = new System.Drawing.Size(194, 109);
             this.solidGauge1.TabIndex = 63;
@@ -233,7 +233,7 @@
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(232, 287);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
@@ -249,7 +249,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Location = new System.Drawing.Point(391, 115);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 44);
             this.button1.TabIndex = 69;
@@ -316,6 +316,7 @@
             this.administrareConturiToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
             this.administrareConturiToolStripMenuItem.Text = "Administrare Conturi";
             this.administrareConturiToolStripMenuItem.Visible = false;
+            this.administrareConturiToolStripMenuItem.Click += new System.EventHandler(this.administrareConturiToolStripMenuItem_Click);
             // 
             // menuStrip2
             // 
@@ -453,7 +454,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(180, 54);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -476,7 +477,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip2;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

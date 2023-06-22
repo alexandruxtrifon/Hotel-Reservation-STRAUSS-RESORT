@@ -457,13 +457,18 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>5.29646in</Height>
+    <Height>13.45301cm</Height>
     <Style />
   </Body>
-  <Width>8.18in</Width>
+  <Width>20.7772cm</Width>
   <Page>
-    <PageHeight>11.69in</PageHeight>
-    <PageWidth>8.27in</PageWidth>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
+    <ColumnSpacing>1.27cm</ColumnSpacing>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
@@ -641,6 +646,6 @@ J2yYd/wzw+r0AUVdRz88trV3fLN3ckUgFn3m588a3aqoeAAAAAAACtUtzKYD4+km6f9IKtd6J+cFx0d4
 AGyATkhkOsNP/JNFtOIZ/ZhMCcQtazye+IO4wQAAAAAAAFBqgeSALOfzveOb9VxxrxJ1PeuvrdLskwVyx6DtfAAAAAAAAIAK2nmLZU/2Tq7PkqR3E3VZ7UmObhK/Pwzxlpa/rZXxA8nbguMTM/99kkP6d3UAAAAAAAAAchTqvDA4Xpc1SX5Ewq7J/hmdFngkB3b61nd7138oEH80EB+qCX2nGJ/j+6f5t26aN5efhocFAAAAAAAAKkNXonuRoOf58nV5V9HXDQAAAAAAAKDHJmYE4nbRSXf61XNejkcAAAAAAAAAKmlxMv6YyfZzE1G/SM5sDI1tVvT1AgAAAAAAAOgr71rv805WRrlyTnKKFrbDIwAAAAAAAAADYUFt2Vztdx5Xcs7f1F7pRV8bAAAAAAAAgNw1qf1qT/KrXlV5z7alnS/z1Grg9gMAAAAAAMDA88TPC8RfDSRX57hifon2V1+8zfhjB/4GAAAAAAAAADzcxAxPsl1w8tng+MRAcntvE3P+myf5hq7c69/C1QcAAAAAAABIYb9kv39qzpZnhTovDI4/ERwfEZz8yBP/Nji5PDi5IZDcMZl8r/XEtwXiWzzJX7Qauyf+XiA5oOH4rSPUnoOLDgAAkAyU/w8wt5pnZoq95wAAAABJRU5ErkJggg==</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
-  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>478a43dd-8b33-49bf-8f2c-2758802a5628</rd:ReportID>
 </Report>

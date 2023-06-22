@@ -96,8 +96,10 @@ namespace Rezervare_Hotel
                     Utility.cmd.ExecuteNonQuery();
                     Utility.con.Close();
 
-                    dataGridView1.Rows.RemoveAt(rowIndex);
+                    //dataGridView1.Rows.RemoveAt(rowIndex);
                     dataGridView1.ClearSelection();
+                    dataGridView1.Update();
+                    dataGridView1.Refresh();
                 }
             }
             catch (Exception ex)

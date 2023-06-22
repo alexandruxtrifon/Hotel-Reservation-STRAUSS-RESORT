@@ -351,5 +351,10 @@ namespace Rezervare_Hotel
             FormRaportCamereOcupate f = new FormRaportCamereOcupate();
             f.Show();
         }
+
+        private void administrareConturiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

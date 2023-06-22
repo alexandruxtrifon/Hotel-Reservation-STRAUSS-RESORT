@@ -345,6 +345,27 @@ WHERE  (Rezervare.Data_Cazare &gt;= @SelectedStartDate) AND (Rezervare.Data_Plec
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CameraTableAdapter" GeneratorDataComponentClassName="CameraTableAdapter" Name="Camera" UserDataComponentName="CameraTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Baza_de_date_licentaConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Camera.Cod_Camera, Camera.Nr_Camera, Camera.Etaj_Camera, TipCamera.Nume_TipCamera
+FROM            (Camera INNER JOIN
+                         TipCamera ON Camera.Cod_TipCamera = TipCamera.Cod_TipCamera)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cod_Camera" DataSetColumn="Cod_Camera" />
+              <Mapping SourceColumn="Nr_Camera" DataSetColumn="Nr_Camera" />
+              <Mapping SourceColumn="Etaj_Camera" DataSetColumn="Etaj_Camera" />
+              <Mapping SourceColumn="Nume_TipCamera" DataSetColumn="Nume_TipCamera" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -629,6 +650,28 @@ WHERE  (Rezervare.Data_Cazare &gt;= @SelectedStartDate) AND (Rezervare.Data_Plec
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Camera" msprop:Generator_RowClassName="CameraRow" msprop:Generator_RowEvHandlerName="CameraRowChangeEventHandler" msprop:Generator_RowDeletedName="CameraRowDeleted" msprop:Generator_RowDeletingName="CameraRowDeleting" msprop:Generator_RowEvArgName="CameraRowChangeEvent" msprop:Generator_TablePropName="Camera" msprop:Generator_RowChangedName="CameraRowChanged" msprop:Generator_UserTableName="Camera" msprop:Generator_RowChangingName="CameraRowChanging" msprop:Generator_TableClassName="CameraDataTable" msprop:Generator_TableVarName="tableCamera">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cod_Camera" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Cod_Camera" msprop:Generator_ColumnPropNameInTable="Cod_CameraColumn" msprop:Generator_ColumnPropNameInRow="Cod_Camera" msprop:Generator_ColumnVarNameInTable="columnCod_Camera" type="xs:int" minOccurs="0" />
+              <xs:element name="Nr_Camera" msprop:Generator_UserColumnName="Nr_Camera" msprop:Generator_ColumnPropNameInTable="Nr_CameraColumn" msprop:Generator_ColumnPropNameInRow="Nr_Camera" msprop:Generator_ColumnVarNameInTable="columnNr_Camera" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Etaj_Camera" msprop:Generator_UserColumnName="Etaj_Camera" msprop:Generator_ColumnPropNameInTable="Etaj_CameraColumn" msprop:Generator_ColumnPropNameInRow="Etaj_Camera" msprop:Generator_ColumnVarNameInTable="columnEtaj_Camera" type="xs:int" minOccurs="0" />
+              <xs:element name="Nume_TipCamera" msprop:Generator_UserColumnName="Nume_TipCamera" msprop:Generator_ColumnPropNameInTable="Nume_TipCameraColumn" msprop:Generator_ColumnPropNameInRow="Nume_TipCamera" msprop:Generator_ColumnVarNameInTable="columnNume_TipCamera" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -642,6 +685,10 @@ WHERE  (Rezervare.Data_Cazare &gt;= @SelectedStartDate) AND (Rezervare.Data_Plec
     <xs:unique name="Client1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Client1" />
       <xs:field xpath="mstns:Cod_Client" />
+    </xs:unique>
+    <xs:unique name="Camera_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Camera" />
+      <xs:field xpath="mstns:Cod_Camera" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

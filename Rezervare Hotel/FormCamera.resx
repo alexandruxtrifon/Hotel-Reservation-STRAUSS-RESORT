@@ -117,14 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="cameraBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>116, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoCAYAAABNo9TkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAA/7JJREFUeF7s3Qe8HGW9//HEhgo2MDn7zJ4ERWxYr7FdW5Scnd1AxBrUv9euWK7K
+        DAAACwwBP0AiyAAA/7JJREFUeF7s3Qe8HGW9//HEhgo2MDn7zJ4ERWxYr7FdW5Scnd1AxBrUv9euWK7K
         tWK7xmu72A3WmGSfZ0/EEhsq9sJVUVGxY1cQEKSD9Jr8f8+eH5rs+e05s31m9/N+vb4vFM4z88zstN/u
         zDNLAABA92rlbdMVF9JKObykmvj3pYk/JnX+B9Uk/EX+97lpEi6T/72zGRcukv//d/m7X8v//3rqwvvl
         fz9P/rlq/ZLtN9RJAgAAAACAxRy4fPNUtRSeK0X1x6UQ/9s/i+8eI9O6oOr8J6plf/DqJcfdSGcHAAAA
@@ -1617,4 +1617,10 @@
         NuVqm2qyhBBCCBkLNtro/wMwt5pn45NSVAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="dataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="cameraTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>286, 17</value>
+  </metadata>
 </root>
