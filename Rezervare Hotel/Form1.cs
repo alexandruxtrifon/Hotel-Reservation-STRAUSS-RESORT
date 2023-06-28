@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using static Rezervare_Hotel.Utility;
 
 
@@ -25,23 +26,10 @@ namespace Rezervare_Hotel
         public Form1()
         {
             InitializeComponent();
-
-            //testing
-            chart1.Titles.Add("Ponderea Camerelor Rezervate Dupa Tip");
-            chart1.Series.Add("s1");
-            chart1.Series["s1"].Points.AddXY("Single", "12");
-            chart1.Series["s1"].Points.AddXY("Double", "27");
-            chart1.Series["s1"].Points.AddXY("Triple", "31");
-            chart1.Series["s1"].Points.AddXY("Quad", "30");
-            chart1.Series["s1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            loadgauge();
-            //piechart_load();
-            // chart1.Series["Tipuri de Camere"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             Utility.ButonRotunjit(button1);
             label3.Text = $"Bine ai venit, {Utility.contnume}";
             menuStrip1.BackColor = Color.White; // din nou exista un bug cu selectarea culorii
@@ -49,6 +37,36 @@ namespace Rezervare_Hotel
             menuStrip2.BackColor = Color.White;
             menuStrip2.Renderer = new CustomMenuStripRenderer();
 
+            UpdateLabels();
+            PopulateChart();
+            CustomizeChartAppearance();
+        }
+
+        private void PopulateChart()
+        {
+            chart2.Series.Clear();
+            Series series = new Series("Occupancy Rate");
+            series.ChartType = SeriesChartType.Line;
+
+            // Retrieve the occupancy rate data for the past seven days
+            for (int i = 6; i >= 0; i--)
+            {
+                DateTime currentDate = DateTime.Today.AddDays(-i);
+                double occupancyRate = CalculateOccupancyRate(currentDate);
+
+                // Add data point to the series
+                series.Points.AddXY(currentDate.ToShortDateString(), occupancyRate);
+            }
+
+            // Add the series to the chart
+            chart2.Series.Add(series);
+
+            // Set chart labels and titles
+            chart2.ChartAreas[0].AxisX.Title = "Data";
+            chart2.ChartAreas[0].AxisY.Title = "%";
+            chart2.ChartAreas[0].AxisY.LabelStyle.Angle = 90;
+            chart2.Titles.Clear();
+            chart2.Titles.Add("Gradul de incarcare");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -105,141 +123,6 @@ namespace Rezervare_Hotel
         {
             FormRaportUtilizatori f = new FormRaportUtilizatori();
             f.Show();
-        }
-
-        private void solidGauge1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
-        {
-        }
-
-        public void loadgauge()
-        {
-            Utility.cmd = new OleDbCommand();
-            Utility.cmd.Connection = Utility.con;
-            string query = "SELECT COUNT (*) FROM Rezervare";
-            Utility.cmd.CommandText = query;
-            Utility.con.Open();
-            countrezervari = (int)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-            //double countrezervari = (double)Utility.cmd.ExecuteScalar();
-            string query1 = $"SELECT COUNT (*) FROM Camera";
-            Utility.cmd.CommandText = query1;
-            Utility.con.Open();
-            double countcamere = (int)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-            double situatie = countrezervari / countcamere;
-            solidGauge1.Value = situatie;
-            solidGauge1.To = countrezervari;
-        }
-        double countrezervari;
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pieChart1_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
-        {
-
-        }
-
-        private void piechart_load()//(object sender, EventArgs e)
-        {
-            Utility.cmd = new OleDbCommand();
-            Utility.cmd.Connection = Utility.con;
-
-            string query = "SELECT COUNT(*) FROM Rezervare " +
-                "INNER JOIN TipCamera  ON Rezervare.Cod_TipCamera = TipCamera.Cod_TipCamera " +
-                "WHERE TipCamera.Nume_TipCamera = 'Single'";
-            Utility.cmd.CommandText = query;
-            Utility.con.Open();
-            int countsingle = (int)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-            string query1 = "SELECT COUNT(*) FROM Rezervare R " +
-                "INNER JOIN TipCamera TC ON R.Cod_TipCamera = TC.Cod_TipCamera " +
-                "WHERE TC.Nume_TipCamera = 'Double'";
-            Utility.cmd.CommandText = query1;
-            Utility.con.Open();
-            int countdouble = (int)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-            string query2 = "SELECT COUNT(*) FROM Rezervare R " +
-                "INNER JOIN TipCamera TC ON R.Cod_TipCamera = TC.Cod_TipCamera " +
-                "WHERE TC.Nume_TipCamera = 'Triple'";
-            Utility.cmd.CommandText = query2;
-            Utility.con.Open();
-            int counttriple = (int)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-            string query3 = "SELECT COUNT(*) FROM Rezervare R " +
-                "INNER JOIN TipCamera TC ON R.Cod_TipCamera = TC.Cod_TipCamera " +
-                "WHERE TC.Nume_TipCamera = 'Quad'";
-            Utility.cmd.CommandText = query3;
-            Utility.con.Open();
-            int countquad = (int)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-            //double ponderesingle = countrezervari;
-
-            // Retrieve the counts of each room type from the database
-            string querycounttipcamera = "SELECT COUNT(*) AS CountTipCamera FROM Rezervare AS R INNER JOIN Camera AS C ON R.FK_CameraId = C.Id INNER JOIN TipCamera AS TC ON C.FK_TipCameraId = TC.Id GROUP BY TC.Nume_TipCamera";
-            DataTable tablecontortipcamera = new DataTable();
-            using (OleDbDataAdapter adapter = new OleDbDataAdapter(query, Utility.con))
-            {
-                adapter.Fill(tablecontortipcamera);
-            }
-
-            // converteste tabela contorizata intr-o matrice 
-            int[] countertipcamera = tablecontortipcamera.Rows.OfType<DataRow>().Select(row => row.Field<int>("CountTipCamera")).ToArray();
-
-            // Retrieve the room types from the database
-            string querytipcamera = "SELECT Nume_TipCamera FROM TipCamera";
-            DataTable tabletipcamera = new DataTable();
-            using (OleDbDataAdapter adapter = new OleDbDataAdapter(querytipcamera, Utility.con))
-            {
-                adapter.Fill(tabletipcamera);
-            }
-
-            // Convert the room types table to an array of strings
-            string[] tipuricamera = tabletipcamera.Rows.OfType<DataRow>().Select(row => row.Field<string>("Nume_TipCamera")).ToArray();
-
-            chart1.Series.Clear();
-            chart1.Series.Add("Tipuri de Camere");
-
-            // Set the chart type to a pie chart
-            //chart1.Series["RoomTypes"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-
-            // Add the room types and their counts to the chart series
-            for (int i = 0; i < tipuricamera.Length; i++)
-            {
-                chart1.Series["Tipuri de Camere"].Points.AddXY(tipuricamera[i], countertipcamera[i]);
-            }
-
-            // Set the chart title
-            chart1.Titles.Clear();
-            chart1.Titles.Add("Pondere Tipuri Camere");
-
-            // Refresh the chart to update the display
-            chart1.Refresh();
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -355,6 +238,72 @@ namespace Rezervare_Hotel
         private void administrareConturiToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UpdateLabels()
+        {
+            // Set Label 1 with the current date
+            label1.Text = DateTime.Now.ToShortDateString();
+
+            // Calculate the occupancy rate for today
+            double occupancyRate = CalculateOccupancyRate(DateTime.Today);
+
+            // Set Label 2 with the occupancy rate percentage
+            label2.Text = occupancyRate.ToString("0.00") + "%";
+        }
+
+        private double CalculateOccupancyRate(DateTime date)
+        {
+            // Retrieve the count of reservations for the specified date
+            string query = "SELECT COUNT(*) FROM Rezervare WHERE Data_Cazare <= @date AND Data_Plecare > @date";
+            Utility.cmd = new OleDbCommand(query, Utility.con);
+            Utility.cmd.Parameters.AddWithValue("@date", date);
+
+            Utility.con.Open();
+            int countReservations = (int)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+            // Calculate the occupancy rate percentage
+            double occupancyRate = (countReservations / (double)TotalRooms()) * 100.0;
+
+            return occupancyRate;
+        }
+
+        private int TotalRooms()
+        {
+            // Retrieve the total number of rooms
+            string query = "SELECT COUNT(*) FROM Camera";
+            Utility.cmd = new OleDbCommand(query, Utility.con);
+
+            Utility.con.Open();
+            int totalRooms = (int)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+            return totalRooms;
+        }
+
+        private void CustomizeChartAppearance()
+        {
+            // Set the chart size
+            //chart2.Size = new Size(800, 400);
+
+            // Set the font properties for axis labels and title
+            chart2.ChartAreas[0].AxisX.LabelStyle.Font = new Font("Arial", 10f, FontStyle.Bold);
+            chart2.ChartAreas[0].AxisY.LabelStyle.Font = new Font("Arial", 10f, FontStyle.Bold);
+            chart2.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 10f, FontStyle.Bold);
+            chart2.ChartAreas[0].AxisY.TitleFont = new Font("Arial", 10f, FontStyle.Bold);
+
+            // Set the line thickness
+            chart2.Series[0].BorderWidth = 5;
+
+            // Refresh the chart to apply the changes
+            chart2.Refresh();
+        }
+
+        private void fisaclientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaportFisaClient f = new RaportFisaClient();
+            f.Show();
         }
     }
 }

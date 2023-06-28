@@ -22,89 +22,18 @@ namespace Rezervare_Hotel
 
         private void butoninsereaza_Click(object sender, EventArgs e)
         {
-            //
-
-            string selectednume = combonumeclient.SelectedItem.ToString();
-            string nume = selectednume.Split(' ')[0];
-            string query1 = $"SELECT Cod_Client FROM Client WHERE Nume_Client = '{nume}'";
-            //Utility.cmd = new OleDbCommand(query1, Utility.con);
-            Utility.cmd.CommandText = query1;
-            Utility.con.Open();
-            Utility.cmd.ExecuteNonQuery();
-            int codclient = (int)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-            string selectedcamera = combonrcamera.SelectedItem.ToString();
-            string query2 = $"SELECT Cod_Camera FROM Camera WHERE Nr_Camera = '{selectedcamera}'";
-            Utility.cmd.CommandText = query2;
-            Utility.con.Open();
-            Utility.cmd.ExecuteNonQuery();
-            int codcamera = (int)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-            
-
-            //
-            if (checkoverlap(codcamera, checkindate.Value, checkoutdate.Value))
-            {
-                MessageBox.Show("Camera selectata este deja rezervata");
-                return;
-            }
-            //
-            checkdate(checkindate.Value, checkoutdate.Value);
-
-            string query3 = $"INSERT INTO Rezervare(Data_Cazare, Data_Plecare, Cod_Client, Cod_Camera)" +
-                $" VALUES ('{checkindate.Value}', '{checkoutdate.Value}', '{codclient}', '{codcamera}')";
-            Utility.cmd.CommandText = query3;
-            Utility.con.Open();
-            Utility.cmd.ExecuteNonQuery();
-            Utility.con.Close();
-            MessageBox.Show("Rezervarea a fost efectuata cu succes!");
-
-
-            // Retrieve fk codrezervare
-            string query4 = "SELECT MAX(Cod_Rezervare) FROM Rezervare";
-            Utility.cmd.CommandText = query4;
-            Utility.con.Open();
-            int codRezervare = (int)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-            string query5 = $"SELECT Cod_Client FROM Client WHERE Nume_Client = '{nume}'";
-            Utility.cmd.CommandText = query5;
-            Utility.con.Open();
-            Utility.cmd.ExecuteNonQuery();
-            int codClient = (int)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-
-            string query11 = "SELECT MAX(Data_Cazare) FROM Rezervare";
-            Utility.cmd.CommandText = query11;
-            Utility.con.Open();
-            DateTime datacazare = (DateTime)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-            string query12 = "SELECT MAX(Data_Plecare) FROM Rezervare";
-            Utility.cmd.CommandText = query12;
-            Utility.con.Open();
-            DateTime dataplecare = (DateTime)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-
-            // calculare nr zile si total de plata
-            int pretTipCamera = int.Parse(textpretcamera.Text);
-            int nrzile = (int)(dataplecare - datacazare).TotalDays;
-            int totalplata = nrzile * pretTipCamera;
-
-            getrezervari();
+           
         }
 
         private void RezervareForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.Rezervare' table. You can move, or remove it, as needed.
+            this.rezervareTableAdapter.Fill(this.dataSet1.Rezervare);
             popularenrcamera();
-            popularerezervari();
+           // popularerezervari();
             popularetipcamera();
             populareclienti();
-            getrezervari();
+           // getrezervari();
 
 
 
@@ -214,9 +143,6 @@ namespace Rezervare_Hotel
         }
         public void clear()
         {
-            textcodrezervare.Text = string.Empty;
-            textcodclient.Text = string.Empty;
-            textcodcamera.Text = string.Empty;
             combonumeclient.Text = string.Empty;
             combonrcamera.Text = string.Empty;
             combotipcamera.Text = string.Empty;
@@ -323,6 +249,99 @@ namespace Rezervare_Hotel
             }
             listBox1.Items.Clear();
             listBox1.Items.AddRange(camerelibere.ToArray());
+
+        }
+
+        private void butoninsereaza_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butonactualizeaza_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butonR1_Click(object sender, EventArgs e)
+        {
+            //
+
+            string selectednume = combonumeclient.SelectedItem.ToString();
+            string nume = selectednume.Split(' ')[0];
+            string query1 = $"SELECT Cod_Client FROM Client WHERE Nume_Client = '{nume}'";
+            //Utility.cmd = new OleDbCommand(query1, Utility.con);
+            Utility.cmd.CommandText = query1;
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            int codclient = (int)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+            string selectedcamera = combonrcamera.SelectedItem.ToString();
+            string query2 = $"SELECT Cod_Camera FROM Camera WHERE Nr_Camera = '{selectedcamera}'";
+            Utility.cmd.CommandText = query2;
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            int codcamera = (int)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+
+
+            //
+            if (checkoverlap(codcamera, checkindate.Value, checkoutdate.Value))
+            {
+                MessageBox.Show("Camera selectata este deja rezervata");
+                return;
+            }
+            //
+            checkdate(checkindate.Value, checkoutdate.Value);
+
+            string query3 = $"INSERT INTO Rezervare(Data_Cazare, Data_Plecare, Cod_Client, Cod_Camera)" +
+                $" VALUES ('{checkindate.Value}', '{checkoutdate.Value}', '{codclient}', '{codcamera}')";
+            Utility.cmd.CommandText = query3;
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            Utility.con.Close();
+            MessageBox.Show("Rezervarea a fost efectuata cu succes!");
+
+
+            // Retrieve fk codrezervare
+            string query4 = "SELECT MAX(Cod_Rezervare) FROM Rezervare";
+            Utility.cmd.CommandText = query4;
+            Utility.con.Open();
+            int codRezervare = (int)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+            string query5 = $"SELECT Cod_Client FROM Client WHERE Nume_Client = '{nume}'";
+            Utility.cmd.CommandText = query5;
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            int codClient = (int)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+
+            string query11 = "SELECT MAX(Data_Cazare) FROM Rezervare";
+            Utility.cmd.CommandText = query11;
+            Utility.con.Open();
+            DateTime datacazare = (DateTime)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+            string query12 = "SELECT MAX(Data_Plecare) FROM Rezervare";
+            Utility.cmd.CommandText = query12;
+            Utility.con.Open();
+            DateTime dataplecare = (DateTime)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+
+            // calculare nr zile si total de plata
+            int pretTipCamera = int.Parse(textpretcamera.Text);
+            int nrzile = (int)(dataplecare - datacazare).TotalDays;
+            int totalplata = nrzile * pretTipCamera;
+
+            getrezervari();
+        }
+
+        private void butonsterge_Click(object sender, EventArgs e)
+        {
 
         }
     }

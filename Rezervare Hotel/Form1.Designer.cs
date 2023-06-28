@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -44,10 +43,6 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.solidGauge1 = new LiveCharts.WinForms.SolidGauge();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -56,24 +51,28 @@
             this.administrareConturiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItemImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rezervariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rapoarteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raportUtilizatoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jkhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fisaclientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formuarPrelucrareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raportCamereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raportTipuriCameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.situatiaCamerelorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.camereOcupateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gradulDeIncarcareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rezervariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -193,62 +192,10 @@
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(198, 4);
             this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
-            // solidGauge1
-            // 
-            this.solidGauge1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.solidGauge1.Location = new System.Drawing.Point(631, 323);
-            this.solidGauge1.Margin = new System.Windows.Forms.Padding(2);
-            this.solidGauge1.Name = "solidGauge1";
-            this.solidGauge1.Size = new System.Drawing.Size(194, 109);
-            this.solidGauge1.TabIndex = 63;
-            this.solidGauge1.Text = "solidGauge1";
-            this.solidGauge1.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.solidGauge1_ChildChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(588, 284);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 26);
-            this.label1.TabIndex = 66;
-            this.label1.Text = "Situatia Ocuparii Hotelului";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(182, 229);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(402, 26);
-            this.label2.TabIndex = 67;
-            this.label2.Text = "Pondere Tipuri de Camere Rezervate";
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(232, 287);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.YValuesPerPoint = 6;
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(277, 163);
-            this.chart1.TabIndex = 68;
-            this.chart1.Text = "chart1";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Info;
-            this.button1.Location = new System.Drawing.Point(391, 115);
+            this.button1.Location = new System.Drawing.Point(400, 334);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 44);
@@ -325,10 +272,10 @@
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItemImage,
+            this.rapoarteToolStripMenuItem,
             this.toolStripMenuItem9,
             this.clientiToolStripMenuItem,
-            this.rezervariToolStripMenuItem,
-            this.rapoarteToolStripMenuItem});
+            this.rezervariToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(0);
@@ -343,48 +290,19 @@
             this.ToolStripMenuItemImage.Name = "ToolStripMenuItemImage";
             this.ToolStripMenuItemImage.Size = new System.Drawing.Size(180, 70);
             // 
-            // toolStripMenuItem9
-            // 
-            this.toolStripMenuItem9.AutoSize = false;
-            this.toolStripMenuItem9.Image = global::Rezervare_Hotel.Properties.Resources.bed;
-            this.toolStripMenuItem9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(180, 70);
-            this.toolStripMenuItem9.Text = "  Camere";
-            this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
-            // 
-            // clientiToolStripMenuItem
-            // 
-            this.clientiToolStripMenuItem.AutoSize = false;
-            this.clientiToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.add_user;
-            this.clientiToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.clientiToolStripMenuItem.Name = "clientiToolStripMenuItem";
-            this.clientiToolStripMenuItem.Size = new System.Drawing.Size(180, 70);
-            this.clientiToolStripMenuItem.Text = "  Clienti";
-            this.clientiToolStripMenuItem.Click += new System.EventHandler(this.clientiToolStripMenuItem_Click);
-            // 
-            // rezervariToolStripMenuItem
-            // 
-            this.rezervariToolStripMenuItem.AutoSize = false;
-            this.rezervariToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.booking;
-            this.rezervariToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.rezervariToolStripMenuItem.Name = "rezervariToolStripMenuItem";
-            this.rezervariToolStripMenuItem.Size = new System.Drawing.Size(180, 70);
-            this.rezervariToolStripMenuItem.Text = "  Rezervari";
-            this.rezervariToolStripMenuItem.Click += new System.EventHandler(this.rezervariToolStripMenuItem_Click);
-            // 
             // rapoarteToolStripMenuItem
             // 
             this.rapoarteToolStripMenuItem.AutoSize = false;
             this.rapoarteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.facturaToolStripMenuItem,
             this.raportUtilizatoriToolStripMenuItem,
-            this.jkhToolStripMenuItem,
+            this.fisaclientToolStripMenuItem,
             this.formuarPrelucrareToolStripMenuItem,
             this.raportCamereToolStripMenuItem,
             this.raportTipuriCameraToolStripMenuItem,
             this.situatiaCamerelorToolStripMenuItem,
-            this.camereOcupateToolStripMenuItem});
+            this.camereOcupateToolStripMenuItem,
+            this.gradulDeIncarcareToolStripMenuItem});
             this.rapoarteToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.report;
             this.rapoarteToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rapoarteToolStripMenuItem.Name = "rapoarteToolStripMenuItem";
@@ -406,14 +324,15 @@
             this.raportUtilizatoriToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.user;
             this.raportUtilizatoriToolStripMenuItem.Name = "raportUtilizatoriToolStripMenuItem";
             this.raportUtilizatoriToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
-            this.raportUtilizatoriToolStripMenuItem.Text = "Raport Utilizatori";
+            this.raportUtilizatoriToolStripMenuItem.Text = "Utilizatori";
             this.raportUtilizatoriToolStripMenuItem.Click += new System.EventHandler(this.raportUtilizatoriToolStripMenuItem_Click);
             // 
-            // jkhToolStripMenuItem
+            // fisaclientToolStripMenuItem
             // 
-            this.jkhToolStripMenuItem.Name = "jkhToolStripMenuItem";
-            this.jkhToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
-            this.jkhToolStripMenuItem.Text = "jkh";
+            this.fisaclientToolStripMenuItem.Name = "fisaclientToolStripMenuItem";
+            this.fisaclientToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
+            this.fisaclientToolStripMenuItem.Text = "Fisa Client";
+            this.fisaclientToolStripMenuItem.Click += new System.EventHandler(this.fisaclientToolStripMenuItem_Click);
             // 
             // formuarPrelucrareToolStripMenuItem
             // 
@@ -450,10 +369,46 @@
             this.camereOcupateToolStripMenuItem.Text = "Camere Ocupate";
             this.camereOcupateToolStripMenuItem.Click += new System.EventHandler(this.camereOcupateToolStripMenuItem_Click);
             // 
+            // gradulDeIncarcareToolStripMenuItem
+            // 
+            this.gradulDeIncarcareToolStripMenuItem.Name = "gradulDeIncarcareToolStripMenuItem";
+            this.gradulDeIncarcareToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
+            this.gradulDeIncarcareToolStripMenuItem.Text = "Gradul de Incarcare";
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.AutoSize = false;
+            this.toolStripMenuItem9.Image = global::Rezervare_Hotel.Properties.Resources.bed;
+            this.toolStripMenuItem9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(180, 70);
+            this.toolStripMenuItem9.Text = "  Camere";
+            this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
+            // 
+            // clientiToolStripMenuItem
+            // 
+            this.clientiToolStripMenuItem.AutoSize = false;
+            this.clientiToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.add_user;
+            this.clientiToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.clientiToolStripMenuItem.Name = "clientiToolStripMenuItem";
+            this.clientiToolStripMenuItem.Size = new System.Drawing.Size(180, 70);
+            this.clientiToolStripMenuItem.Text = "  Clienti";
+            this.clientiToolStripMenuItem.Click += new System.EventHandler(this.clientiToolStripMenuItem_Click);
+            // 
+            // rezervariToolStripMenuItem
+            // 
+            this.rezervariToolStripMenuItem.AutoSize = false;
+            this.rezervariToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.booking;
+            this.rezervariToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rezervariToolStripMenuItem.Name = "rezervariToolStripMenuItem";
+            this.rezervariToolStripMenuItem.Size = new System.Drawing.Size(180, 70);
+            this.rezervariToolStripMenuItem.Text = "  Rezervari";
+            this.rezervariToolStripMenuItem.Click += new System.EventHandler(this.rezervariToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(180, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(182, 298);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 120);
@@ -461,19 +416,48 @@
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
             // 
+            // chart2
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(210, 77);
+            this.chart2.Name = "chart2";
+            this.chart2.Size = new System.Drawing.Size(662, 204);
+            this.chart2.TabIndex = 73;
+            this.chart2.Text = "chart2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(583, 324);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(672, 324);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 461);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.chart2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.solidGauge1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip2;
@@ -484,12 +468,12 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,10 +485,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private LiveCharts.WinForms.SolidGauge solidGauge1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripButton5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
@@ -525,7 +505,7 @@
         private System.Windows.Forms.ToolStripMenuItem rapoarteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem raportUtilizatoriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem jkhToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fisaclientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formuarPrelucrareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem raportCamereToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem raportTipuriCameraToolStripMenuItem;
@@ -533,6 +513,10 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemImage;
         private System.Windows.Forms.ToolStripMenuItem situatiaCamerelorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem camereOcupateToolStripMenuItem;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.ToolStripMenuItem gradulDeIncarcareToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

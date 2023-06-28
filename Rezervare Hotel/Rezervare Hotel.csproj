@@ -119,6 +119,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RaportFisaClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportFisaClient.Designer.cs">
+      <DependentUpon>RaportFisaClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="TipCameraForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,10 @@
       <DependentUpon>FormRaportCamereOcupate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RaportCamereOcupate.rdlc" />
+    <EmbeddedResource Include="RaportFisaClient.rdlc" />
+    <EmbeddedResource Include="RaportFisaClient.resx">
+      <DependentUpon>RaportFisaClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UtilizatorForm.resx">
       <DependentUpon>UtilizatorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,7 +241,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RaportBlank.rdlc" />
     <EmbeddedResource Include="RaportUtilizatori.rdlc" />
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>

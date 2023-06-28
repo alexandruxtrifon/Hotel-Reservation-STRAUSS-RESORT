@@ -38,52 +38,35 @@ namespace Rezervare_Hotel
             string query = @"SELECT C.Nume_Client & ' ' & C.Prenume_Client AS FullName
                      FROM Client AS C
                      INNER JOIN Rezervare AS R ON C.Cod_Client = R.Cod_Client";
+            Utility.cmd = new OleDbCommand();
+            Utility.cmd.Connection = Utility.con;
 
             Utility.cmd.CommandText = query;
+            
 
             try
             {
                 Utility.con.Open();
                 using (OleDbDataReader reader = Utility.cmd.ExecuteReader())
                 {
-                    listBox1.Items.Clear(); // Clear the existing items in the ListBox
+                    listBox1.Items.Clear();
 
                     while (reader.Read())
                     {
                         string fullName = reader.GetString(0);
 
-                        // Add the concatenated name to the ListBox
                         listBox1.Items.Add(fullName);
                     }
                 }
             }
             catch (OleDbException ex)
             {
-                // Handle any exceptions
-                MessageBox.Show("Error executing query: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
             finally
             {
                 Utility.con.Close();
             }
-        }
-
-        void popularelista() // eroare sintaxa from clause
-        {
-            string query = "SELECT CONCAT(c.[Nume_Client], ' ', c.[Prenume_Client]) AS NumePrenume " +
-                           "FROM Rezervare r" +
-                           "JOIN Client c ON r.[Cod_Client] = c.[Cod_Client]";
-            Utility.con.Open();
-            Utility.cmd = new OleDbCommand(query, Utility.con);
-            DataTable dt = new DataTable();
-            Utility.adapter = new OleDbDataAdapter(Utility.cmd);
-            Utility.adapter.Fill(dt);
-            foreach (DataRow row in dt.Rows)
-            {
-                string numePrenume = row["NumePrenume"].ToString();
-                // listBox1.Items.Add(numePrenume);
-            }
-            Utility.con.Close();
         }
 
         void listBox1_SelectedIndexChanged(object sender, EventArgs e)
