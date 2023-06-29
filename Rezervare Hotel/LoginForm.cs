@@ -76,10 +76,7 @@ namespace Rezervare_Hotel
             if (e.KeyCode == Keys.Enter)
             {
                 butonR1.PerformClick();
-                e.SuppressKeyPress = true;
             }
-           // textBoxR2.KeyDown += textBoxR2_KeyDown;
-
         }
 
         private void LoginForm_KeyDown(object sender, KeyEventArgs e)

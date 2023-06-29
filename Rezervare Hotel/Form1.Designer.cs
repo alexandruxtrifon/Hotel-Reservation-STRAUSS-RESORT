@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -68,6 +68,14 @@
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.incasareCameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.venituriCalendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -302,7 +310,15 @@
             this.raportTipuriCameraToolStripMenuItem,
             this.situatiaCamerelorToolStripMenuItem,
             this.camereOcupateToolStripMenuItem,
-            this.gradulDeIncarcareToolStripMenuItem});
+            this.gradulDeIncarcareToolStripMenuItem,
+            this.incasareCameraToolStripMenuItem,
+            this.venituriCalendarToolStripMenuItem,
+            this.toolStripMenuItem10,
+            this.toolStripMenuItem11,
+            this.toolStripMenuItem12,
+            this.toolStripMenuItem13,
+            this.toolStripMenuItem14,
+            this.toolStripMenuItem15});
             this.rapoarteToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.report;
             this.rapoarteToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rapoarteToolStripMenuItem.Name = "rapoarteToolStripMenuItem";
@@ -418,10 +434,10 @@
             // 
             // chart2
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
             this.chart2.Location = new System.Drawing.Point(210, 77);
             this.chart2.Name = "chart2";
             this.chart2.Size = new System.Drawing.Size(662, 204);
@@ -445,6 +461,54 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 75;
             this.label2.Text = "label2";
+            // 
+            // incasareCameraToolStripMenuItem
+            // 
+            this.incasareCameraToolStripMenuItem.Name = "incasareCameraToolStripMenuItem";
+            this.incasareCameraToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
+            this.incasareCameraToolStripMenuItem.Text = "Venituri Camera";
+            // 
+            // venituriCalendarToolStripMenuItem
+            // 
+            this.venituriCalendarToolStripMenuItem.Name = "venituriCalendarToolStripMenuItem";
+            this.venituriCalendarToolStripMenuItem.Size = new System.Drawing.Size(258, 38);
+            this.venituriCalendarToolStripMenuItem.Text = "Venituri";
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(258, 38);
+            this.toolStripMenuItem10.Text = "toolStripMenuItem10";
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(258, 38);
+            this.toolStripMenuItem11.Text = "toolStripMenuItem11";
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(258, 38);
+            this.toolStripMenuItem12.Text = "toolStripMenuItem12";
+            // 
+            // toolStripMenuItem13
+            // 
+            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(258, 38);
+            this.toolStripMenuItem13.Text = "toolStripMenuItem13";
+            // 
+            // toolStripMenuItem14
+            // 
+            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(258, 38);
+            this.toolStripMenuItem14.Text = "toolStripMenuItem14";
+            // 
+            // toolStripMenuItem15
+            // 
+            this.toolStripMenuItem15.Name = "toolStripMenuItem15";
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(258, 38);
+            this.toolStripMenuItem15.Text = "toolStripMenuItem15";
             // 
             // Form1
             // 
@@ -517,6 +581,14 @@
         private System.Windows.Forms.ToolStripMenuItem gradulDeIncarcareToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem incasareCameraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem venituriCalendarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem13;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem14;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem15;
     }
 }
 

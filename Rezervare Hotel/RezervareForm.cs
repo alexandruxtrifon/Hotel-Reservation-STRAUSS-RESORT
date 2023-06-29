@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Runtime.InteropServices;
 using System.Collections;
+using System.Windows.Media.Media3D;
 
 namespace Rezervare_Hotel
 {
@@ -33,7 +34,7 @@ namespace Rezervare_Hotel
            // popularerezervari();
             popularetipcamera();
             populareclienti();
-           // getrezervari();
+
 
 
 
@@ -70,16 +71,7 @@ namespace Rezervare_Hotel
                 MessageBox.Show("Rezervarea nu poate sa fie mai scurta decat o zi");
                 return;
             }
-            getrezervari();
-        }
-
-        void getrezervari()
-        {
-            DataTable dt = new DataTable();
-            Utility.adapter = new OleDbDataAdapter("SELECT * FROM Rezervare", Utility.con);
-            Utility.adapter.Fill(dt);
-            dataGridView1.DataSource = dt;
-            Utility.con.Close();
+            this.rezervareTableAdapter.Fill(this.dataSet1.Rezervare);
         }
 
         public void popularenrcamera()
@@ -148,41 +140,6 @@ namespace Rezervare_Hotel
             combotipcamera.Text = string.Empty;
             checkindate.Value = DateTimePicker.MinimumDateTime;
             checkoutdate.Value = DateTimePicker.MaximumDateTime;
-        }
-
-        private void combotipcamera_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //curat comboboxul cu nr camere
-            combonrcamera.Items.Clear();
-
-            string camptipcamera = combotipcamera.Text;
-
-            string query = "SELECT Camera.Nr_Camera FROM Camera INNER JOIN TipCamera ON Camera.Cod_TipCamera = TipCamera.Cod_TipCamera WHERE TipCamera.Nume_TipCamera = @roomType";
-            OleDbDataAdapter adapter = new OleDbDataAdapter(query, Utility.con);
-            adapter.SelectCommand.Parameters.AddWithValue("@roomType", camptipcamera);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-
-            //adaug camerele in combobox nr camere
-            foreach (DataRow dr in dt.Rows)
-            {
-                combonrcamera.Items.Add(dr["Nr_Camera"].ToString());
-            }
-
-            //actualizare preturi
-            combotipcamera.SelectedIndexChanged += combotipcamera_SelectedIndexChanged;
-            //string camptipcamera = combotipcamera.Text;
-            string selectedTipCamera = combotipcamera.SelectedItem.ToString();
-            string query1 = $"SELECT Pret_TipCamera FROM TipCamera WHERE Nume_TipCamera = '{camptipcamera}'";
-            Utility.cmd = new OleDbCommand(query1, Utility.con);
-            Utility.con.Open();
-            Utility.cmd.ExecuteNonQuery();
-            double pretTipCamera = (double)Utility.cmd.ExecuteScalar();
-            Utility.con.Close();
-
-            textpretcamera.Text = pretTipCamera.ToString();
-
-            metodanoua();
         }
 
         private void combonumeclient_SelectedIndexChanged(object sender, EventArgs e)
@@ -337,11 +294,47 @@ namespace Rezervare_Hotel
             int nrzile = (int)(dataplecare - datacazare).TotalDays;
             int totalplata = nrzile * pretTipCamera;
 
-            getrezervari();
+            this.rezervareTableAdapter.Fill(this.dataSet1.Rezervare);
         }
 
         private void butonsterge_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void combotipcamera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            combonrcamera.Items.Clear();
+
+            string camptipcamera = combotipcamera.Text;
+
+            string query = "SELECT Camera.Nr_Camera FROM Camera INNER JOIN TipCamera ON Camera.Cod_TipCamera = TipCamera.Cod_TipCamera WHERE TipCamera.Nume_TipCamera = @roomType";
+            OleDbDataAdapter adapter = new OleDbDataAdapter(query, Utility.con);
+            adapter.SelectCommand.Parameters.AddWithValue("@roomType", camptipcamera);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+
+            //adaug camerele in combobox nr camere
+            foreach (DataRow dr in dt.Rows)
+            {
+                combonrcamera.Items.Add(dr["Nr_Camera"].ToString());
+            }
+
+            //actualizare preturi
+            combotipcamera.SelectedIndexChanged += combotipcamera_SelectedIndexChanged;
+            //string camptipcamera = combotipcamera.Text;
+            string selectedTipCamera = combotipcamera.SelectedItem.ToString();
+            string query1 = $"SELECT Pret_TipCamera FROM TipCamera WHERE Nume_TipCamera = '{camptipcamera}'";
+            Utility.cmd = new OleDbCommand(query1, Utility.con);
+            Utility.con.Open();
+            Utility.cmd.ExecuteNonQuery();
+            double pretTipCamera = (double)Utility.cmd.ExecuteScalar();
+            Utility.con.Close();
+
+            textpretcamera.Text = pretTipCamera.ToString();
+
+            metodanoua();
+
 
         }
     }

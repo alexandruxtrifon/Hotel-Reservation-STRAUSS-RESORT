@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nrCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCazareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataPlecareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.receptionerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeTipCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rezervareBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new Rezervare_Hotel.DataSet1();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.textpretcamera = new System.Windows.Forms.TextBox();
@@ -47,22 +55,16 @@
             this.butonmodifica = new Rezervare_Hotel.ButonR();
             this.butonR2 = new Rezervare_Hotel.ButonR();
             this.butonR1 = new Rezervare_Hotel.ButonR();
-            this.dataSet1 = new Rezervare_Hotel.DataSet1();
-            this.rezervareBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rezervareTableAdapter = new Rezervare_Hotel.DataSet1TableAdapters.RezervareTableAdapter();
-            this.nrCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataCazareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataPlecareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.receptionerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeTipCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervareBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -84,6 +86,70 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(444, 156);
             this.dataGridView1.TabIndex = 84;
+            // 
+            // nrCameraDataGridViewTextBoxColumn
+            // 
+            this.nrCameraDataGridViewTextBoxColumn.DataPropertyName = "Nr_Camera";
+            this.nrCameraDataGridViewTextBoxColumn.FillWeight = 152.2843F;
+            this.nrCameraDataGridViewTextBoxColumn.HeaderText = "Nr";
+            this.nrCameraDataGridViewTextBoxColumn.Name = "nrCameraDataGridViewTextBoxColumn";
+            this.nrCameraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nrCameraDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // dataCazareDataGridViewTextBoxColumn
+            // 
+            this.dataCazareDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataCazareDataGridViewTextBoxColumn.DataPropertyName = "Data_Cazare";
+            this.dataCazareDataGridViewTextBoxColumn.FillWeight = 89.54315F;
+            this.dataCazareDataGridViewTextBoxColumn.HeaderText = "Data_Cazare";
+            this.dataCazareDataGridViewTextBoxColumn.Name = "dataCazareDataGridViewTextBoxColumn";
+            this.dataCazareDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataPlecareDataGridViewTextBoxColumn
+            // 
+            this.dataPlecareDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataPlecareDataGridViewTextBoxColumn.DataPropertyName = "Data_Plecare";
+            this.dataPlecareDataGridViewTextBoxColumn.FillWeight = 89.54315F;
+            this.dataPlecareDataGridViewTextBoxColumn.HeaderText = "Data_Plecare";
+            this.dataPlecareDataGridViewTextBoxColumn.Name = "dataPlecareDataGridViewTextBoxColumn";
+            this.dataPlecareDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clientDataGridViewTextBoxColumn
+            // 
+            this.clientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clientDataGridViewTextBoxColumn.DataPropertyName = "Client";
+            this.clientDataGridViewTextBoxColumn.FillWeight = 89.54315F;
+            this.clientDataGridViewTextBoxColumn.HeaderText = "Client";
+            this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
+            this.clientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // receptionerDataGridViewTextBoxColumn
+            // 
+            this.receptionerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.receptionerDataGridViewTextBoxColumn.DataPropertyName = "Receptioner";
+            this.receptionerDataGridViewTextBoxColumn.FillWeight = 89.54315F;
+            this.receptionerDataGridViewTextBoxColumn.HeaderText = "Receptioner";
+            this.receptionerDataGridViewTextBoxColumn.Name = "receptionerDataGridViewTextBoxColumn";
+            this.receptionerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numeTipCameraDataGridViewTextBoxColumn
+            // 
+            this.numeTipCameraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numeTipCameraDataGridViewTextBoxColumn.DataPropertyName = "Nume_TipCamera";
+            this.numeTipCameraDataGridViewTextBoxColumn.FillWeight = 89.54315F;
+            this.numeTipCameraDataGridViewTextBoxColumn.HeaderText = "Nume Camera";
+            this.numeTipCameraDataGridViewTextBoxColumn.Name = "numeTipCameraDataGridViewTextBoxColumn";
+            this.numeTipCameraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rezervareBindingSource
+            // 
+            this.rezervareBindingSource.DataMember = "Rezervare";
+            this.rezervareBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // listBox1
             // 
@@ -185,6 +251,7 @@
             this.combotipcamera.Name = "combotipcamera";
             this.combotipcamera.Size = new System.Drawing.Size(123, 28);
             this.combotipcamera.TabIndex = 71;
+            this.combotipcamera.SelectedIndexChanged += new System.EventHandler(this.combotipcamera_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -297,73 +364,9 @@
             this.butonR1.UseVisualStyleBackColor = false;
             this.butonR1.Click += new System.EventHandler(this.butonR1_Click);
             // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rezervareBindingSource
-            // 
-            this.rezervareBindingSource.DataMember = "Rezervare";
-            this.rezervareBindingSource.DataSource = this.dataSet1;
-            // 
             // rezervareTableAdapter
             // 
             this.rezervareTableAdapter.ClearBeforeFill = true;
-            // 
-            // nrCameraDataGridViewTextBoxColumn
-            // 
-            this.nrCameraDataGridViewTextBoxColumn.DataPropertyName = "Nr_Camera";
-            this.nrCameraDataGridViewTextBoxColumn.FillWeight = 152.2843F;
-            this.nrCameraDataGridViewTextBoxColumn.HeaderText = "Nr";
-            this.nrCameraDataGridViewTextBoxColumn.Name = "nrCameraDataGridViewTextBoxColumn";
-            this.nrCameraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nrCameraDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // dataCazareDataGridViewTextBoxColumn
-            // 
-            this.dataCazareDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataCazareDataGridViewTextBoxColumn.DataPropertyName = "Data_Cazare";
-            this.dataCazareDataGridViewTextBoxColumn.FillWeight = 89.54315F;
-            this.dataCazareDataGridViewTextBoxColumn.HeaderText = "Data_Cazare";
-            this.dataCazareDataGridViewTextBoxColumn.Name = "dataCazareDataGridViewTextBoxColumn";
-            this.dataCazareDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataPlecareDataGridViewTextBoxColumn
-            // 
-            this.dataPlecareDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataPlecareDataGridViewTextBoxColumn.DataPropertyName = "Data_Plecare";
-            this.dataPlecareDataGridViewTextBoxColumn.FillWeight = 89.54315F;
-            this.dataPlecareDataGridViewTextBoxColumn.HeaderText = "Data_Plecare";
-            this.dataPlecareDataGridViewTextBoxColumn.Name = "dataPlecareDataGridViewTextBoxColumn";
-            this.dataPlecareDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // clientDataGridViewTextBoxColumn
-            // 
-            this.clientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clientDataGridViewTextBoxColumn.DataPropertyName = "Client";
-            this.clientDataGridViewTextBoxColumn.FillWeight = 89.54315F;
-            this.clientDataGridViewTextBoxColumn.HeaderText = "Client";
-            this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
-            this.clientDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // receptionerDataGridViewTextBoxColumn
-            // 
-            this.receptionerDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.receptionerDataGridViewTextBoxColumn.DataPropertyName = "Receptioner";
-            this.receptionerDataGridViewTextBoxColumn.FillWeight = 89.54315F;
-            this.receptionerDataGridViewTextBoxColumn.HeaderText = "Receptioner";
-            this.receptionerDataGridViewTextBoxColumn.Name = "receptionerDataGridViewTextBoxColumn";
-            this.receptionerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // numeTipCameraDataGridViewTextBoxColumn
-            // 
-            this.numeTipCameraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.numeTipCameraDataGridViewTextBoxColumn.DataPropertyName = "Nume_TipCamera";
-            this.numeTipCameraDataGridViewTextBoxColumn.FillWeight = 89.54315F;
-            this.numeTipCameraDataGridViewTextBoxColumn.HeaderText = "Nume Camera";
-            this.numeTipCameraDataGridViewTextBoxColumn.Name = "numeTipCameraDataGridViewTextBoxColumn";
-            this.numeTipCameraDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // RezervareForm
             // 
@@ -389,13 +392,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RezervareForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.RezervareForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rezervareBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
