@@ -243,6 +243,7 @@ namespace Rezervare_Hotel
 
 
 
+
             //
             if (checkoverlap(codcamera, checkindate.Value, checkoutdate.Value))
             {
@@ -252,8 +253,9 @@ namespace Rezervare_Hotel
             //
             checkdate(checkindate.Value, checkoutdate.Value);
 
-            string query3 = $"INSERT INTO Rezervare(Data_Cazare, Data_Plecare, Cod_Client, Cod_Camera)" +
-                $" VALUES ('{checkindate.Value}', '{checkoutdate.Value}', '{codclient}', '{codcamera}')";
+            string query3 = $"INSERT INTO Rezervare(Data_Cazare, Data_Plecare, Cod_Client, Cod_Camera, Cod_Utilizator)" +
+                $" VALUES ('{checkindate.Value}', '{checkoutdate.Value}', " +
+                $"'{codclient}', '{codcamera}')";
             Utility.cmd.CommandText = query3;
             Utility.con.Open();
             Utility.cmd.ExecuteNonQuery();

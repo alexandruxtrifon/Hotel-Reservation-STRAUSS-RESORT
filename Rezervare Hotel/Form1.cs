@@ -64,7 +64,7 @@ namespace Rezervare_Hotel
             // Set chart labels and titles
             chart2.ChartAreas[0].AxisX.Title = "Data";
             chart2.ChartAreas[0].AxisY.Title = "%";
-            chart2.ChartAreas[0].AxisY.LabelStyle.Angle = 90;
+            chart2.ChartAreas[0].AxisY.LabelStyle.Angle = 0;
             chart2.Titles.Clear();
             chart2.Titles.Add("Gradul de incarcare");
         }
@@ -148,10 +148,6 @@ namespace Rezervare_Hotel
         {
             LoginForm f = new LoginForm();
             f.Show();
-        }
-
-        private void loadlabeluser()
-        {
         }
 
         private void toolStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -242,36 +238,25 @@ namespace Rezervare_Hotel
 
         private void UpdateLabels()
         {
-            // Set Label 1 with the current date
             label1.Text = DateTime.Now.ToShortDateString();
-
-            // Calculate the occupancy rate for today
             double occupancyRate = CalculateOccupancyRate(DateTime.Today);
-
-            // Set Label 2 with the occupancy rate percentage
             label2.Text = occupancyRate.ToString("0.00") + "%";
         }
 
         private double CalculateOccupancyRate(DateTime date)
         {
-            // Retrieve the count of reservations for the specified date
             string query = "SELECT COUNT(*) FROM Rezervare WHERE Data_Cazare <= @date AND Data_Plecare > @date";
             Utility.cmd = new OleDbCommand(query, Utility.con);
             Utility.cmd.Parameters.AddWithValue("@date", date);
-
             Utility.con.Open();
             int countReservations = (int)Utility.cmd.ExecuteScalar();
             Utility.con.Close();
-
-            // Calculate the occupancy rate percentage
             double occupancyRate = (countReservations / (double)TotalRooms()) * 100.0;
-
             return occupancyRate;
         }
 
         private int TotalRooms()
         {
-            // Retrieve the total number of rooms
             string query = "SELECT COUNT(*) FROM Camera";
             Utility.cmd = new OleDbCommand(query, Utility.con);
 
@@ -284,19 +269,11 @@ namespace Rezervare_Hotel
 
         private void CustomizeChartAppearance()
         {
-            // Set the chart size
-            //chart2.Size = new Size(800, 400);
-
-            // Set the font properties for axis labels and title
             chart2.ChartAreas[0].AxisX.LabelStyle.Font = new Font("Arial", 10f, FontStyle.Bold);
             chart2.ChartAreas[0].AxisY.LabelStyle.Font = new Font("Arial", 10f, FontStyle.Bold);
             chart2.ChartAreas[0].AxisX.TitleFont = new Font("Arial", 10f, FontStyle.Bold);
             chart2.ChartAreas[0].AxisY.TitleFont = new Font("Arial", 10f, FontStyle.Bold);
-
-            // Set the line thickness
             chart2.Series[0].BorderWidth = 5;
-
-            // Refresh the chart to apply the changes
             chart2.Refresh();
         }
 
@@ -304,6 +281,31 @@ namespace Rezervare_Hotel
         {
             RaportFisaClient f = new RaportFisaClient();
             f.Show();
+        }
+
+        private void gradulDeIncarcareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaportGradIncarcare f = new RaportGradIncarcare();
+            f.Show();
+        }
+
+        private void incasareCameraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            RaportTop10Luni f = new RaportTop10Luni();
+            f.Show();
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            if (label3.Text == $"Bine ai venit, STRAUSS RESORT")
+                administrareConturiToolStripMenuItem.Visible = true;
+            else
+                return;
         }
     }
 }

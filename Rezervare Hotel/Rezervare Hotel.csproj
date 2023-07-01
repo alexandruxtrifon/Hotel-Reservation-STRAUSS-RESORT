@@ -125,6 +125,24 @@
     <Compile Include="RaportFisaClient.Designer.cs">
       <DependentUpon>RaportFisaClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="RaportGradIncarcare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportGradIncarcare.Designer.cs">
+      <DependentUpon>RaportGradIncarcare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportTop10Luni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportTop10Luni.Designer.cs">
+      <DependentUpon>RaportTop10Luni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportVenituriCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportVenituriCamera.Designer.cs">
+      <DependentUpon>RaportVenituriCamera.cs</DependentUpon>
+    </Compile>
     <Compile Include="TipCameraForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +233,15 @@
     <EmbeddedResource Include="RaportFisaClient.resx">
       <DependentUpon>RaportFisaClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RaportGradIncarcare.resx">
+      <DependentUpon>RaportGradIncarcare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportGradIncarcare.rdlc" />
+    <EmbeddedResource Include="RaportTop10Luni.rdlc" />
+    <EmbeddedResource Include="RaportTop10Luni.resx">
+      <DependentUpon>RaportTop10Luni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaportVenituriCamera.rdlc" />
     <EmbeddedResource Include="UtilizatorForm.resx">
       <DependentUpon>UtilizatorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,7 +272,6 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="RaportFactura.rdlc" />
     <EmbeddedResource Include="RaportTipCamera.rdlc" />
     <EmbeddedResource Include="RaportFormular.rdlc" />
