@@ -55,6 +55,10 @@ namespace Rezervare_Hotel
 
         private void Form5_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.CodFactura' table. You can move, or remove it, as needed.
+            this.codFacturaTableAdapter.Fill(this.dataSet1.CodFactura);
+            // TODO: This line of code loads data into the 'dataSet1.Rezervare' table. You can move, or remove it, as needed.
+            this.rezervareTableAdapter.Fill(this.dataSet1.Rezervare);
 
             // TODO: This line of code loads data into the 'dataSet1.DataTable1' table. You can move, or remove it, as needed.
             this.dataTable1TableAdapter.Fill(this.dataSet1.DataTable1, int.Parse(textBox1.Text));
@@ -78,6 +82,20 @@ namespace Rezervare_Hotel
             textBox1.Text = (int.Parse(textBox1.Text) - 1).ToString();
             this.dataTable1TableAdapter.Fill(this.dataSet1.DataTable1, int.Parse(textBox1.Text));
             this.reportViewer1.RefreshReport();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedValue != null)
+            {
+                int codfactura = int.Parse(listBox1.SelectedValue.ToString());
+                this.dataTable1TableAdapter.Fill(this.dataSet1.DataTable1, codfactura);
+                this.reportViewer1.RefreshReport();
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

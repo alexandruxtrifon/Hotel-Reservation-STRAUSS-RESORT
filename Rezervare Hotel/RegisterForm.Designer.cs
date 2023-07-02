@@ -56,15 +56,14 @@
             this.textprenume.BorderSize = 2;
             this.textprenume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textprenume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textprenume.Location = new System.Drawing.Point(122, 77);
-            this.textprenume.Margin = new System.Windows.Forms.Padding(4);
+            this.textprenume.Location = new System.Drawing.Point(92, 63);
             this.textprenume.Multiline = false;
             this.textprenume.Name = "textprenume";
-            this.textprenume.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.textprenume.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.textprenume.PasswordChar = true;
             this.textprenume.PlaceholderColor = System.Drawing.Color.Empty;
             this.textprenume.PlaceholderText = "";
-            this.textprenume.Size = new System.Drawing.Size(250, 40);
+            this.textprenume.Size = new System.Drawing.Size(188, 33);
             this.textprenume.TabIndex = 12;
             this.textprenume.UnderlinedStyle = false;
             // 
@@ -77,15 +76,14 @@
             this.textnume.BorderSize = 2;
             this.textnume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textnume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textnume.Location = new System.Drawing.Point(122, 29);
-            this.textnume.Margin = new System.Windows.Forms.Padding(4);
+            this.textnume.Location = new System.Drawing.Point(92, 24);
             this.textnume.Multiline = false;
             this.textnume.Name = "textnume";
-            this.textnume.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.textnume.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.textnume.PasswordChar = false;
             this.textnume.PlaceholderColor = System.Drawing.Color.Empty;
             this.textnume.PlaceholderText = "";
-            this.textnume.Size = new System.Drawing.Size(250, 40);
+            this.textnume.Size = new System.Drawing.Size(188, 33);
             this.textnume.TabIndex = 11;
             this.textnume.UnderlinedStyle = false;
             this.textnume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textnume_KeyPress);
@@ -94,10 +92,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 78);
+            this.label2.Location = new System.Drawing.Point(13, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label2.Size = new System.Drawing.Size(98, 39);
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.label2.Size = new System.Drawing.Size(80, 32);
             this.label2.TabIndex = 10;
             this.label2.Text = "Prenume";
             // 
@@ -105,10 +104,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 30);
+            this.label1.Location = new System.Drawing.Point(35, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label1.Size = new System.Drawing.Size(68, 39);
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.label1.Size = new System.Drawing.Size(55, 32);
             this.label1.TabIndex = 9;
             this.label1.Text = "Nume";
             // 
@@ -123,9 +123,10 @@
             this.butonR1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butonR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butonR1.ForeColor = System.Drawing.Color.White;
-            this.butonR1.Location = new System.Drawing.Point(122, 459);
+            this.butonR1.Location = new System.Drawing.Point(92, 359);
+            this.butonR1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.butonR1.Name = "butonR1";
-            this.butonR1.Size = new System.Drawing.Size(250, 50);
+            this.butonR1.Size = new System.Drawing.Size(188, 41);
             this.butonR1.TabIndex = 8;
             this.butonR1.Text = "Inregistreaza";
             this.butonR1.TextColor = System.Drawing.Color.White;
@@ -141,15 +142,14 @@
             this.texttelefon.BorderSize = 2;
             this.texttelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.texttelefon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.texttelefon.Location = new System.Drawing.Point(122, 173);
-            this.texttelefon.Margin = new System.Windows.Forms.Padding(4);
+            this.texttelefon.Location = new System.Drawing.Point(92, 141);
             this.texttelefon.Multiline = false;
             this.texttelefon.Name = "texttelefon";
-            this.texttelefon.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.texttelefon.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.texttelefon.PasswordChar = true;
             this.texttelefon.PlaceholderColor = System.Drawing.Color.Empty;
             this.texttelefon.PlaceholderText = "";
-            this.texttelefon.Size = new System.Drawing.Size(250, 40);
+            this.texttelefon.Size = new System.Drawing.Size(188, 33);
             this.texttelefon.TabIndex = 16;
             this.texttelefon.UnderlinedStyle = false;
             // 
@@ -162,15 +162,14 @@
             this.textutilizator.BorderSize = 2;
             this.textutilizator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textutilizator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textutilizator.Location = new System.Drawing.Point(122, 125);
-            this.textutilizator.Margin = new System.Windows.Forms.Padding(4);
+            this.textutilizator.Location = new System.Drawing.Point(92, 102);
             this.textutilizator.Multiline = false;
             this.textutilizator.Name = "textutilizator";
-            this.textutilizator.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.textutilizator.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.textutilizator.PasswordChar = false;
             this.textutilizator.PlaceholderColor = System.Drawing.Color.Empty;
             this.textutilizator.PlaceholderText = "";
-            this.textutilizator.Size = new System.Drawing.Size(250, 40);
+            this.textutilizator.Size = new System.Drawing.Size(188, 33);
             this.textutilizator.TabIndex = 15;
             this.textutilizator.UnderlinedStyle = false;
             // 
@@ -178,10 +177,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 174);
+            this.label3.Location = new System.Drawing.Point(31, 141);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label3.Size = new System.Drawing.Size(74, 39);
+            this.label3.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.label3.Size = new System.Drawing.Size(60, 32);
             this.label3.TabIndex = 14;
             this.label3.Text = "Parola";
             // 
@@ -189,10 +189,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 126);
+            this.label4.Location = new System.Drawing.Point(14, 102);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label4.Size = new System.Drawing.Size(96, 39);
+            this.label4.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.label4.Size = new System.Drawing.Size(81, 32);
             this.label4.TabIndex = 13;
             this.label4.Text = "Utilizator";
             // 
@@ -205,15 +206,14 @@
             this.textadresa.BorderSize = 2;
             this.textadresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textadresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textadresa.Location = new System.Drawing.Point(122, 221);
-            this.textadresa.Margin = new System.Windows.Forms.Padding(4);
+            this.textadresa.Location = new System.Drawing.Point(92, 180);
             this.textadresa.Multiline = false;
             this.textadresa.Name = "textadresa";
-            this.textadresa.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.textadresa.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.textadresa.PasswordChar = true;
             this.textadresa.PlaceholderColor = System.Drawing.Color.Empty;
             this.textadresa.PlaceholderText = "";
-            this.textadresa.Size = new System.Drawing.Size(250, 40);
+            this.textadresa.Size = new System.Drawing.Size(188, 33);
             this.textadresa.TabIndex = 18;
             this.textadresa.UnderlinedStyle = false;
             // 
@@ -221,10 +221,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 222);
+            this.label5.Location = new System.Drawing.Point(38, 180);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label5.Size = new System.Drawing.Size(65, 39);
+            this.label5.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.label5.Size = new System.Drawing.Size(53, 32);
             this.label5.TabIndex = 17;
             this.label5.Text = "Email";
             // 
@@ -237,15 +238,14 @@
             this.textBoxR6.BorderSize = 2;
             this.textBoxR6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxR6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxR6.Location = new System.Drawing.Point(122, 365);
-            this.textBoxR6.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxR6.Location = new System.Drawing.Point(92, 297);
             this.textBoxR6.Multiline = false;
             this.textBoxR6.Name = "textBoxR6";
-            this.textBoxR6.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.textBoxR6.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.textBoxR6.PasswordChar = true;
             this.textBoxR6.PlaceholderColor = System.Drawing.Color.Empty;
             this.textBoxR6.PlaceholderText = "";
-            this.textBoxR6.Size = new System.Drawing.Size(250, 40);
+            this.textBoxR6.Size = new System.Drawing.Size(188, 33);
             this.textBoxR6.TabIndex = 24;
             this.textBoxR6.UnderlinedStyle = false;
             // 
@@ -253,10 +253,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(53, 366);
+            this.label6.Location = new System.Drawing.Point(40, 297);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label6.Size = new System.Drawing.Size(62, 39);
+            this.label6.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.label6.Size = new System.Drawing.Size(51, 32);
             this.label6.TabIndex = 23;
             this.label6.Text = "IBAN";
             // 
@@ -269,15 +270,14 @@
             this.textBoxR7.BorderSize = 2;
             this.textBoxR7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxR7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxR7.Location = new System.Drawing.Point(122, 317);
-            this.textBoxR7.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxR7.Location = new System.Drawing.Point(92, 258);
             this.textBoxR7.Multiline = false;
             this.textBoxR7.Name = "textBoxR7";
-            this.textBoxR7.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.textBoxR7.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.textBoxR7.PasswordChar = true;
             this.textBoxR7.PlaceholderColor = System.Drawing.Color.Empty;
             this.textBoxR7.PlaceholderText = "";
-            this.textBoxR7.Size = new System.Drawing.Size(250, 40);
+            this.textBoxR7.Size = new System.Drawing.Size(188, 33);
             this.textBoxR7.TabIndex = 22;
             this.textBoxR7.UnderlinedStyle = false;
             // 
@@ -290,15 +290,14 @@
             this.textBoxR8.BorderSize = 2;
             this.textBoxR8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxR8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxR8.Location = new System.Drawing.Point(122, 269);
-            this.textBoxR8.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxR8.Location = new System.Drawing.Point(92, 219);
             this.textBoxR8.Multiline = false;
             this.textBoxR8.Name = "textBoxR8";
-            this.textBoxR8.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.textBoxR8.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.textBoxR8.PasswordChar = false;
             this.textBoxR8.PlaceholderColor = System.Drawing.Color.Empty;
             this.textBoxR8.PlaceholderText = "";
-            this.textBoxR8.Size = new System.Drawing.Size(250, 40);
+            this.textBoxR8.Size = new System.Drawing.Size(188, 33);
             this.textBoxR8.TabIndex = 21;
             this.textBoxR8.UnderlinedStyle = false;
             // 
@@ -306,10 +305,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 318);
+            this.label7.Location = new System.Drawing.Point(26, 258);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label7.Size = new System.Drawing.Size(81, 39);
+            this.label7.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.label7.Size = new System.Drawing.Size(66, 32);
             this.label7.TabIndex = 20;
             this.label7.Text = "Adresa";
             // 
@@ -317,20 +317,21 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(30, 270);
+            this.label8.Location = new System.Drawing.Point(22, 219);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(0, 7, 0, 7);
-            this.label8.Size = new System.Drawing.Size(85, 39);
+            this.label8.Padding = new System.Windows.Forms.Padding(0, 6, 0, 6);
+            this.label8.Size = new System.Drawing.Size(69, 32);
             this.label8.TabIndex = 19;
             this.label8.Text = "Telefon";
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(482, 553);
+            this.ClientSize = new System.Drawing.Size(362, 417);
             this.Controls.Add(this.textBoxR6);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxR7);
@@ -348,6 +349,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butonR1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";

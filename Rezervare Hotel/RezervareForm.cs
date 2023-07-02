@@ -255,7 +255,7 @@ namespace Rezervare_Hotel
 
             string query3 = $"INSERT INTO Rezervare(Data_Cazare, Data_Plecare, Cod_Client, Cod_Camera, Cod_Utilizator)" +
                 $" VALUES ('{checkindate.Value}', '{checkoutdate.Value}', " +
-                $"'{codclient}', '{codcamera}')";
+                $"'{codclient}', '{codcamera}', '{Utility.codutilizator}')";
             Utility.cmd.CommandText = query3;
             Utility.con.Open();
             Utility.cmd.ExecuteNonQuery();
@@ -297,6 +297,7 @@ namespace Rezervare_Hotel
             int totalplata = nrzile * pretTipCamera;
 
             this.rezervareTableAdapter.Fill(this.dataSet1.Rezervare);
+            this.dataGridView1.Refresh();
         }
 
         private void butonsterge_Click(object sender, EventArgs e)

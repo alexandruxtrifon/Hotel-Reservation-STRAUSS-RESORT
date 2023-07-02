@@ -45,7 +45,7 @@ namespace Rezervare_Hotel
         private void PopulateChart()
         {
             chart2.Series.Clear();
-            Series series = new Series("Occupancy Rate");
+            Series series = new Series("Gradul de Incarcare");
             series.ChartType = SeriesChartType.Line;
 
             // Retrieve the occupancy rate data for the past seven days
@@ -63,7 +63,7 @@ namespace Rezervare_Hotel
 
             // Set chart labels and titles
             chart2.ChartAreas[0].AxisX.Title = "Data";
-            chart2.ChartAreas[0].AxisY.Title = "%";
+            chart2.ChartAreas[0].AxisY.Title = "Procent";
             chart2.ChartAreas[0].AxisY.LabelStyle.Angle = 0;
             chart2.Titles.Clear();
             chart2.Titles.Add("Gradul de incarcare");
@@ -77,7 +77,7 @@ namespace Rezervare_Hotel
 
         private void butonclienti_Click(object sender, EventArgs e)
         {
-            UtilizatorForm f = new UtilizatorForm();
+            ClientiForm f = new ClientiForm();
             f.Show();
         }
 
@@ -176,7 +176,7 @@ namespace Rezervare_Hotel
 
         private void clientiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UtilizatorForm f = new UtilizatorForm();
+            ClientiForm f = new ClientiForm();
             f.Show();
         }
 

@@ -33,6 +33,7 @@ namespace Rezervare_Hotel
         }
 
         public static string contnume;
+        public static int codutilizator;
         public static bool isadmin;
         public static void ButonRotunjit(Button button)
         {

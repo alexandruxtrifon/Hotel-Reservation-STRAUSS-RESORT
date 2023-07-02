@@ -46,15 +46,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.ToolStripMenuItemImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.administrareConturiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.rapoarteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raportUtilizatoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +66,10 @@
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.clientiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -205,6 +204,7 @@
             this.button1.TabIndex = 69;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label3
@@ -233,72 +233,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(704, 64);
             this.menuStrip1.TabIndex = 71;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItemImage,
-            this.rapoarteToolStripMenuItem,
-            this.toolStripMenuItem9,
-            this.clientiToolStripMenuItem,
-            this.rezervariToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(0);
-            this.menuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip2.Size = new System.Drawing.Size(180, 461);
-            this.menuStrip2.TabIndex = 72;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // ToolStripMenuItemImage
-            // 
-            this.ToolStripMenuItemImage.AutoSize = false;
-            this.ToolStripMenuItemImage.Name = "ToolStripMenuItemImage";
-            this.ToolStripMenuItemImage.Size = new System.Drawing.Size(180, 70);
-            // 
-            // chart2
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(210, 77);
-            this.chart2.Name = "chart2";
-            this.chart2.Size = new System.Drawing.Size(662, 204);
-            this.chart2.TabIndex = 73;
-            this.chart2.Text = "chart2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(583, 324);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(672, 324);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 75;
-            this.label2.Text = "label2";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(182, 298);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 60;
-            this.pictureBox1.TabStop = false;
             // 
             // toolStripMenuItem8
             // 
@@ -329,11 +263,31 @@
             // 
             // administrareConturiToolStripMenuItem
             // 
+            this.administrareConturiToolStripMenuItem.AutoSize = false;
             this.administrareConturiToolStripMenuItem.Name = "administrareConturiToolStripMenuItem";
-            this.administrareConturiToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
+            this.administrareConturiToolStripMenuItem.Size = new System.Drawing.Size(235, 40);
             this.administrareConturiToolStripMenuItem.Text = "Administrare Conturi";
             this.administrareConturiToolStripMenuItem.Visible = false;
             this.administrareConturiToolStripMenuItem.Click += new System.EventHandler(this.administrareConturiToolStripMenuItem_Click);
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rapoarteToolStripMenuItem,
+            this.toolStripMenuItem9,
+            this.clientiToolStripMenuItem,
+            this.rezervariToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(0);
+            this.menuStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.menuStrip2.Size = new System.Drawing.Size(180, 461);
+            this.menuStrip2.TabIndex = 72;
+            this.menuStrip2.Text = "menuStrip2";
             // 
             // rapoarteToolStripMenuItem
             // 
@@ -473,17 +427,60 @@
             this.rezervariToolStripMenuItem.Text = "  Rezervari";
             this.rezervariToolStripMenuItem.Click += new System.EventHandler(this.rezervariToolStripMenuItem_Click);
             // 
+            // chart2
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(210, 77);
+            this.chart2.Name = "chart2";
+            this.chart2.Size = new System.Drawing.Size(662, 204);
+            this.chart2.TabIndex = 73;
+            this.chart2.Text = "chart2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(583, 324);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(672, 324);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(11, 334);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 461);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
@@ -537,7 +534,6 @@
         private System.Windows.Forms.ToolStripMenuItem raportCamereToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem raportTipuriCameraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrareConturiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemImage;
         private System.Windows.Forms.ToolStripMenuItem camereOcupateToolStripMenuItem;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.ToolStripMenuItem gradulDeIncarcareToolStripMenuItem;

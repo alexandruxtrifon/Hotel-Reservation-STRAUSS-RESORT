@@ -1,6 +1,6 @@
 ﻿namespace Rezervare_Hotel
 {
-    partial class UtilizatorForm
+    partial class ClientiForm
     {
         /// <summary>
         /// Required designer variable.
@@ -81,7 +81,7 @@
             this.Adresa});
             this.dataGridView1.DataSource = this.client1BindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(9, 55);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -254,7 +254,7 @@
             this.cautaclientr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cautaclientr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cautaclientr.Location = new System.Drawing.Point(191, 6);
-            this.cautaclientr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cautaclientr.Margin = new System.Windows.Forms.Padding(4);
             this.cautaclientr.Multiline = false;
             this.cautaclientr.Name = "cautaclientr";
             this.cautaclientr.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -281,7 +281,7 @@
             this.butonmodifica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butonmodifica.ForeColor = System.Drawing.Color.White;
             this.butonmodifica.Location = new System.Drawing.Point(254, 563);
-            this.butonmodifica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butonmodifica.Margin = new System.Windows.Forms.Padding(2);
             this.butonmodifica.Name = "butonmodifica";
             this.butonmodifica.Size = new System.Drawing.Size(120, 41);
             this.butonmodifica.TabIndex = 33;
@@ -304,7 +304,7 @@
             this.butonR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butonR2.ForeColor = System.Drawing.Color.White;
             this.butonR2.Location = new System.Drawing.Point(392, 563);
-            this.butonR2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butonR2.Margin = new System.Windows.Forms.Padding(2);
             this.butonR2.Name = "butonR2";
             this.butonR2.Size = new System.Drawing.Size(90, 41);
             this.butonR2.TabIndex = 32;
@@ -327,7 +327,7 @@
             this.butonR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butonR1.ForeColor = System.Drawing.Color.White;
             this.butonR1.Location = new System.Drawing.Point(85, 563);
-            this.butonR1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butonR1.Margin = new System.Windows.Forms.Padding(2);
             this.butonR1.Name = "butonR1";
             this.butonR1.Size = new System.Drawing.Size(150, 41);
             this.butonR1.TabIndex = 26;
@@ -345,7 +345,7 @@
             this.textadresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textadresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textadresar.Location = new System.Drawing.Point(167, 515);
-            this.textadresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textadresar.Margin = new System.Windows.Forms.Padding(4);
             this.textadresar.Multiline = false;
             this.textadresar.Name = "textadresar";
             this.textadresar.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -366,7 +366,7 @@
             this.texttelefonr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.texttelefonr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.texttelefonr.Location = new System.Drawing.Point(167, 474);
-            this.texttelefonr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.texttelefonr.Margin = new System.Windows.Forms.Padding(4);
             this.texttelefonr.Multiline = false;
             this.texttelefonr.Name = "texttelefonr";
             this.texttelefonr.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -389,7 +389,7 @@
             this.textemailr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textemailr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textemailr.Location = new System.Drawing.Point(167, 434);
-            this.textemailr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textemailr.Margin = new System.Windows.Forms.Padding(4);
             this.textemailr.Multiline = false;
             this.textemailr.Name = "textemailr";
             this.textemailr.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -410,7 +410,7 @@
             this.textprenumer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textprenumer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textprenumer.Location = new System.Drawing.Point(167, 393);
-            this.textprenumer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textprenumer.Margin = new System.Windows.Forms.Padding(4);
             this.textprenumer.Multiline = false;
             this.textprenumer.Name = "textprenumer";
             this.textprenumer.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -431,7 +431,7 @@
             this.textnumer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textnumer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textnumer.Location = new System.Drawing.Point(167, 353);
-            this.textnumer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textnumer.Margin = new System.Windows.Forms.Padding(4);
             this.textnumer.Multiline = false;
             this.textnumer.Name = "textnumer";
             this.textnumer.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -442,7 +442,7 @@
             this.textnumer.TabIndex = 21;
             this.textnumer.UnderlinedStyle = false;
             // 
-            // UtilizatorForm
+            // ClientiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -464,8 +464,8 @@
             this.Controls.Add(this.textprenumer);
             this.Controls.Add(this.textnumer);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "UtilizatorForm";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "ClientiForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);

@@ -23,7 +23,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.44625cm</Top>
+        <Top>5.72054cm</Top>
         <Left>0.03433cm</Left>
         <Height>0.86458cm</Height>
         <Width>20.35386cm</Width>
@@ -38,7 +38,7 @@
         </Style>
       </Textbox>
       <Line Name="Line1">
-        <Top>1.31083cm</Top>
+        <Top>6.58512cm</Top>
         <Left>1.33433cm</Left>
         <Height>0cm</Height>
         <Width>17.20412cm</Width>
@@ -53,13 +53,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.44846cm</Width>
+              <Width>1.63367cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.94971cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.56512cm</Width>
+              <Width>3.22116cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.76458cm</Width>
@@ -68,7 +68,7 @@
               <Width>2.68521cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.79104cm</Width>
+              <Width>2.94979cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -85,7 +85,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nr. Crt.</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -117,7 +120,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Data</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -149,7 +155,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Document</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -181,7 +190,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nr. Doc.</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -213,7 +225,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Suma</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -245,7 +260,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Sold</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -282,7 +300,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=RowNumber(Nothing)</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -314,7 +335,12 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Data_Cazare.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>d</Format>
+                                <Language>ro-RO</Language>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -346,7 +372,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Factura</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -378,7 +407,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Cod_Rezervare.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -410,7 +442,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!Pret_TipCamera.Value + DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!Pret_TipCamera.Value * 0.01 + DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!Pret_TipCamera.Value * 0.09</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -442,7 +477,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!Pret_TipCamera.Value + DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!Pret_TipCamera.Value * 0.01 + DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!Pret_TipCamera.Value * 0.09</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -451,6 +489,120 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox15</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.6cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>4</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox11">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>="TOTAL"</Value>
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox16">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=SUM(DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!Pret_TipCamera.Value + DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!Pret_TipCamera.Value * 0.01 + DateDiff("y",Fields!Data_Cazare.Value,Fields!Data_Plecare.Value) * Fields!Pret_TipCamera.Value * 0.09)</Value>
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox16</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -486,12 +638,15 @@
             <TablixMember>
               <Group Name="Details" />
             </TablixMember>
+            <TablixMember>
+              <KeepWithGroup>Before</KeepWithGroup>
+            </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.83118cm</Top>
+        <Top>7.10547cm</Top>
         <Left>1.33433cm</Left>
-        <Height>1.2cm</Height>
+        <Height>1.8cm</Height>
         <Width>17.20412cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
@@ -500,14 +655,156 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Furnizor:</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>STRAUSS RESORT SRL</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Reg.Com.: J44/483/2016</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>CIF: 27084472</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Adresa: BULEVARDUL MAMAIA, NR.326, MUNICIPIUL CONSTANȚA, CONSTANȚA</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>IBAN: RO08PORL1694578413836993</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Banca: BANCA TRANSILVANIA</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>SWIFT: BTRLRON23</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tel.: 078374747</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Email: straussresort@gmail.com</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox23</rd:DefaultName>
+        <Left>4.59027in</Left>
+        <Height>2.175in</Height>
+        <Width>2.70833in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>10.29389cm</Height>
+    <Height>16.52118cm</Height>
     <Style />
   </Body>
   <Width>20.38819cm</Width>
   <Page>
     <PageHeader>
-      <Height>9.5338cm</Height>
+      <Height>4cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -515,7 +812,7 @@
           <Source>Embedded</Source>
           <Value>logonobackground</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>1.5cm</Top>
+          <Top>1cm</Top>
           <Left>1.3cm</Left>
           <Height>3cm</Height>
           <Width>3cm</Width>
@@ -546,186 +843,11 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.58333in</Top>
+          <Top>1cm</Top>
+          <Left>0cm</Left>
           <Height>0.40833in</Height>
           <Width>8.01333in</Width>
           <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox23">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Furnizor:</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>STRAUSS RESORT SRL</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                    <FontSize>12pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Reg.Com.: J44/483/2016</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>CIF: 27084472</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Adresa: BULEVARDUL MAMAIA, NR.326, MUNICIPIUL CONSTANȚA, CONSTANȚA</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>IBAN: RO08PORL1694578413836993</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Banca: BANCA TRANSILVANIA</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>SWIFT: BTRLRON23</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Tel.: 078374747</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Email: straussresort@gmail.com</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Cota TVA 9%</Value>
-                  <Style>
-                    <FontFamily>arial</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value />
-                  <Style>
-                    <FontFamily>Times New Roman</FontFamily>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox23</rd:DefaultName>
-          <Top>1.57847in</Top>
-          <Left>4.57676in</Left>
-          <Height>2.175in</Height>
-          <Width>2.70833in</Width>
-          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -755,10 +877,10 @@
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>2.54cm</LeftMargin>
-    <RightMargin>2.54cm</RightMargin>
-    <TopMargin>2.54cm</TopMargin>
-    <BottomMargin>2.54cm</BottomMargin>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
     <ColumnSpacing>1.27cm</ColumnSpacing>
     <Style />
   </Page>

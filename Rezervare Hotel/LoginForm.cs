@@ -38,7 +38,7 @@ namespace Rezervare_Hotel
             string user = textBoxR1.Text;
             string parola = textBoxR2.Text;
 
-            string query = $"SELECT Nume, Prenume FROM Utilizator WHERE Username = '" + textBoxR1.Text + "' AND Parola = '" + textBoxR2.Text + "'";
+            string query = $"SELECT Nume, Prenume, Cod_Utilizator FROM Utilizator WHERE Username = '" + textBoxR1.Text + "' AND Parola = '" + textBoxR2.Text + "'";
             Utility.cmd = new OleDbCommand(query, Utility.con);
             //  Utility.cmd.Parameters.AddWithValue("@Username", user);
             //  Utility.cmd.Parameters.AddWithValue("@Parola", parola);
@@ -49,6 +49,7 @@ namespace Rezervare_Hotel
             if (reader.Read() == true)
             {
                 Utility.contnume = $"{reader["Nume"].ToString()} {reader["Prenume"].ToString()}";
+                Utility.codutilizator = int.Parse(reader["Cod_Utilizator"].ToString());
 
              //   string nume = reader["Nume"].ToString();
              //   string prenume = reader["Prenume"].ToString();

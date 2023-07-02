@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace Rezervare_Hotel
 {
 
-    public partial class UtilizatorForm : Form
+    public partial class ClientiForm : Form
     {
         //OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Alex\source\repos\Rezervare Hotel\Rezervare Hotel\Baza de date licenta.accdb");
         //OleDbCommand cmd;
@@ -32,7 +32,7 @@ namespace Rezervare_Hotel
 
         }
 
-        public UtilizatorForm()
+        public ClientiForm()
         {
             InitializeComponent();
             //GetCustomers();
