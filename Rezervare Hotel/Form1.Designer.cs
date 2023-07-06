@@ -46,10 +46,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.administrareConturiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.raportUtilizatoriToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.raportPerformantaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rapoarteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raportUtilizatoriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,14 +68,9 @@
             this.incasareCameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.venituriCalendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.clientiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rezervariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -211,7 +212,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(228, 20);
+            this.label3.Location = new System.Drawing.Point(206, 25);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 19);
@@ -234,42 +235,6 @@
             this.menuStrip1.TabIndex = 71;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripMenuItem8.AutoSize = false;
-            this.toolStripMenuItem8.Image = global::Rezervare_Hotel.Properties.Resources.logout;
-            this.toolStripMenuItem8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(180, 60);
-            this.toolStripMenuItem8.Text = " Delogare";
-            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripMenuItem7.AutoSize = false;
-            this.toolStripMenuItem7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripMenuItem7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.administrareConturiToolStripMenuItem});
-            this.toolStripMenuItem7.Image = global::Rezervare_Hotel.Properties.Resources.setting;
-            this.toolStripMenuItem7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(122, 60);
-            this.toolStripMenuItem7.Text = " Setari";
-            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
-            // 
-            // administrareConturiToolStripMenuItem
-            // 
-            this.administrareConturiToolStripMenuItem.AutoSize = false;
-            this.administrareConturiToolStripMenuItem.Name = "administrareConturiToolStripMenuItem";
-            this.administrareConturiToolStripMenuItem.Size = new System.Drawing.Size(235, 40);
-            this.administrareConturiToolStripMenuItem.Text = "Administrare Conturi";
-            this.administrareConturiToolStripMenuItem.Visible = false;
-            this.administrareConturiToolStripMenuItem.Click += new System.EventHandler(this.administrareConturiToolStripMenuItem_Click);
-            // 
             // menuStrip2
             // 
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -289,6 +254,102 @@
             this.menuStrip2.TabIndex = 72;
             this.menuStrip2.Text = "menuStrip2";
             // 
+            // chart2
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(210, 77);
+            this.chart2.Name = "chart2";
+            this.chart2.Size = new System.Drawing.Size(662, 204);
+            this.chart2.TabIndex = 73;
+            this.chart2.Text = "chart2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(583, 324);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 74;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(672, 324);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(11, 334);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripMenuItem8.AutoSize = false;
+            this.toolStripMenuItem8.Image = global::Rezervare_Hotel.Properties.Resources.logout;
+            this.toolStripMenuItem8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(180, 60);
+            this.toolStripMenuItem8.Text = " Delogare";
+            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripMenuItem7.AutoSize = false;
+            this.toolStripMenuItem7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolStripMenuItem7.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.administrareConturiToolStripMenuItem,
+            this.raportUtilizatoriToolStripMenuItem1,
+            this.raportPerformantaToolStripMenuItem});
+            this.toolStripMenuItem7.Image = global::Rezervare_Hotel.Properties.Resources.setting;
+            this.toolStripMenuItem7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(122, 60);
+            this.toolStripMenuItem7.Text = " Admin";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
+            // 
+            // administrareConturiToolStripMenuItem
+            // 
+            this.administrareConturiToolStripMenuItem.AutoSize = false;
+            this.administrareConturiToolStripMenuItem.Name = "administrareConturiToolStripMenuItem";
+            this.administrareConturiToolStripMenuItem.Size = new System.Drawing.Size(235, 40);
+            this.administrareConturiToolStripMenuItem.Text = "Administrare Conturi";
+            this.administrareConturiToolStripMenuItem.Visible = false;
+            this.administrareConturiToolStripMenuItem.Click += new System.EventHandler(this.administrareConturiToolStripMenuItem_Click);
+            // 
+            // raportUtilizatoriToolStripMenuItem1
+            // 
+            this.raportUtilizatoriToolStripMenuItem1.AutoSize = false;
+            this.raportUtilizatoriToolStripMenuItem1.Image = global::Rezervare_Hotel.Properties.Resources.user;
+            this.raportUtilizatoriToolStripMenuItem1.Name = "raportUtilizatoriToolStripMenuItem1";
+            this.raportUtilizatoriToolStripMenuItem1.Size = new System.Drawing.Size(235, 40);
+            this.raportUtilizatoriToolStripMenuItem1.Text = "Raport Utilizatori";
+            // 
+            // raportPerformantaToolStripMenuItem
+            // 
+            this.raportPerformantaToolStripMenuItem.Name = "raportPerformantaToolStripMenuItem";
+            this.raportPerformantaToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.raportPerformantaToolStripMenuItem.Text = "Raport Performanta";
+            this.raportPerformantaToolStripMenuItem.Click += new System.EventHandler(this.raportPerformantaToolStripMenuItem_Click);
+            // 
             // rapoarteToolStripMenuItem
             // 
             this.rapoarteToolStripMenuItem.AutoSize = false;
@@ -303,8 +364,7 @@
             this.gradulDeIncarcareToolStripMenuItem,
             this.incasareCameraToolStripMenuItem,
             this.venituriCalendarToolStripMenuItem,
-            this.toolStripMenuItem10,
-            this.toolStripMenuItem12});
+            this.toolStripMenuItem10});
             this.rapoarteToolStripMenuItem.Image = global::Rezervare_Hotel.Properties.Resources.report;
             this.rapoarteToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rapoarteToolStripMenuItem.Name = "rapoarteToolStripMenuItem";
@@ -349,6 +409,7 @@
             this.raportCamereToolStripMenuItem.Name = "raportCamereToolStripMenuItem";
             this.raportCamereToolStripMenuItem.Size = new System.Drawing.Size(276, 38);
             this.raportCamereToolStripMenuItem.Text = "Raport Camere";
+            this.raportCamereToolStripMenuItem.Click += new System.EventHandler(this.raportCamereToolStripMenuItem_Click);
             // 
             // raportTipuriCameraToolStripMenuItem
             // 
@@ -391,12 +452,6 @@
             this.toolStripMenuItem10.Text = "Top 10 Luni Aglomerate";
             this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
-            // toolStripMenuItem12
-            // 
-            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(276, 38);
-            this.toolStripMenuItem12.Text = "toolStripMenuItem12";
-            // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.AutoSize = false;
@@ -426,49 +481,6 @@
             this.rezervariToolStripMenuItem.Size = new System.Drawing.Size(180, 70);
             this.rezervariToolStripMenuItem.Text = "  Rezervari";
             this.rezervariToolStripMenuItem.Click += new System.EventHandler(this.rezervariToolStripMenuItem_Click);
-            // 
-            // chart2
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(210, 77);
-            this.chart2.Name = "chart2";
-            this.chart2.Size = new System.Drawing.Size(662, 204);
-            this.chart2.TabIndex = 73;
-            this.chart2.Text = "chart2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(583, 324);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 74;
-            this.label1.Text = "label1";
-            this.label1.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(672, 324);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 75;
-            this.label2.Text = "label2";
-            this.label2.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 334);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 60;
-            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -542,7 +554,8 @@
         private System.Windows.Forms.ToolStripMenuItem incasareCameraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem venituriCalendarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
+        private System.Windows.Forms.ToolStripMenuItem raportUtilizatoriToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem raportPerformantaToolStripMenuItem;
     }
 }
 

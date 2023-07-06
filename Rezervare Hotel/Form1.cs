@@ -40,6 +40,7 @@ namespace Rezervare_Hotel
             UpdateLabels();
             PopulateChart();
             CustomizeChartAppearance();
+            isadmin();
         }
 
         private void PopulateChart()
@@ -233,7 +234,8 @@ namespace Rezervare_Hotel
 
         private void administrareConturiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            RegisterForm f = new RegisterForm();
+            f.Show();
         }
 
         private void UpdateLabels()
@@ -302,10 +304,25 @@ namespace Rezervare_Hotel
 
         private void toolStripMenuItem7_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void isadmin()
+        {
             if (label3.Text == $"Bine ai venit, STRAUSS RESORT")
                 administrareConturiToolStripMenuItem.Visible = true;
             else
                 return;
+        }
+
+        private void raportPerformantaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaportPerformanta f = new RaportPerformanta();
+            f.Show();
+        }
+
+        private void raportCamereToolStripMenuItem_Click(object sender, EventArgs e)
+        {
         }
     }
 }

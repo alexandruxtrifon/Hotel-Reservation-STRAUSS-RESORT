@@ -131,6 +131,12 @@
     <Compile Include="RaportGradIncarcare.Designer.cs">
       <DependentUpon>RaportGradIncarcare.cs</DependentUpon>
     </Compile>
+    <Compile Include="RaportPerformanta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportPerformanta.Designer.cs">
+      <DependentUpon>RaportPerformanta.cs</DependentUpon>
+    </Compile>
     <Compile Include="RaportTop10Luni.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +243,10 @@
       <DependentUpon>RaportGradIncarcare.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RaportGradIncarcare.rdlc" />
+    <EmbeddedResource Include="RaportPerformanta.rdlc" />
+    <EmbeddedResource Include="RaportPerformanta.resx">
+      <DependentUpon>RaportPerformanta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RaportTop10Luni.rdlc" />
     <EmbeddedResource Include="RaportTop10Luni.resx">
       <DependentUpon>RaportTop10Luni.cs</DependentUpon>
@@ -332,6 +342,7 @@
     <Content Include="Baza de date licenta.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="icons\admin-panel.png" />
     <None Include="icons\trash %281%29.png" />
     <None Include="icons\pen-circle.png" />
     <None Include="icons\user-pen.png" />

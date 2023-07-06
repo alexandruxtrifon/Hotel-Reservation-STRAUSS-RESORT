@@ -73,6 +73,16 @@ namespace Rezervare_Hotel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap admin_panel {
+            get {
+                object obj = ResourceManager.GetObject("admin-panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bed {
             get {
                 object obj = ResourceManager.GetObject("bed", resourceCulture);

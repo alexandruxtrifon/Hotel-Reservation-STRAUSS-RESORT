@@ -57,6 +57,7 @@
             this.textprenume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textprenume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textprenume.Location = new System.Drawing.Point(92, 63);
+            this.textprenume.Margin = new System.Windows.Forms.Padding(4);
             this.textprenume.Multiline = false;
             this.textprenume.Name = "textprenume";
             this.textprenume.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -77,6 +78,7 @@
             this.textnume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textnume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textnume.Location = new System.Drawing.Point(92, 24);
+            this.textnume.Margin = new System.Windows.Forms.Padding(4);
             this.textnume.Multiline = false;
             this.textnume.Name = "textnume";
             this.textnume.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -124,7 +126,7 @@
             this.butonR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butonR1.ForeColor = System.Drawing.Color.White;
             this.butonR1.Location = new System.Drawing.Point(92, 359);
-            this.butonR1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.butonR1.Margin = new System.Windows.Forms.Padding(2);
             this.butonR1.Name = "butonR1";
             this.butonR1.Size = new System.Drawing.Size(188, 41);
             this.butonR1.TabIndex = 8;
@@ -143,6 +145,7 @@
             this.texttelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.texttelefon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.texttelefon.Location = new System.Drawing.Point(92, 141);
+            this.texttelefon.Margin = new System.Windows.Forms.Padding(4);
             this.texttelefon.Multiline = false;
             this.texttelefon.Name = "texttelefon";
             this.texttelefon.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -163,6 +166,7 @@
             this.textutilizator.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textutilizator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textutilizator.Location = new System.Drawing.Point(92, 102);
+            this.textutilizator.Margin = new System.Windows.Forms.Padding(4);
             this.textutilizator.Multiline = false;
             this.textutilizator.Name = "textutilizator";
             this.textutilizator.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -207,6 +211,7 @@
             this.textadresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textadresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textadresa.Location = new System.Drawing.Point(92, 180);
+            this.textadresa.Margin = new System.Windows.Forms.Padding(4);
             this.textadresa.Multiline = false;
             this.textadresa.Name = "textadresa";
             this.textadresa.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -239,6 +244,7 @@
             this.textBoxR6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxR6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBoxR6.Location = new System.Drawing.Point(92, 297);
+            this.textBoxR6.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxR6.Multiline = false;
             this.textBoxR6.Name = "textBoxR6";
             this.textBoxR6.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -271,6 +277,7 @@
             this.textBoxR7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxR7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBoxR7.Location = new System.Drawing.Point(92, 258);
+            this.textBoxR7.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxR7.Multiline = false;
             this.textBoxR7.Name = "textBoxR7";
             this.textBoxR7.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -291,6 +298,7 @@
             this.textBoxR8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxR8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBoxR8.Location = new System.Drawing.Point(92, 219);
+            this.textBoxR8.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxR8.Multiline = false;
             this.textBoxR8.Name = "textBoxR8";
             this.textBoxR8.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -349,7 +357,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butonR1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";

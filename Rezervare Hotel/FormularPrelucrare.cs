@@ -72,17 +72,14 @@ namespace Rezervare_Hotel
         void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            // Get the selected item from listBox1
-            string selectedItem = listBox1.SelectedItems[0] as string;
+            //string selectedItem = listBox1.SelectedItems[0] as string;
+            string selectedItem = Utility.contnume as string;
 
-            // Split the selected item based on ' '
             string[] nameParts = selectedItem.Split(' ');
             string firstName = nameParts[0];
             string lastName = nameParts[1];
 
-            // Fill the clientTableAdapter with the selected names
             this.clientTableAdapter.Fill(this.dataSet1.Client, firstName, lastName);
-            // this.clientTableAdapter.Fill(this.dataSet1.Client, firstName, lastName);
             this.reportViewer1.RefreshReport();
 
 

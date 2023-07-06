@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Rezervare_Hotel.DataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -37,10 +37,12 @@
             this.clientTableAdapter = new Rezervare_Hotel.DataSet1TableAdapters.ClientTableAdapter();
             this.dataSet11 = new Rezervare_Hotel.DataSet1();
             this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // clientBindingSource
@@ -55,24 +57,28 @@
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.clientBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Right;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.clientBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Rezervare_Hotel.RaportFormular.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 60);
+            this.reportViewer1.Location = new System.Drawing.Point(306, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.ServerReport.ReportServerUrl = new System.Uri("", System.UriKind.Relative);
-            this.reportViewer1.Size = new System.Drawing.Size(776, 378);
+            this.reportViewer1.Size = new System.Drawing.Size(1006, 937);
             this.reportViewer1.TabIndex = 0;
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(167, 5);
+            this.listBox1.ItemHeight = 25;
+            this.listBox1.Location = new System.Drawing.Point(12, 11);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(293, 36);
+            this.listBox1.Size = new System.Drawing.Size(285, 354);
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -90,13 +96,23 @@
             this.clientBindingSource1.DataMember = "Client";
             this.clientBindingSource1.DataSource = this.dataSet11;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 937);
+            this.panel1.TabIndex = 2;
+            // 
             // FormularPrelucrare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(1312, 937);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormularPrelucrare";
             this.Text = "FormularPrelucrare";
             this.Load += new System.EventHandler(this.FormularPrelucrare_Load);
@@ -104,6 +120,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -117,5 +134,6 @@
         private DataSet1TableAdapters.ClientTableAdapter clientTableAdapter;
         private System.Windows.Forms.BindingSource clientBindingSource1;
         private DataSet1 dataSet11;
+        private System.Windows.Forms.Panel panel1;
     }
 }
