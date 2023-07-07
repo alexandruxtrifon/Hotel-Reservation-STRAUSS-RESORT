@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.etajCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeTipCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cameraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Rezervare_Hotel.DataSet1();
             this.combonume = new System.Windows.Forms.ComboBox();
@@ -42,10 +46,6 @@
             this.butonR1 = new Rezervare_Hotel.ButonR();
             this.textetajcam = new Rezervare_Hotel.TextBoxR();
             this.textnrcam = new Rezervare_Hotel.TextBoxR();
-            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nrCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.etajCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeTipCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cameraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -75,6 +75,42 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(393, 168);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // cod
+            // 
+            this.cod.DataPropertyName = "Cod_Camera";
+            this.cod.HeaderText = "Cod_Camera";
+            this.cod.Name = "cod";
+            this.cod.ReadOnly = true;
+            this.cod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cod.Visible = false;
+            // 
+            // nrCameraDataGridViewTextBoxColumn
+            // 
+            this.nrCameraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nrCameraDataGridViewTextBoxColumn.DataPropertyName = "Nr_Camera";
+            this.nrCameraDataGridViewTextBoxColumn.HeaderText = "Nr";
+            this.nrCameraDataGridViewTextBoxColumn.Name = "nrCameraDataGridViewTextBoxColumn";
+            this.nrCameraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nrCameraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // etajCameraDataGridViewTextBoxColumn
+            // 
+            this.etajCameraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.etajCameraDataGridViewTextBoxColumn.DataPropertyName = "Etaj_Camera";
+            this.etajCameraDataGridViewTextBoxColumn.HeaderText = "Etaj";
+            this.etajCameraDataGridViewTextBoxColumn.Name = "etajCameraDataGridViewTextBoxColumn";
+            this.etajCameraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.etajCameraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // numeTipCameraDataGridViewTextBoxColumn
+            // 
+            this.numeTipCameraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.numeTipCameraDataGridViewTextBoxColumn.DataPropertyName = "Nume_TipCamera";
+            this.numeTipCameraDataGridViewTextBoxColumn.HeaderText = "Nume";
+            this.numeTipCameraDataGridViewTextBoxColumn.Name = "numeTipCameraDataGridViewTextBoxColumn";
+            this.numeTipCameraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numeTipCameraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // cameraBindingSource
             // 
@@ -249,42 +285,6 @@
             this.textnrcam.Size = new System.Drawing.Size(263, 33);
             this.textnrcam.TabIndex = 61;
             this.textnrcam.UnderlinedStyle = false;
-            // 
-            // cod
-            // 
-            this.cod.DataPropertyName = "Cod_Camera";
-            this.cod.HeaderText = "Cod_Camera";
-            this.cod.Name = "cod";
-            this.cod.ReadOnly = true;
-            this.cod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cod.Visible = false;
-            // 
-            // nrCameraDataGridViewTextBoxColumn
-            // 
-            this.nrCameraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nrCameraDataGridViewTextBoxColumn.DataPropertyName = "Nr_Camera";
-            this.nrCameraDataGridViewTextBoxColumn.HeaderText = "Nr";
-            this.nrCameraDataGridViewTextBoxColumn.Name = "nrCameraDataGridViewTextBoxColumn";
-            this.nrCameraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nrCameraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // etajCameraDataGridViewTextBoxColumn
-            // 
-            this.etajCameraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.etajCameraDataGridViewTextBoxColumn.DataPropertyName = "Etaj_Camera";
-            this.etajCameraDataGridViewTextBoxColumn.HeaderText = "Etaj";
-            this.etajCameraDataGridViewTextBoxColumn.Name = "etajCameraDataGridViewTextBoxColumn";
-            this.etajCameraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.etajCameraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // numeTipCameraDataGridViewTextBoxColumn
-            // 
-            this.numeTipCameraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.numeTipCameraDataGridViewTextBoxColumn.DataPropertyName = "Nume_TipCamera";
-            this.numeTipCameraDataGridViewTextBoxColumn.HeaderText = "Nume";
-            this.numeTipCameraDataGridViewTextBoxColumn.Name = "numeTipCameraDataGridViewTextBoxColumn";
-            this.numeTipCameraDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numeTipCameraDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // FormCamera
             // 

@@ -311,7 +311,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -339,10 +338,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>5.76266cm</Top>
+        <Top>8.96412cm</Top>
         <Left>4.99745cm</Left>
         <Height>1.8cm</Height>
-        <Width>9.77542cm</Width>
+        <Width>9.77541cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -474,7 +473,7 @@
         <rd:DefaultName>Textbox15</rd:DefaultName>
         <Top>2.61412cm</Top>
         <Left>1.3cm</Left>
-        <Height>2.31979cm</Height>
+        <Height>5.9884cm</Height>
         <Width>17.54573cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
@@ -488,7 +487,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>9cm</Height>
+    <Height>11.16958cm</Height>
     <Style />
   </Body>
   <Width>20.35386cm</Width>

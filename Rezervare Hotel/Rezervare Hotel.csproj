@@ -229,11 +229,11 @@
     <Compile Include="FormCamera.Designer.cs">
       <DependentUpon>FormCamera.cs</DependentUpon>
     </Compile>
-    <Compile Include="UtilizatorForm.cs">
+    <Compile Include="ClientiForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UtilizatorForm.Designer.cs">
-      <DependentUpon>UtilizatorForm.cs</DependentUpon>
+    <Compile Include="ClientiForm.Designer.cs">
+      <DependentUpon>ClientiForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -273,8 +273,8 @@
     <EmbeddedResource Include="RaportVenituri Lunare.rdlc" />
     <EmbeddedResource Include="RaportIncasariCamera.rdlc" />
     <EmbeddedResource Include="RaportTop5Receptioneri.rdlc" />
-    <EmbeddedResource Include="UtilizatorForm.resx">
-      <DependentUpon>UtilizatorForm.cs</DependentUpon>
+    <EmbeddedResource Include="ClientiForm.resx">
+      <DependentUpon>ClientiForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TipCameraForm.resx">
       <DependentUpon>TipCameraForm.cs</DependentUpon>

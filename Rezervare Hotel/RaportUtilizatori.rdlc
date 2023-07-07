@@ -49,7 +49,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nr.</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -81,7 +84,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nume</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -113,7 +119,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Email</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -145,7 +154,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Adresa</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -177,7 +189,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>IBAN</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -215,7 +230,8 @@
                             <TextRun>
                               <Value>=RowNumber(Nothing)</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -249,19 +265,22 @@
                             <TextRun>
                               <Value>=Fields!Nume.Value</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                             <TextRun>
                               <Value xml:space="preserve">  </Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                             <TextRun>
                               <Value>=Fields!Prenume.Value</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -295,7 +314,8 @@
                             <TextRun>
                               <Value>=Fields!Email.Value</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -329,7 +349,8 @@
                             <TextRun>
                               <Value>=Fields!Adresa.Value</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -363,7 +384,8 @@
                             <TextRun>
                               <Value>=Fields!IBAN.Value</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
