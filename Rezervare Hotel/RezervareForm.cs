@@ -163,52 +163,6 @@ namespace Rezervare_Hotel
 
         }
 
-        private void metodanoua()
-        {
-            DateTime selectedStartDate = monthCalendar1.SelectionStart;
-            DateTime selectedEndDate = monthCalendar1.SelectionEnd;
-            string selectedRoomType = combotipcamera.SelectedItem.ToString();
-            string query = @"SELECT Camera.Nr_Camera 
-                FROM Camera
-                INNER JOIN TipCamera ON TipCamera.Cod_TipCamera = Camera.Cod_TipCamera
-                WHERE Camera.Cod_Camera NOT IN (
-                    SELECT Rezervare.Cod_Camera
-                    FROM Rezervare
-                    WHERE Rezervare.Data_Cazare <= @SelectedEndDate
-                    AND Rezervare.Data_Plecare >= @SelectedStartDate
-                ) 
-                AND TipCamera.Nume_TipCamera = @SelectedRoomType";
-            List <string> camerelibere = new List<string>();
-            //SqlCommand command = new SqlCommand(query, Utility.con);
-            //Utility.cmd = new OleDbCommand( query, Utility.con);
-            OleDbConnection connection = new OleDbConnection(Utility.conString);
-            OleDbCommand command = new OleDbCommand(query, connection);
-            command.Parameters.AddWithValue("@SelectedStartDate", selectedStartDate);
-            command.Parameters.AddWithValue("@SelectedEndDate", selectedEndDate);
-            command.Parameters.AddWithValue("@SelectedRoomType", selectedRoomType);
-
-            try
-            {
-                connection.Open();
-                OleDbDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                  //  string tipcamera = reader["Nume_TipCamera"].ToString();
-                    string nrcamera = reader["Nr_Camera"].ToString();
-                    camerelibere.Add(nrcamera);
-                }
-                reader.Close();
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            listBox1.Items.Clear();
-            listBox1.Items.AddRange(camerelibere.ToArray());
-
-        }
-
         private void butoninsereaza_Click_1(object sender, EventArgs e)
         {
 
@@ -335,8 +289,6 @@ namespace Rezervare_Hotel
             Utility.con.Close();
 
             textpretcamera.Text = pretTipCamera.ToString();
-
-            metodanoua();
 
 
         }

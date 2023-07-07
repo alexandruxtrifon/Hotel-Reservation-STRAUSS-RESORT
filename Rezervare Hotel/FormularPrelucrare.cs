@@ -22,6 +22,7 @@ namespace Rezervare_Hotel
         private string lastName;
         private void FormularPrelucrare_Load(object sender, EventArgs e)
         {
+
             PopulateListBoxWithClientNames();
 
 
@@ -55,7 +56,11 @@ namespace Rezervare_Hotel
                     {
                         string fullName = reader.GetString(0);
 
-                        listBox1.Items.Add(fullName);
+                        //listBox1.Items.Add(fullName);
+                        if (!listBox1.Items.Contains(fullName))
+                        {
+                            listBox1.Items.Add(fullName);
+                        }
                     }
                 }
             }
@@ -72,9 +77,8 @@ namespace Rezervare_Hotel
         void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            //string selectedItem = listBox1.SelectedItems[0] as string;
-            string selectedItem = Utility.contnume as string;
-
+            string selectedItem = listBox1.SelectedItems[0] as string;
+            
             string[] nameParts = selectedItem.Split(' ');
             string firstName = nameParts[0];
             string lastName = nameParts[1];

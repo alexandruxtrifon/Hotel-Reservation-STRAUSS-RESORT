@@ -38,8 +38,6 @@
             this.numeTipCameraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rezervareBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Rezervare_Hotel.DataSet1();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.textpretcamera = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.combonumeclient = new System.Windows.Forms.ComboBox();
@@ -75,7 +73,7 @@
             this.receptionerDataGridViewTextBoxColumn,
             this.numeTipCameraDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.rezervareBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(284, 18);
+            this.dataGridView1.Location = new System.Drawing.Point(281, 12);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -84,7 +82,7 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(444, 156);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 271);
             this.dataGridView1.TabIndex = 84;
             // 
             // nrCameraDataGridViewTextBoxColumn
@@ -150,22 +148,6 @@
             // 
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(606, 230);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(106, 121);
-            this.listBox1.TabIndex = 83;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(359, 185);
-            this.monthCalendar1.MaxSelectionCount = 99;
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 82;
             // 
             // textpretcamera
             // 
@@ -378,8 +360,6 @@
             this.Controls.Add(this.butonR2);
             this.Controls.Add(this.butonR1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.textpretcamera);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.combonumeclient);
@@ -405,8 +385,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TextBox textpretcamera;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox combonumeclient;

@@ -108,6 +108,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RaportTop5Receptioneri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportTop5Receptioneri.Designer.cs">
+      <DependentUpon>RaportTop5Receptioneri.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRaportCamereOcupate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,11 +131,11 @@
     <Compile Include="RaportFisaClient.Designer.cs">
       <DependentUpon>RaportFisaClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="RaportGradIncarcare.cs">
+    <Compile Include="RaportIncasariCamera.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RaportGradIncarcare.Designer.cs">
-      <DependentUpon>RaportGradIncarcare.cs</DependentUpon>
+    <Compile Include="RaportIncasariCamera.Designer.cs">
+      <DependentUpon>RaportIncasariCamera.cs</DependentUpon>
     </Compile>
     <Compile Include="RaportPerformanta.cs">
       <SubType>Form</SubType>
@@ -142,6 +148,12 @@
     </Compile>
     <Compile Include="RaportTop10Luni.Designer.cs">
       <DependentUpon>RaportTop10Luni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaportVenituri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaportVenituri.Designer.cs">
+      <DependentUpon>RaportVenituri.cs</DependentUpon>
     </Compile>
     <Compile Include="RaportVenituriCamera.cs">
       <SubType>Form</SubType>
@@ -161,11 +173,11 @@
     <Compile Include="FormFactura.Designer.cs">
       <DependentUpon>FormFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="RaportCamera.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="RaportCamera.Designer.cs">
+      <DependentUpon>RaportCamera.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRaportUtilizatori.cs">
       <SubType>Form</SubType>
@@ -228,6 +240,10 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RaportCamera.rdlc" />
+    <EmbeddedResource Include="RaportTop5Receptioneri.resx">
+      <DependentUpon>RaportTop5Receptioneri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCamera.resx">
       <DependentUpon>FormCamera.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,10 +255,9 @@
     <EmbeddedResource Include="RaportFisaClient.resx">
       <DependentUpon>RaportFisaClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RaportGradIncarcare.resx">
-      <DependentUpon>RaportGradIncarcare.cs</DependentUpon>
+    <EmbeddedResource Include="RaportIncasariCamera.resx">
+      <DependentUpon>RaportIncasariCamera.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RaportGradIncarcare.rdlc" />
     <EmbeddedResource Include="RaportPerformanta.rdlc" />
     <EmbeddedResource Include="RaportPerformanta.resx">
       <DependentUpon>RaportPerformanta.cs</DependentUpon>
@@ -251,7 +266,13 @@
     <EmbeddedResource Include="RaportTop10Luni.resx">
       <DependentUpon>RaportTop10Luni.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RaportVenituri.resx">
+      <DependentUpon>RaportVenituri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RaportVenituriCamera.rdlc" />
+    <EmbeddedResource Include="RaportVenituri Lunare.rdlc" />
+    <EmbeddedResource Include="RaportIncasariCamera.rdlc" />
+    <EmbeddedResource Include="RaportTop5Receptioneri.rdlc" />
     <EmbeddedResource Include="UtilizatorForm.resx">
       <DependentUpon>UtilizatorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,8 +282,8 @@
     <EmbeddedResource Include="FormFactura.resx">
       <DependentUpon>FormFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="RaportCamera.resx">
+      <DependentUpon>RaportCamera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRaportUtilizatori.resx">
       <DependentUpon>FormRaportUtilizatori.cs</DependentUpon>
@@ -342,6 +363,12 @@
     <Content Include="Baza de date licenta.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="icons\occupied.png" />
+    <None Include="icons\open-door.png" />
+    <None Include="icons\badge.png" />
+    <None Include="icons\customer.png" />
+    <None Include="icons\diagram.png" />
+    <None Include="icons\analysis.png" />
     <None Include="icons\admin-panel.png" />
     <None Include="icons\trash %281%29.png" />
     <None Include="icons\pen-circle.png" />

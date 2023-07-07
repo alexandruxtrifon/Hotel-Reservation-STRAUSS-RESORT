@@ -33,16 +33,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.butonR1 = new Rezervare_Hotel.ButonR();
-            this.texttelefon = new Rezervare_Hotel.TextBoxR();
+            this.textparola = new Rezervare_Hotel.TextBoxR();
             this.textutilizator = new Rezervare_Hotel.TextBoxR();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textadresa = new Rezervare_Hotel.TextBoxR();
+            this.textemail = new Rezervare_Hotel.TextBoxR();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxR6 = new Rezervare_Hotel.TextBoxR();
+            this.textiban = new Rezervare_Hotel.TextBoxR();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxR7 = new Rezervare_Hotel.TextBoxR();
-            this.textBoxR8 = new Rezervare_Hotel.TextBoxR();
+            this.textadr = new Rezervare_Hotel.TextBoxR();
+            this.texttel = new Rezervare_Hotel.TextBoxR();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             this.textprenume.Multiline = false;
             this.textprenume.Name = "textprenume";
             this.textprenume.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.textprenume.PasswordChar = true;
+            this.textprenume.PasswordChar = false;
             this.textprenume.PlaceholderColor = System.Drawing.Color.Empty;
             this.textprenume.PlaceholderText = "";
             this.textprenume.Size = new System.Drawing.Size(188, 33);
@@ -135,26 +135,26 @@
             this.butonR1.UseVisualStyleBackColor = false;
             this.butonR1.Click += new System.EventHandler(this.butonR1_Click);
             // 
-            // texttelefon
+            // textparola
             // 
-            this.texttelefon.BackColor = System.Drawing.SystemColors.Control;
-            this.texttelefon.BorderColor = System.Drawing.SystemColors.Control;
-            this.texttelefon.BorderFocusColor = System.Drawing.SystemColors.Control;
-            this.texttelefon.BorderRadius = 20;
-            this.texttelefon.BorderSize = 2;
-            this.texttelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texttelefon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.texttelefon.Location = new System.Drawing.Point(92, 141);
-            this.texttelefon.Margin = new System.Windows.Forms.Padding(4);
-            this.texttelefon.Multiline = false;
-            this.texttelefon.Name = "texttelefon";
-            this.texttelefon.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.texttelefon.PasswordChar = true;
-            this.texttelefon.PlaceholderColor = System.Drawing.Color.Empty;
-            this.texttelefon.PlaceholderText = "";
-            this.texttelefon.Size = new System.Drawing.Size(188, 33);
-            this.texttelefon.TabIndex = 16;
-            this.texttelefon.UnderlinedStyle = false;
+            this.textparola.BackColor = System.Drawing.SystemColors.Control;
+            this.textparola.BorderColor = System.Drawing.SystemColors.Control;
+            this.textparola.BorderFocusColor = System.Drawing.SystemColors.Control;
+            this.textparola.BorderRadius = 20;
+            this.textparola.BorderSize = 2;
+            this.textparola.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textparola.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textparola.Location = new System.Drawing.Point(92, 141);
+            this.textparola.Margin = new System.Windows.Forms.Padding(4);
+            this.textparola.Multiline = false;
+            this.textparola.Name = "textparola";
+            this.textparola.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.textparola.PasswordChar = true;
+            this.textparola.PlaceholderColor = System.Drawing.Color.Empty;
+            this.textparola.PlaceholderText = "";
+            this.textparola.Size = new System.Drawing.Size(188, 33);
+            this.textparola.TabIndex = 16;
+            this.textparola.UnderlinedStyle = false;
             // 
             // textutilizator
             // 
@@ -201,26 +201,26 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Utilizator";
             // 
-            // textadresa
+            // textemail
             // 
-            this.textadresa.BackColor = System.Drawing.SystemColors.Control;
-            this.textadresa.BorderColor = System.Drawing.SystemColors.Control;
-            this.textadresa.BorderFocusColor = System.Drawing.SystemColors.Control;
-            this.textadresa.BorderRadius = 20;
-            this.textadresa.BorderSize = 2;
-            this.textadresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textadresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textadresa.Location = new System.Drawing.Point(92, 180);
-            this.textadresa.Margin = new System.Windows.Forms.Padding(4);
-            this.textadresa.Multiline = false;
-            this.textadresa.Name = "textadresa";
-            this.textadresa.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.textadresa.PasswordChar = true;
-            this.textadresa.PlaceholderColor = System.Drawing.Color.Empty;
-            this.textadresa.PlaceholderText = "";
-            this.textadresa.Size = new System.Drawing.Size(188, 33);
-            this.textadresa.TabIndex = 18;
-            this.textadresa.UnderlinedStyle = false;
+            this.textemail.BackColor = System.Drawing.SystemColors.Control;
+            this.textemail.BorderColor = System.Drawing.SystemColors.Control;
+            this.textemail.BorderFocusColor = System.Drawing.SystemColors.Control;
+            this.textemail.BorderRadius = 20;
+            this.textemail.BorderSize = 2;
+            this.textemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textemail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textemail.Location = new System.Drawing.Point(92, 180);
+            this.textemail.Margin = new System.Windows.Forms.Padding(4);
+            this.textemail.Multiline = false;
+            this.textemail.Name = "textemail";
+            this.textemail.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.textemail.PasswordChar = false;
+            this.textemail.PlaceholderColor = System.Drawing.Color.Empty;
+            this.textemail.PlaceholderText = "";
+            this.textemail.Size = new System.Drawing.Size(188, 33);
+            this.textemail.TabIndex = 18;
+            this.textemail.UnderlinedStyle = false;
             // 
             // label5
             // 
@@ -234,26 +234,26 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Email";
             // 
-            // textBoxR6
+            // textiban
             // 
-            this.textBoxR6.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxR6.BorderColor = System.Drawing.SystemColors.Control;
-            this.textBoxR6.BorderFocusColor = System.Drawing.SystemColors.Control;
-            this.textBoxR6.BorderRadius = 20;
-            this.textBoxR6.BorderSize = 2;
-            this.textBoxR6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxR6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxR6.Location = new System.Drawing.Point(92, 297);
-            this.textBoxR6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxR6.Multiline = false;
-            this.textBoxR6.Name = "textBoxR6";
-            this.textBoxR6.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.textBoxR6.PasswordChar = true;
-            this.textBoxR6.PlaceholderColor = System.Drawing.Color.Empty;
-            this.textBoxR6.PlaceholderText = "";
-            this.textBoxR6.Size = new System.Drawing.Size(188, 33);
-            this.textBoxR6.TabIndex = 24;
-            this.textBoxR6.UnderlinedStyle = false;
+            this.textiban.BackColor = System.Drawing.SystemColors.Control;
+            this.textiban.BorderColor = System.Drawing.SystemColors.Control;
+            this.textiban.BorderFocusColor = System.Drawing.SystemColors.Control;
+            this.textiban.BorderRadius = 20;
+            this.textiban.BorderSize = 2;
+            this.textiban.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textiban.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textiban.Location = new System.Drawing.Point(92, 297);
+            this.textiban.Margin = new System.Windows.Forms.Padding(4);
+            this.textiban.Multiline = false;
+            this.textiban.Name = "textiban";
+            this.textiban.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.textiban.PasswordChar = false;
+            this.textiban.PlaceholderColor = System.Drawing.Color.Empty;
+            this.textiban.PlaceholderText = "";
+            this.textiban.Size = new System.Drawing.Size(188, 33);
+            this.textiban.TabIndex = 24;
+            this.textiban.UnderlinedStyle = false;
             // 
             // label6
             // 
@@ -267,47 +267,47 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "IBAN";
             // 
-            // textBoxR7
+            // textadr
             // 
-            this.textBoxR7.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxR7.BorderColor = System.Drawing.SystemColors.Control;
-            this.textBoxR7.BorderFocusColor = System.Drawing.SystemColors.Control;
-            this.textBoxR7.BorderRadius = 20;
-            this.textBoxR7.BorderSize = 2;
-            this.textBoxR7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxR7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxR7.Location = new System.Drawing.Point(92, 258);
-            this.textBoxR7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxR7.Multiline = false;
-            this.textBoxR7.Name = "textBoxR7";
-            this.textBoxR7.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.textBoxR7.PasswordChar = true;
-            this.textBoxR7.PlaceholderColor = System.Drawing.Color.Empty;
-            this.textBoxR7.PlaceholderText = "";
-            this.textBoxR7.Size = new System.Drawing.Size(188, 33);
-            this.textBoxR7.TabIndex = 22;
-            this.textBoxR7.UnderlinedStyle = false;
+            this.textadr.BackColor = System.Drawing.SystemColors.Control;
+            this.textadr.BorderColor = System.Drawing.SystemColors.Control;
+            this.textadr.BorderFocusColor = System.Drawing.SystemColors.Control;
+            this.textadr.BorderRadius = 20;
+            this.textadr.BorderSize = 2;
+            this.textadr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textadr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textadr.Location = new System.Drawing.Point(92, 258);
+            this.textadr.Margin = new System.Windows.Forms.Padding(4);
+            this.textadr.Multiline = false;
+            this.textadr.Name = "textadr";
+            this.textadr.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.textadr.PasswordChar = false;
+            this.textadr.PlaceholderColor = System.Drawing.Color.Empty;
+            this.textadr.PlaceholderText = "";
+            this.textadr.Size = new System.Drawing.Size(188, 33);
+            this.textadr.TabIndex = 22;
+            this.textadr.UnderlinedStyle = false;
             // 
-            // textBoxR8
+            // texttel
             // 
-            this.textBoxR8.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxR8.BorderColor = System.Drawing.SystemColors.Control;
-            this.textBoxR8.BorderFocusColor = System.Drawing.SystemColors.Control;
-            this.textBoxR8.BorderRadius = 20;
-            this.textBoxR8.BorderSize = 2;
-            this.textBoxR8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxR8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxR8.Location = new System.Drawing.Point(92, 219);
-            this.textBoxR8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxR8.Multiline = false;
-            this.textBoxR8.Name = "textBoxR8";
-            this.textBoxR8.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.textBoxR8.PasswordChar = false;
-            this.textBoxR8.PlaceholderColor = System.Drawing.Color.Empty;
-            this.textBoxR8.PlaceholderText = "";
-            this.textBoxR8.Size = new System.Drawing.Size(188, 33);
-            this.textBoxR8.TabIndex = 21;
-            this.textBoxR8.UnderlinedStyle = false;
+            this.texttel.BackColor = System.Drawing.SystemColors.Control;
+            this.texttel.BorderColor = System.Drawing.SystemColors.Control;
+            this.texttel.BorderFocusColor = System.Drawing.SystemColors.Control;
+            this.texttel.BorderRadius = 20;
+            this.texttel.BorderSize = 2;
+            this.texttel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.texttel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.texttel.Location = new System.Drawing.Point(92, 219);
+            this.texttel.Margin = new System.Windows.Forms.Padding(4);
+            this.texttel.Multiline = false;
+            this.texttel.Name = "texttel";
+            this.texttel.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.texttel.PasswordChar = false;
+            this.texttel.PlaceholderColor = System.Drawing.Color.Empty;
+            this.texttel.PlaceholderText = "";
+            this.texttel.Size = new System.Drawing.Size(188, 33);
+            this.texttel.TabIndex = 21;
+            this.texttel.UnderlinedStyle = false;
             // 
             // label7
             // 
@@ -340,15 +340,15 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(362, 417);
-            this.Controls.Add(this.textBoxR6);
+            this.Controls.Add(this.textiban);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBoxR7);
-            this.Controls.Add(this.textBoxR8);
+            this.Controls.Add(this.textadr);
+            this.Controls.Add(this.texttel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textadresa);
+            this.Controls.Add(this.textemail);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.texttelefon);
+            this.Controls.Add(this.textparola);
             this.Controls.Add(this.textutilizator);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -373,16 +373,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private ButonR butonR1;
-        private TextBoxR texttelefon;
+        private TextBoxR textparola;
         private TextBoxR textutilizator;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private TextBoxR textadresa;
+        private TextBoxR textemail;
         private System.Windows.Forms.Label label5;
-        private TextBoxR textBoxR6;
+        private TextBoxR textiban;
         private System.Windows.Forms.Label label6;
-        private TextBoxR textBoxR7;
-        private TextBoxR textBoxR8;
+        private TextBoxR textadr;
+        private TextBoxR texttel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
     }

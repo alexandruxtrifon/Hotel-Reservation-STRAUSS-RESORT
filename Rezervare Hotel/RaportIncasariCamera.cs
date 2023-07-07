@@ -11,24 +11,23 @@ using System.Windows.Forms;
 
 namespace Rezervare_Hotel
 {
-    public partial class RaportPerformanta : Form
+    public partial class RaportIncasariCamera : Form
     {
-        public RaportPerformanta()
+        public RaportIncasariCamera()
         {
             InitializeComponent();
         }
 
-
-        private void RaportPerformanta_Load(object sender, EventArgs e)
+        private void RaportIncasariCamera_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.Refresh();
-            PopulateListBoxWithUserNames();
+            PopulateListBoxWithRooms();
+            this.reportViewer1.RefreshReport();
         }
 
-        private void PopulateListBoxWithUserNames()
+        private void PopulateListBoxWithRooms()
         {
-            string query = @"SELECT U.Nume & ' ' & U.Prenume AS Nume
-                     FROM Utilizator AS U";
+            string query = @"SELECT C.Nr_Camera
+                     FROM Camera AS C";
             Utility.cmd = new OleDbCommand();
             Utility.cmd.Connection = Utility.con;
 
@@ -46,7 +45,11 @@ namespace Rezervare_Hotel
                     {
                         string fullName = reader.GetString(0);
 
-                        listBox1.Items.Add(fullName);
+                        //listBox1.Items.Add(fullName);
+                        if (!listBox1.Items.Contains(fullName))
+                        {
+                            listBox1.Items.Add(fullName);
+                        }
                     }
                 }
             }
@@ -62,14 +65,10 @@ namespace Rezervare_Hotel
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedItem = listBox1.SelectedItems[0] as string;
 
+            string nr = listBox1.SelectedItems[0] as string;
 
-            string[] nameParts = selectedItem.Split(' ');
-            string firstName = nameParts[0];
-            string lastName = nameParts[1];
-
-            this.performantaTableAdapter.Fill(this.dataSet1.Performanta, firstName, lastName);
+            this.incasariCameraTableAdapter.Fill(this.dataSet1.IncasariCamera, nr);
             this.reportViewer1.RefreshReport();
 
         }

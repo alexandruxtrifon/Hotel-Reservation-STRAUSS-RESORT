@@ -55,11 +55,11 @@ namespace Rezervare_Hotel
              //   string prenume = reader["Prenume"].ToString();
                 reader.Close();
                 Utility.con.Close();
-                Form1 f = new Form1();
+                Form1 Form1 = new Form1();
                 // Label label = (Label)Form1.Controls["label3"]
                 // ((Label)Form1.Controls.["label3"]).Text = "Bun venit, " + nume + " " + prenume; 
                 this.Hide();
-                f.Show();
+                Form1.Show();
 
             }
             else

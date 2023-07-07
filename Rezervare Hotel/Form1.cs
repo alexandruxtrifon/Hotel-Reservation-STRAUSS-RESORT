@@ -30,20 +30,18 @@ namespace Rezervare_Hotel
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Utility.ButonRotunjit(button1);
             label3.Text = $"Bine ai venit, {Utility.contnume}";
             menuStrip1.BackColor = Color.White; // din nou exista un bug cu selectarea culorii
             menuStrip1.Renderer = new CustomMenuStripRenderer();
             menuStrip2.BackColor = Color.White;
             menuStrip2.Renderer = new CustomMenuStripRenderer();
 
-            UpdateLabels();
-            PopulateChart();
+            PopulateChart2();
             CustomizeChartAppearance();
             isadmin();
         }
 
-        private void PopulateChart()
+        private void PopulateChart2()
         {
             chart2.Series.Clear();
             Series series = new Series("Gradul de Incarcare");
@@ -69,6 +67,8 @@ namespace Rezervare_Hotel
             chart2.Titles.Clear();
             chart2.Titles.Add("Gradul de incarcare");
         }
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -160,7 +160,7 @@ namespace Rezervare_Hotel
         {
             LoginForm f = new LoginForm();
             //f.Hide();
-            this.Hide();
+            //this.Hide();
             f.ShowDialog();
         }
 
@@ -217,8 +217,6 @@ namespace Rezervare_Hotel
 
         private void raportTipuriCameraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form6 f = new Form6();
-            f.Show();
         }
 
         private void situatiaCamerelorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -236,13 +234,6 @@ namespace Rezervare_Hotel
         {
             RegisterForm f = new RegisterForm();
             f.Show();
-        }
-
-        private void UpdateLabels()
-        {
-            label1.Text = DateTime.Now.ToShortDateString();
-            double occupancyRate = CalculateOccupancyRate(DateTime.Today);
-            label2.Text = occupancyRate.ToString("0.00") + "%";
         }
 
         private double CalculateOccupancyRate(DateTime date)
@@ -287,13 +278,12 @@ namespace Rezervare_Hotel
 
         private void gradulDeIncarcareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RaportGradIncarcare f = new RaportGradIncarcare();
-            f.Show();
         }
 
         private void incasareCameraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            RaportIncasariCamera f = new RaportIncasariCamera();
+            f.Show();
         }
 
         private void toolStripMenuItem10_Click(object sender, EventArgs e)
@@ -310,7 +300,7 @@ namespace Rezervare_Hotel
         private void isadmin()
         {
             if (label3.Text == $"Bine ai venit, STRAUSS RESORT")
-                administrareConturiToolStripMenuItem.Visible = true;
+                toolStripMenuItem7.Visible = true;
             else
                 return;
         }
@@ -323,6 +313,44 @@ namespace Rezervare_Hotel
 
         private void raportCamereToolStripMenuItem_Click(object sender, EventArgs e)
         {
+        }
+
+        private void venituriCalendarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaportVenituri f = new RaportVenituri();
+            f.Show();
+        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (Application.OpenForms["LoginForm"] != null)
+            {
+                Application.OpenForms["LoginForm"].Close();
+            }
+        }
+
+        private void top5ReceptioneriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaportTop5Receptioneri f = new RaportTop5Receptioneri();
+            f.Show();
+        }
+
+        private void camereToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RaportCamera f = new RaportCamera();
+            f.Show();
+        }
+
+        private void categoriiCameraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipCameraForm f = new TipCameraForm();
+            f.Show();
+        }
+
+        private void raportUtilizatoriToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormRaportUtilizatori f = new FormRaportUtilizatori();
+            f.Show();
         }
     }
 }

@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.rezervariDupaDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new Rezervare_Hotel.DataSet1();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.rezervariDupaDataTableAdapter = new Rezervare_Hotel.DataSet1TableAdapters.RezervariDupaDataTableAdapter();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.rezervariDupaDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // rezervariDupaDataBindingSource
@@ -52,30 +54,33 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.rezervariDupaDataBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Right;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.rezervariDupaDataBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Rezervare_Hotel.RaportCamereOcupate.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(205, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(582, 753);
+            this.reportViewer1.Size = new System.Drawing.Size(779, 761);
             this.reportViewer1.TabIndex = 0;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 41);
+            this.dateTimePicker1.Location = new System.Drawing.Point(30, 32);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(145, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(120, 20);
             this.dateTimePicker1.TabIndex = 1;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(165, 41);
+            this.dateTimePicker2.Location = new System.Drawing.Point(30, 78);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(157, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(120, 20);
             this.dateTimePicker2.TabIndex = 2;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
@@ -83,19 +88,31 @@
             // 
             this.rezervariDupaDataTableAdapter.ClearBeforeFill = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.dateTimePicker2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 761);
+            this.panel1.TabIndex = 3;
+            // 
             // FormRaportCamereOcupate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 753);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRaportCamereOcupate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRaportCamereOcupate";
             this.Load += new System.EventHandler(this.FormRaportCamereOcupate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rezervariDupaDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -108,5 +125,6 @@
         private System.Windows.Forms.BindingSource rezervariDupaDataBindingSource;
         private DataSet1 dataSet1;
         private DataSet1TableAdapters.RezervariDupaDataTableAdapter rezervariDupaDataTableAdapter;
+        private System.Windows.Forms.Panel panel1;
     }
 }
